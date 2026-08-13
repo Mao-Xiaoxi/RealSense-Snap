@@ -1,6 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QThread>
+#include <QQmlContext>
 #include "core/CameraWorker.h"
 #include "core/videoitem.h"
 
@@ -17,10 +18,12 @@ int main(int argc, char *argv[])
     // 线程与Worker准备
     QThread workerThread;
     CameraWorker worker;
-    worker.moveToThread(&workerThread);
+    CameraController controller;
+    worker.moveToThread(&workerThread); // 线程暴露问题
 
     // 加载QML
     QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty("cameraController", &controller);
     engine.loadFromModule("RealSense_Snap","Main");
 
     // 查找UI中的 VideoItem
@@ -28,26 +31,29 @@ int main(int argc, char *argv[])
     // 模版参数是指针类型
     auto videoItem = root->findChild<VideoItem*>("liveView");
 
+    // 这里可以理解为接口之间的对接
     QObject::connect(&worker, &CameraWorker::frameReady,
                      videoItem, &VideoItem::setImage,
                      Qt::QueuedConnection);
-
-    // QObject::connect(
-    //     &engine,
-    //     &QQmlApplicationEngine::objectCreationFailed,
-    //     &app,
-    //     []() { QCoreApplication::exit(-1); },
-    //     Qt::QueuedConnection);
+    QObject::connect(&controller, &CameraController::alphaRequested,
+                     &worker, &CameraWorker::setAlpha,
+                     Qt::QueuedConnection);
 
     // 启动线程并开始工作
     workerThread.start();
     QMetaObject::invokeMethod(&worker,&CameraWorker::start,Qt::QueuedConnection);
 
     //退出清理
-    QObject::connect(&app,&QCoreApplication::aboutToQuit,[&](){
-        worker.stop();
+    QObject::connect(&app, &QCoreApplication::aboutToQuit, [&]() {
+        QMetaObject::invokeMethod(
+            &worker,
+            &CameraWorker::stop,
+            Qt::BlockingQueuedConnection
+            );
+
         workerThread.quit();
         workerThread.wait();
+
     });
 
     return QGuiApplication::exec();

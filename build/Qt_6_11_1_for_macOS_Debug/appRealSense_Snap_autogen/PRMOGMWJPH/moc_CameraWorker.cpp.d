@@ -798,7 +798,9 @@
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rs.h \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rs.hpp \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rsutil.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QMutex \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QObject \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QTimer \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q20bit.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
@@ -808,6 +810,7 @@
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q20utility.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q23type_traits.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q23utility.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qabstracteventdispatcher.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qanystringview.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qarraydata.h \
@@ -817,6 +820,7 @@
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qatomic.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qatomic_cxx11.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qbasicatomic.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qbasictimer.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qbindingstorage.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qbytearray.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qbytearrayalgorithms.h \
@@ -835,6 +839,8 @@
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qcontainertools_impl.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qdatastream.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qdeadlinetimer.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qeventloop.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qflags.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qfloat16.h \
@@ -858,6 +864,7 @@
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qmetacontainer.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qmetatype.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qminmax.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qmutex.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qnamespace.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qnumeric.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qobject.h \
@@ -899,10 +906,12 @@
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtdeprecationmarkers.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtformat_impl.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtimer.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtnoop.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtpreprocessorsupport.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtresource.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtsan_impl.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qttranslation.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qttypetraits.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtversion.h \

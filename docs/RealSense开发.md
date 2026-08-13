@@ -114,6 +114,24 @@ set_target_properties(myApp PROPERTIES ...)
 | 鲁棒性       | 依赖训练数据；依赖环境光照条件。 | 暗光条件下稳定，易于受强阳光干扰；对黑色、反光物体可能失效 |
 | 实时性与性能 | 消耗与精度正相关                 | 速度快、开销低。                                           |
 
+### Qt
+
+Qt使用一些列函数来实现数据的对接
+
+```bash
+QObject::connect(&controller, &CameraController::alphaRequested,
+                 &worker, &CameraWorker::setAlpha,
+                 Qt::QueuedConnection);
+
+// Qt属性系统，使用自己函数，将属性暴露出来
+Q_PROPERTY(float alpha READ alpha WRITE setAlpha NOTIFY alphaChanged)
+
+// 之后在函数实现中，C++代码函数中主动使用emit来发出数据传输请求。
+emit alphaRequested(a);
+// QML直接赋值实现数据传输。
+cameraController.alpha = value
+```
+
 ## 注意
 
 * 由于macOS的权限原因，终端往往不能直接访问摄像头，因此在例如遍历摄像头设备的操作时，可能会出现如下报错，导致程序直接失效。

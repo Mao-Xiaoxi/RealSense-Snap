@@ -3,6 +3,7 @@ import QtQuick.Layouts
 import QtQuick.Controls.Basic
 
 import CustomComponents 1.0
+import QtQuick.Controls 2.15
 
 
 ApplicationWindow {
@@ -50,9 +51,23 @@ ApplicationWindow {
                 text: "Realsense Camera"
                 anchors.centerIn: parent
                 color: "white"
-                font.pixelSize: 48
+                font.pixelSize: 32
                 style: Text.Outline
                 styleColor: "black"
+            }
+            Slider {
+                id: alphaSlider
+                from: 0.0
+                to: 1.0
+                stepSize: 0.01
+                value: cameraController.alpha   // 从 C++ 读取初始值
+                onValueChanged: {
+                    // 拖动时更新 C++ 的 alpha 值
+                    cameraController.alpha = value
+                }
+            }
+            Label {
+                text: "Alpha: " + alphaSlider.value.toFixed(2)
             }
             ColumnLayout {
                 anchors.fill: parent

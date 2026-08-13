@@ -959,6 +959,16 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/cassert \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/q20iterator.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qline.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QMutex \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmutex.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdeadlinetimer.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtsan_impl.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/sanitizer/tsan_interface.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QTimer \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtimer.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qbasictimer.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qeventloop.h \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rs.hpp \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rs.h \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rsutil.h \
@@ -1192,10 +1202,6 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/source_location \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qevent.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcoreevent.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qbasictimer.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qeventloop.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdeadlinetimer.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qiodevice.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qeventpoint.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qvector2d.h \

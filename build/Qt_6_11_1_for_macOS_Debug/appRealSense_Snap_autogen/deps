@@ -813,10 +813,12 @@ appRealSense_Snap_autogen/timestamp: \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/main.cpp \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/include/QtQmlIntegration/qqmlintegration.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QList \
+	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QMutex \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QObject \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QRect \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QSize \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QSizeF \
+	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QTimer \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q20bit.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
@@ -896,6 +898,7 @@ appRealSense_Snap_autogen/timestamp: \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qmetasequence.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qmetatype.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qminmax.h \
+	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qmutex.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qnamespace.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qnativeinterface.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qnumeric.h \
@@ -947,10 +950,12 @@ appRealSense_Snap_autogen/timestamp: \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtextstream.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtformat_impl.h \
+	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtimer.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtnoop.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtpreprocessorsupport.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtresource.h \
+	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtsan_impl.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qttranslation.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qttypetraits.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qtversion.h \

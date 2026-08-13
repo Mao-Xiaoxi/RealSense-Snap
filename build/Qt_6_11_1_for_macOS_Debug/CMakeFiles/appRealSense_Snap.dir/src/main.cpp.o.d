@@ -1028,6 +1028,8 @@ CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/unistd.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/thread \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__thread/this_thread.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/QQmlContext \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmlcontext.h \
   /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/CameraWorker.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QObject \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/QImage \
@@ -1042,6 +1044,12 @@ CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o: \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qpolygon.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qregion.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qline.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QMutex \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmutex.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtsan_impl.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/sanitizer/tsan_interface.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QTimer \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtimer.h \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rs.hpp \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rs.h \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rsutil.h \

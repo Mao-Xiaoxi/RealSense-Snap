@@ -22,7 +22,7 @@ void CameraWorker::start(){
         return;
     }
     qDebug()<<"CameraWorker starting in thread:"<<QThread::currentThread();
-    qDebug() << "Starting pipeline...";
+
     try{
         rs2::config cfg;
         cfg.enable_stream(RS2_STREAM_DEPTH);
@@ -30,12 +30,10 @@ void CameraWorker::start(){
 
         pipe.start(cfg);
 
-        while(m_running.load(std::memory_order_acquire)){
-            processFrame();
-        }
+        m_timer = new QTimer(this);
+        connect(m_timer, &QTimer::timeout, this, &CameraWorker::processFrame);
+        m_timer->start(0);
 
-        pipe.stop();
-        qDebug()<<"CameraWorker stopped successfully.";
     }catch (const rs2::error &e) {
         qCritical() << "RealSense error:" << e.what();
         // 发生异常时，最好通知主线程发生错误（可以加一个 errorOccurred 信号）
@@ -49,15 +47,31 @@ void CameraWorker::start(){
 }
 
 void CameraWorker::stop(){
-    bool expected = true;
-    if(m_running.compare_exchange_strong(expected,false)){
-        qDebug()<<"CameraWorker stop requested";
+    if(!m_running.exchange(false)){
+        return;
+    }
+    qDebug()<<"CameraWorker stop requested";
+
+    if(m_timer){
+        m_timer->stop();
+        m_timer->deleteLater();
+        m_timer=nullptr;
+    }
+    try {
+        pipe.stop();
+    } catch (const std::exception &e) {
+        qWarning() << "Pipeline stop failed:" << e.what();
     }
 }
 
 void CameraWorker::processFrame() try
 {
-    rs2::frameset frames=pipe.wait_for_frames();
+    if (!m_running.load(std::memory_order_acquire)) {
+        return;
+    }
+
+    rs2::frameset frames;
+    pipe.try_wait_for_frames(&frames,5000);
     if(false){
         frames=align_to_depth.process(frames);
     }else{
@@ -70,7 +84,6 @@ void CameraWorker::processFrame() try
         qWarning()<<"Incomplete frameset receive.d";
         return;
     }
-
     rs2::video_frame colorized_depth = colorizer.colorize(depth);
 
     cv::Mat color_rgb(cv::Size(color.get_width(),color.get_height()),CV_8UC3,(void*)color.get_data(),cv::Mat::AUTO_STEP);
@@ -81,8 +94,14 @@ void CameraWorker::processFrame() try
     cv::Mat depth_bgr;
     cv::cvtColor(depth_rgb, depth_bgr, cv::COLOR_RGB2BGR);
 
+
     cv::Mat overlay;
-    cv::addWeighted(depth_bgr,0.3,color_bgr,0.7,0,overlay);
+    float currentAlpha;
+    {
+        QMutexLocker locker(&m_alphaMutex);
+        currentAlpha = m_alpha;
+    }
+    cv::addWeighted(color_bgr, 1.0f - currentAlpha, depth_bgr, currentAlpha, 0, overlay);
 
     cv::Mat overlay_rgb;
     cv::cvtColor(overlay,overlay_rgb,cv::COLOR_BGR2RGB);
@@ -98,4 +117,30 @@ void CameraWorker::processFrame() try
         qCritical()<<"Frame processing error:"<<e.what();
     }
     m_running=false;
+    if (m_timer) {
+        m_timer->stop();
+    }
 }
+
+
+float CameraWorker::alpha() const
+{
+    QMutexLocker locker(&m_alphaMutex);
+    return m_alpha;
+}
+
+void CameraWorker::setAlpha(float a){
+    if(a<0.0f||a>1.0f) return;
+    {
+        QMutexLocker locker(&m_alphaMutex);
+        if(qFuzzyCompare(m_alpha,a)) return;
+        m_alpha=a;
+    }
+
+    emit alphaChanged();    // 通知QML属性变化
+}
+
+
+
+
+

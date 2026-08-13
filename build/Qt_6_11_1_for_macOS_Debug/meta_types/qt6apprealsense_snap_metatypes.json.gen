@@ -3,10 +3,17 @@
         "classes": [
             {
                 "className": "CameraWorker",
-                "lineNumber": 11,
+                "lineNumber": 14,
                 "object": true,
                 "qualifiedClassName": "CameraWorker",
                 "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "lineNumber": 24,
+                        "name": "alphaChanged",
+                        "returnType": "void"
+                    },
                     {
                         "access": "public",
                         "arguments": [
@@ -15,8 +22,8 @@
                                 "type": "QImage"
                             }
                         ],
-                        "index": 0,
-                        "lineNumber": 22,
+                        "index": 1,
+                        "lineNumber": 31,
                         "name": "frameReady",
                         "returnType": "void"
                     }
@@ -24,16 +31,85 @@
                 "slots": [
                     {
                         "access": "public",
-                        "index": 1,
-                        "lineNumber": 18,
+                        "index": 2,
+                        "lineNumber": 27,
                         "name": "start",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
-                        "index": 2,
-                        "lineNumber": 19,
+                        "index": 3,
+                        "lineNumber": 28,
                         "name": "stop",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            },
+            {
+                "className": "CameraController",
+                "lineNumber": 47,
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "lineNumber": 49,
+                        "name": "alpha",
+                        "notify": "alphaChanged",
+                        "override": false,
+                        "read": "alpha",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "float",
+                        "user": false,
+                        "virtual": false,
+                        "write": "setAlpha"
+                    }
+                ],
+                "qualifiedClassName": "CameraController",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "lineNumber": 63,
+                        "name": "alphaChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "a",
+                                "type": "float"
+                            }
+                        ],
+                        "index": 1,
+                        "lineNumber": 64,
+                        "name": "alphaRequested",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "a",
+                                "type": "float"
+                            }
+                        ],
+                        "index": 2,
+                        "lineNumber": 54,
+                        "name": "setAlpha",
                         "returnType": "void"
                     }
                 ],
