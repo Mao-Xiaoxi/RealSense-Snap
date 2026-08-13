@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/RealSense_Snap/">
+    <file alias="Main.qml">/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/Main.qml</file>
+  </qresource>
+</RCC>
+

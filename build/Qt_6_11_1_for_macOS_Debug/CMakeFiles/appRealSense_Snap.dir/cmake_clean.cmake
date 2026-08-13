@@ -1,0 +1,39 @@
+file(REMOVE_RECURSE
+  ".qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp"
+  ".qt/rcc/qrc_qmake_RealSense_Snap.cpp"
+  ".rcc/qmlcache/appRealSense_Snap_Main_qml.cpp"
+  ".rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.aotstats"
+  ".rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp"
+  "CMakeFiles/appRealSense_Snap_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/appRealSense_Snap_autogen.dir/ParseCache.txt"
+  "appRealSense_Snap_autogen"
+  "CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/appRealSense_Snap.dir/apprealsense_snap_qmltyperegistrations.cpp.o"
+  "CMakeFiles/appRealSense_Snap.dir/apprealsense_snap_qmltyperegistrations.cpp.o.d"
+  "CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.o"
+  "CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.o.d"
+  "CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.cpp.o"
+  "CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.cpp.o.d"
+  "CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o"
+  "CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o.d"
+  "CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o"
+  "CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o.d"
+  "CMakeFiles/appRealSense_Snap.dir/main.cpp.o"
+  "CMakeFiles/appRealSense_Snap.dir/main.cpp.o.d"
+  "RealSense_Snap/appRealSense_Snap.qmltypes"
+  "appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap"
+  "appRealSense_Snap.pdb"
+  "appRealSense_Snap_autogen/mocs_compilation.cpp"
+  "appRealSense_Snap_autogen/timestamp"
+  "apprealsense_snap_qmltyperegistrations.cpp"
+  "meta_types/appRealSense_Snap_json_file_list.txt"
+  "meta_types/appRealSense_Snap_json_file_list.txt.timestamp"
+  "meta_types/qt6apprealsense_snap_metatypes.json"
+  "meta_types/qt6apprealsense_snap_metatypes.json.gen"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/appRealSense_Snap.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

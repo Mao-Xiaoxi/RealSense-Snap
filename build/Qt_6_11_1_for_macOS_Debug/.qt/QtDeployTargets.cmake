@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_appRealSense_Snap_FILE /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap)
+set(__QT_DEPLOY_TARGET_appRealSense_Snap_TYPE EXECUTABLE)

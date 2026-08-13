@@ -1,0 +1,6 @@
+module RealSense_Snap
+typeinfo appRealSense_Snap.qmltypes
+prefer :/qt/qml/RealSense_Snap/
+Main 254.0 Main.qml
+depends QtQuick
+
