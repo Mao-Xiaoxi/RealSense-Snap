@@ -69,7 +69,7 @@ include CMakeFiles/appRealSense_Snap_copy_qml.dir/progress.make
 CMakeFiles/appRealSense_Snap_copy_qml: .qt/appRealSense_Snap_qml.txt
 
 .qt/appRealSense_Snap_qml.txt: /Users/maoxiaoxi/Qt/6.11.1/macos/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
-.qt/appRealSense_Snap_qml.txt: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/Main.qml
+.qt/appRealSense_Snap_qml.txt: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/qml/Main.qml
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying appRealSense_Snap qml sources into build dir"
 	/Users/maoxiaoxi/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DFILES_INFO_PATH=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/appRealSense_Snap_qml.cmake -P /Users/maoxiaoxi/Qt/6.11.1/macos/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
 

@@ -102,47 +102,55 @@ RealSense_Snap/appRealSense_Snap.qmltypes: apprealsense_snap_qmltyperegistration
 .rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp: .rcc/qmlcache/appRealSense_Snap_qml_loader_file_list.rsp
 .rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp: .qt/rcc/qmake_RealSense_Snap.qrc
 .rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp: .qt/rcc/appRealSense_Snap_raw_qml_0.qrc
+.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp: .qt/rcc/appRealSense_Snap_raw_qml_0_extra_qmldirs.qrc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating .rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp"
 	/Users/maoxiaoxi/Qt/6.11.1/macos/libexec/qmlcachegen --resource-name qmlcache_appRealSense_Snap -o /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp @/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml_loader_file_list.rsp
 
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp: /Users/maoxiaoxi/Qt/6.11.1/macos/libexec/qmlcachegen
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/Main.qml
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp: .qt/rcc/qmake_RealSense_Snap.qrc
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp: .qt/rcc/appRealSense_Snap_raw_qml_0.qrc
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp: RealSense_Snap/appRealSense_Snap.qmltypes
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp: RealSense_Snap/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp, .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.aotstats"
-	/Users/maoxiaoxi/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E make_directory /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache
-	/Users/maoxiaoxi/Qt/6.11.1/macos/libexec/qmlcachegen --bare --resource-path /qt/qml/RealSense_Snap/Main.qml -I /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug -I /Users/maoxiaoxi/Qt/6.11.1/macos/qml -i /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/RealSense_Snap/qmldir --resource /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qmake_RealSense_Snap.qrc --resource /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/appRealSense_Snap_raw_qml_0.qrc --dump-aot-stats "--module-id=RealSense_Snap(appRealSense_Snap)" -o /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/Main.qml
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: /Users/maoxiaoxi/Qt/6.11.1/macos/libexec/qmlcachegen
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/qml/Main.qml
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: .qt/rcc/qmake_RealSense_Snap.qrc
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: .qt/rcc/appRealSense_Snap_raw_qml_0.qrc
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: .qt/rcc/appRealSense_Snap_raw_qml_0_extra_qmldirs.qrc
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: RealSense_Snap/appRealSense_Snap.qmltypes
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: RealSense_Snap/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp, .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.aotstats"
+	/Users/maoxiaoxi/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E make_directory /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml
+	/Users/maoxiaoxi/Qt/6.11.1/macos/libexec/qmlcachegen --bare --resource-path /qt/qml/RealSense_Snap/qml/Main.qml -I /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug -I /Users/maoxiaoxi/Qt/6.11.1/macos/qml -i /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/RealSense_Snap/qmldir --resource /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qmake_RealSense_Snap.qrc --resource /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/appRealSense_Snap_raw_qml_0.qrc --resource /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/appRealSense_Snap_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=RealSense_Snap(appRealSense_Snap)" -o /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/qml/Main.qml
 
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.aotstats: .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.aotstats
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.aotstats: .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.aotstats
 
-.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/Main.qml
+.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/qml/Main.qml
 .qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp: .qt/rcc/appRealSense_Snap_raw_qml_0.qrc
 .qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp: /Users/maoxiaoxi/Qt/6.11.1/macos/libexec/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Running rcc for resource appRealSense_Snap_raw_qml_0"
 	/Users/maoxiaoxi/Qt/6.11.1/macos/libexec/rcc --output /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp --name appRealSense_Snap_raw_qml_0 /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/appRealSense_Snap_raw_qml_0.qrc --no-zstd
 
+.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp: RealSense_Snap/qml/qmldir
+.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp: .qt/rcc/appRealSense_Snap_raw_qml_0_extra_qmldirs.qrc
+.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp: /Users/maoxiaoxi/Qt/6.11.1/macos/libexec/rcc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Running rcc for resource appRealSense_Snap_raw_qml_0_extra_qmldirs"
+	/Users/maoxiaoxi/Qt/6.11.1/macos/libexec/rcc --output /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp --name appRealSense_Snap_raw_qml_0_extra_qmldirs /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/appRealSense_Snap_raw_qml_0_extra_qmldirs.qrc --no-zstd
+
 appRealSense_Snap_autogen/timestamp: /Users/maoxiaoxi/Qt/6.11.1/macos/libexec/moc
 appRealSense_Snap_autogen/timestamp: CMakeFiles/appRealSense_Snap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Automatic MOC and UIC for target appRealSense_Snap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Automatic MOC and UIC for target appRealSense_Snap"
 	/Users/maoxiaoxi/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles/appRealSense_Snap_autogen.dir/AutogenInfo.json Debug
 	/Users/maoxiaoxi/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E touch /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/timestamp
 
 meta_types/appRealSense_Snap_json_file_list.txt: /Users/maoxiaoxi/Qt/6.11.1/macos/libexec/cmake_automoc_parser
 meta_types/appRealSense_Snap_json_file_list.txt: appRealSense_Snap_autogen/timestamp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Running AUTOMOC file extraction for target appRealSense_Snap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Running AUTOMOC file extraction for target appRealSense_Snap"
 	/Users/maoxiaoxi/Qt/6.11.1/macos/libexec/cmake_automoc_parser --cmake-autogen-cache-file /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles/appRealSense_Snap_autogen.dir/ParseCache.txt --cmake-autogen-info-file /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles/appRealSense_Snap_autogen.dir/AutogenInfo.json --output-file-path /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/meta_types/appRealSense_Snap_json_file_list.txt --timestamp-file-path /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/meta_types/appRealSense_Snap_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/include
 
 meta_types/qt6apprealsense_snap_metatypes.json: meta_types/qt6apprealsense_snap_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating meta_types/qt6apprealsense_snap_metatypes.json"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating meta_types/qt6apprealsense_snap_metatypes.json"
 	/Users/maoxiaoxi/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E true
 
 CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.o: CMakeFiles/appRealSense_Snap.dir/flags.make
 CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.o: appRealSense_Snap_autogen/mocs_compilation.cpp
 CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.o: CMakeFiles/appRealSense_Snap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.o -MF CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.o -c /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/mocs_compilation.cpp
 
 CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.i: cmake_force
@@ -152,20 +160,6 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
 CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/mocs_compilation.cpp -o CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.s
-
-CMakeFiles/appRealSense_Snap.dir/main.cpp.o: CMakeFiles/appRealSense_Snap.dir/flags.make
-CMakeFiles/appRealSense_Snap.dir/main.cpp.o: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/main.cpp
-CMakeFiles/appRealSense_Snap.dir/main.cpp.o: CMakeFiles/appRealSense_Snap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/appRealSense_Snap.dir/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRealSense_Snap.dir/main.cpp.o -MF CMakeFiles/appRealSense_Snap.dir/main.cpp.o.d -o CMakeFiles/appRealSense_Snap.dir/main.cpp.o -c /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/main.cpp
-
-CMakeFiles/appRealSense_Snap.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/appRealSense_Snap.dir/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/main.cpp > CMakeFiles/appRealSense_Snap.dir/main.cpp.i
-
-CMakeFiles/appRealSense_Snap.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appRealSense_Snap.dir/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/main.cpp -o CMakeFiles/appRealSense_Snap.dir/main.cpp.s
 
 CMakeFiles/appRealSense_Snap.dir/apprealsense_snap_qmltyperegistrations.cpp.o: CMakeFiles/appRealSense_Snap.dir/flags.make
 CMakeFiles/appRealSense_Snap.dir/apprealsense_snap_qmltyperegistrations.cpp.o: apprealsense_snap_qmltyperegistrations.cpp
@@ -195,10 +189,38 @@ CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qma
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.cpp -o CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.cpp.s
 
+CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o: CMakeFiles/appRealSense_Snap.dir/flags.make
+CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/videoitem.cpp
+CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o: CMakeFiles/appRealSense_Snap.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o -MF CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o.d -o CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o -c /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/videoitem.cpp
+
+CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/videoitem.cpp > CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.i
+
+CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/videoitem.cpp -o CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.s
+
+CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o: CMakeFiles/appRealSense_Snap.dir/flags.make
+CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/CameraWorker.cpp
+CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o: CMakeFiles/appRealSense_Snap.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o -MF CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o.d -o CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o -c /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/CameraWorker.cpp
+
+CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/CameraWorker.cpp > CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.i
+
+CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/CameraWorker.cpp -o CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.s
+
 CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o: CMakeFiles/appRealSense_Snap.dir/flags.make
 CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o: .rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp
 CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o: CMakeFiles/appRealSense_Snap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o -MF CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o.d -o CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o -c /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp
 
 CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.i: cmake_force
@@ -209,24 +231,24 @@ CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/a
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp -o CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.s
 
-CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o: CMakeFiles/appRealSense_Snap.dir/flags.make
-CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o: .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp
-CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o: CMakeFiles/appRealSense_Snap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o -MF CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o.d -o CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o -c /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp
+CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.o: CMakeFiles/appRealSense_Snap.dir/flags.make
+CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.o: .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp
+CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.o: CMakeFiles/appRealSense_Snap.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.o -MF CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.o.d -o CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.o -c /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp
 
-CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp > CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.i
+CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp > CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.i
 
-CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp -o CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.s
+CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp -o CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.s
 
 CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.o: CMakeFiles/appRealSense_Snap.dir/flags.make
 CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.o: .qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp
 CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.o: CMakeFiles/appRealSense_Snap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.o -MF CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.o.d -o CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.o -c /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp
 
 CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.i: cmake_force
@@ -237,35 +259,85 @@ CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_app
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp -o CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.s
 
+CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.o: CMakeFiles/appRealSense_Snap.dir/flags.make
+CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.o: .qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp
+CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.o: CMakeFiles/appRealSense_Snap.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.o -MF CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.o.d -o CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.o -c /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp
+
+CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp > CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.i
+
+CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp -o CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.s
+
+CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o: CMakeFiles/appRealSense_Snap.dir/flags.make
+CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/main.cpp
+CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o: CMakeFiles/appRealSense_Snap.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o -MF CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o.d -o CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o -c /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/main.cpp
+
+CMakeFiles/appRealSense_Snap.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/appRealSense_Snap.dir/src/main.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/main.cpp > CMakeFiles/appRealSense_Snap.dir/src/main.cpp.i
+
+CMakeFiles/appRealSense_Snap.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appRealSense_Snap.dir/src/main.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/main.cpp -o CMakeFiles/appRealSense_Snap.dir/src/main.cpp.s
+
 # Object files for target appRealSense_Snap
 appRealSense_Snap_OBJECTS = \
 "CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/appRealSense_Snap.dir/main.cpp.o" \
 "CMakeFiles/appRealSense_Snap.dir/apprealsense_snap_qmltyperegistrations.cpp.o" \
 "CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.cpp.o" \
+"CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o" \
+"CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o" \
 "CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o" \
-"CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o" \
-"CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.o"
+"CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.o" \
+"CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.o" \
+"CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.o" \
+"CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o"
 
 # External object files for target appRealSense_Snap
 appRealSense_Snap_EXTERNAL_OBJECTS =
 
 appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.o
-appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/main.cpp.o
 appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/apprealsense_snap_qmltyperegistrations.cpp.o
 appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.cpp.o
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o
 appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o
-appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.o
 appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.o
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.o
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o
 appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/build.make
 appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQuick.framework/Versions/A/QtQuick
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /Users/maoxiaoxi/Documents/Packages/librealsense/build/Release/librealsense2.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_gapi.4.15.0.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_highgui.4.15.0.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_ml.4.15.0.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_objdetect.4.15.0.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_photo.4.15.0.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_stitching.4.15.0.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_video.4.15.0.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_videoio.4.15.0.dylib
 appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtOpenGL.framework/Versions/A/QtOpenGL
 appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Versions/A/QtGui
 appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Versions/A/QtQml
 appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtNetwork.framework/Versions/A/QtNetwork
 appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/QtCore
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_imgcodecs.4.15.0.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_dnn.4.15.0.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_calib3d.4.15.0.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_features2d.4.15.0.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_flann.4.15.0.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_imgproc.4.15.0.dylib
+appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: /usr/local/lib/libopencv_core.4.15.0.dylib
 appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap: CMakeFiles/appRealSense_Snap.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/appRealSense_Snap.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -277,9 +349,10 @@ CMakeFiles/appRealSense_Snap.dir/clean:
 .PHONY : CMakeFiles/appRealSense_Snap.dir/clean
 
 CMakeFiles/appRealSense_Snap.dir/depend: .qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp
+CMakeFiles/appRealSense_Snap.dir/depend: .qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp
 CMakeFiles/appRealSense_Snap.dir/depend: .qt/rcc/qrc_qmake_RealSense_Snap.cpp
-CMakeFiles/appRealSense_Snap.dir/depend: .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp
-CMakeFiles/appRealSense_Snap.dir/depend: .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.aotstats
+CMakeFiles/appRealSense_Snap.dir/depend: .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp
+CMakeFiles/appRealSense_Snap.dir/depend: .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.aotstats
 CMakeFiles/appRealSense_Snap.dir/depend: .rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp
 CMakeFiles/appRealSense_Snap.dir/depend: RealSense_Snap/appRealSense_Snap.qmltypes
 CMakeFiles/appRealSense_Snap.dir/depend: appRealSense_Snap_autogen/timestamp

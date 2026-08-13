@@ -480,6 +480,30 @@ build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.s
 .PHONY : build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.cpp.s
 
+build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.o: build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.o
+.PHONY : build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.o
+
+# target to build an object file
+build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.o
+.PHONY : build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.o
+
+build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.i: build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.i
+.PHONY : build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.i
+
+# target to preprocess a source file
+build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.i
+.PHONY : build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.i
+
+build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.s: build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.s
+.PHONY : build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.s
+
+# target to generate assembly for a file
+build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.s
+.PHONY : build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.cpp.s
+
 build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.o: build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.cpp.o
 .PHONY : build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.o
 
@@ -504,29 +528,29 @@ build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.cpp.s
 .PHONY : build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.cpp.s
 
-build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.o: build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o
-.PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.o
+build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.o: build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.o
+.PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.o
 
 # target to build an object file
-build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o
-.PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.o
+build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.o
+.PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.o
 
-build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.i: build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.i
-.PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.i
+build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.i: build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.i
+.PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.i
 
 # target to preprocess a source file
-build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.i
-.PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.i
+build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.i
+.PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.i
 
-build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.s: build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.s
-.PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.s
+build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.s: build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.s
+.PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.s
 
 # target to generate assembly for a file
-build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.s
-.PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.s
+build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.s
+.PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.s
 
 build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.o: build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o
 .PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.o
@@ -552,29 +576,77 @@ build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.s
 .PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/core/CameraWorker.o: src/core/CameraWorker.cpp.o
+.PHONY : src/core/CameraWorker.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/core/CameraWorker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o
+.PHONY : src/core/CameraWorker.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/core/CameraWorker.i: src/core/CameraWorker.cpp.i
+.PHONY : src/core/CameraWorker.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/core/CameraWorker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.i
+.PHONY : src/core/CameraWorker.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/core/CameraWorker.s: src/core/CameraWorker.cpp.s
+.PHONY : src/core/CameraWorker.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/core/CameraWorker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.s
+.PHONY : src/core/CameraWorker.cpp.s
+
+src/core/videoitem.o: src/core/videoitem.cpp.o
+.PHONY : src/core/videoitem.o
+
+# target to build an object file
+src/core/videoitem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o
+.PHONY : src/core/videoitem.cpp.o
+
+src/core/videoitem.i: src/core/videoitem.cpp.i
+.PHONY : src/core/videoitem.i
+
+# target to preprocess a source file
+src/core/videoitem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.i
+.PHONY : src/core/videoitem.cpp.i
+
+src/core/videoitem.s: src/core/videoitem.cpp.s
+.PHONY : src/core/videoitem.s
+
+# target to generate assembly for a file
+src/core/videoitem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.s
+.PHONY : src/core/videoitem.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -616,18 +688,27 @@ help:
 	@echo "... build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.o"
 	@echo "... build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.i"
 	@echo "... build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0.s"
+	@echo "... build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.o"
+	@echo "... build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.i"
+	@echo "... build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_appRealSense_Snap_raw_qml_0_extra_qmldirs.s"
 	@echo "... build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.o"
 	@echo "... build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.i"
 	@echo "... build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qrc_qmake_RealSense_Snap.s"
-	@echo "... build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.o"
-	@echo "... build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.i"
-	@echo "... build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.s"
+	@echo "... build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.o"
+	@echo "... build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.i"
+	@echo "... build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.s"
 	@echo "... build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.o"
 	@echo "... build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.i"
 	@echo "... build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/core/CameraWorker.o"
+	@echo "... src/core/CameraWorker.i"
+	@echo "... src/core/CameraWorker.s"
+	@echo "... src/core/videoitem.o"
+	@echo "... src/core/videoitem.i"
+	@echo "... src/core/videoitem.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

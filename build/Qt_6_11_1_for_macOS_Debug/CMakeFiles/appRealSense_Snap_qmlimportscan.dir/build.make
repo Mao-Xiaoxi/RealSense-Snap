@@ -71,7 +71,8 @@ CMakeFiles/appRealSense_Snap_qmlimportscan: .qt/qml_imports/appRealSense_Snap_bu
 .qt/qml_imports/appRealSense_Snap_build.cmake: /Users/maoxiaoxi/Qt/6.11.1/macos/libexec/qmlimportscanner
 .qt/qml_imports/appRealSense_Snap_build.cmake: .qt/rcc/qmake_RealSense_Snap.qrc
 .qt/qml_imports/appRealSense_Snap_build.cmake: .qt/rcc/appRealSense_Snap_raw_qml_0.qrc
-.qt/qml_imports/appRealSense_Snap_build.cmake: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/Main.qml
+.qt/qml_imports/appRealSense_Snap_build.cmake: .qt/rcc/appRealSense_Snap_raw_qml_0_extra_qmldirs.qrc
+.qt/qml_imports/appRealSense_Snap_build.cmake: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/qml/Main.qml
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for appRealSense_Snap"
 	cd /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap && /Users/maoxiaoxi/Qt/6.11.1/macos/libexec/qmlimportscanner @/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/qml_imports/appRealSense_Snap_build.rsp
 

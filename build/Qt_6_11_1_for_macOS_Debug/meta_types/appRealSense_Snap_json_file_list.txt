@@ -1,0 +1,2 @@
+/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/include/../PRMOGMWJPH/moc_CameraWorker.cpp.json
+/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/include/../PRMOGMWJPH/moc_videoitem.cpp.json

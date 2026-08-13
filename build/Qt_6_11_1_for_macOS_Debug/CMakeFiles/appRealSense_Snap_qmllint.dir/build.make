@@ -67,7 +67,7 @@ include CMakeFiles/appRealSense_Snap_qmllint.dir/compiler_depend.make
 include CMakeFiles/appRealSense_Snap_qmllint.dir/progress.make
 
 CMakeFiles/appRealSense_Snap_qmllint: /Users/maoxiaoxi/Qt/6.11.1/macos/bin/qmllint
-CMakeFiles/appRealSense_Snap_qmllint: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/Main.qml
+CMakeFiles/appRealSense_Snap_qmllint: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/qml/Main.qml
 CMakeFiles/appRealSense_Snap_qmllint: .rcc/qmllint/appRealSense_Snap.rsp
 	cd /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap && /Users/maoxiaoxi/Qt/6.11.1/macos/bin/qmllint @/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmllint/appRealSense_Snap.rsp
 

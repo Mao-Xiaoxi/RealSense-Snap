@@ -1,0 +1,223 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-4e269c7de3ab22b09f0c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "RealSense_Snap",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-15cb5f3645039183f1ac.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-6d5745e8c4f54fb4a18c.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-4bd47234c24bba578fb4.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-2aebfe3bcd55a7340a14.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-4b53a82b267518226f7d.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRealSense_Snap::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRealSense_Snap-Debug-1412229f84ee0622c98e.json",
+					"name" : "appRealSense_Snap",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRealSense_Snap_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRealSense_Snap_autogen-Debug-015e0ee21397717ded28.json",
+					"name" : "appRealSense_Snap_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRealSense_Snap_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRealSense_Snap_autogen_timestamp_deps-Debug-f75391c45ae61772f2c1.json",
+					"name" : "appRealSense_Snap_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRealSense_Snap_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRealSense_Snap_copy_qml-Debug-d048d5dbdb65f3e23fe7.json",
+					"name" : "appRealSense_Snap_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRealSense_Snap_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRealSense_Snap_copy_res-Debug-e2849ead037c46dffa63.json",
+					"name" : "appRealSense_Snap_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRealSense_Snap_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRealSense_Snap_qmlimportscan-Debug-7341416ba91925c7e151.json",
+					"name" : "appRealSense_Snap_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRealSense_Snap_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRealSense_Snap_qmllint-Debug-f8768d7c2f0ad03474fc.json",
+					"name" : "appRealSense_Snap_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRealSense_Snap_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRealSense_Snap_qmllint_json-Debug-742f76e44b0da093eae4.json",
+					"name" : "appRealSense_Snap_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRealSense_Snap_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRealSense_Snap_qmllint_module-Debug-cfb6f23e299e899869a2.json",
+					"name" : "appRealSense_Snap_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRealSense_Snap_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRealSense_Snap_qmltyperegistration-Debug-c860e8fa89bb7d98f0a0.json",
+					"name" : "appRealSense_Snap_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "clean_qml_context_properties::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-clean_qml_context_properties-Debug-bc1be8c6a933bb712ad5.json",
+					"name" : "clean_qml_context_properties",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dump_qml_context_properties::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dump_qml_context_properties-Debug-ede65838e57480661dc0.json",
+					"name" : "dump_qml_context_properties",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_qmlls_build_ini_file-Debug-f5fcb04742a50bee5acd.json",
+					"name" : "generate_qmlls_build_ini_file",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appRealSense_Snap_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appRealSense_Snap_aotstats_target-Debug-13cbe058b016adcba190.json",
+					"name" : "module_appRealSense_Snap_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug",
+		"source" : "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

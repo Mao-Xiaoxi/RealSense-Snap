@@ -11,4 +11,6 @@
 /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qmake_RealSense_Snap.qrc
 --resource
 /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/appRealSense_Snap_raw_qml_0.qrc
-/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/Main.qml
+--resource
+/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/appRealSense_Snap_raw_qml_0_extra_qmldirs.qrc
+/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/qml/Main.qml

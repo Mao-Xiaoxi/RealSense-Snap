@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  ".rcc/qmlcache/appRealSense_Snap_Main_qml.cpp"
-  ".rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.aotstats"
+  ".rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp"
+  ".rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.aotstats"
   ".rcc/qmlcache/module_appRealSense_Snap.aotstats"
   "CMakeFiles/module_appRealSense_Snap_aotstats_target"
 )

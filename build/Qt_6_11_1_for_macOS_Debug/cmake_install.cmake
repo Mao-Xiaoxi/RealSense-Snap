@@ -42,7 +42,10 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap")
     execute_process(COMMAND /usr/bin/install_name_tool
+      -delete_rpath "/Users/maoxiaoxi/Documents/Packages/librealsense/build/Release"
       -delete_rpath "/Users/maoxiaoxi/Qt/6.11.1/macos/lib"
+      -delete_rpath "/usr/local/lib"
+      -add_rpath "@executable_path/../lib"
       -add_rpath "@executable_path/../Frameworks"
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./appRealSense_Snap.app/Contents/MacOS/appRealSense_Snap")
   endif()

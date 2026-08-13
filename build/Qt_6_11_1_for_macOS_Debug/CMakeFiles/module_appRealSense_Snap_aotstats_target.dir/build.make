@@ -68,26 +68,27 @@ include CMakeFiles/module_appRealSense_Snap_aotstats_target.dir/progress.make
 
 CMakeFiles/module_appRealSense_Snap_aotstats_target: .rcc/qmlcache/module_appRealSense_Snap.aotstats
 
-.rcc/qmlcache/module_appRealSense_Snap.aotstats: .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.aotstats
+.rcc/qmlcache/module_appRealSense_Snap.aotstats: .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.aotstats
 .rcc/qmlcache/module_appRealSense_Snap.aotstats: .rcc/qmlcache/module_appRealSense_Snap.aotstatslist
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/module_appRealSense_Snap.aotstats"
 	/Users/maoxiaoxi/Qt/6.11.1/macos/libexec/qmlaotstats aggregate /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/module_appRealSense_Snap.aotstatslist /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/module_appRealSense_Snap.aotstats
 
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp: /Users/maoxiaoxi/Qt/6.11.1/macos/libexec/qmlcachegen
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/Main.qml
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp: .qt/rcc/qmake_RealSense_Snap.qrc
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp: .qt/rcc/appRealSense_Snap_raw_qml_0.qrc
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp: RealSense_Snap/appRealSense_Snap.qmltypes
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp: RealSense_Snap/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp, .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.aotstats"
-	/Users/maoxiaoxi/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E make_directory /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache
-	/Users/maoxiaoxi/Qt/6.11.1/macos/libexec/qmlcachegen --bare --resource-path /qt/qml/RealSense_Snap/Main.qml -I /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug -I /Users/maoxiaoxi/Qt/6.11.1/macos/qml -i /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/RealSense_Snap/qmldir --resource /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qmake_RealSense_Snap.qrc --resource /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/appRealSense_Snap_raw_qml_0.qrc --dump-aot-stats "--module-id=RealSense_Snap(appRealSense_Snap)" -o /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/Main.qml
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: /Users/maoxiaoxi/Qt/6.11.1/macos/libexec/qmlcachegen
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/qml/Main.qml
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: .qt/rcc/qmake_RealSense_Snap.qrc
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: .qt/rcc/appRealSense_Snap_raw_qml_0.qrc
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: .qt/rcc/appRealSense_Snap_raw_qml_0_extra_qmldirs.qrc
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: RealSense_Snap/appRealSense_Snap.qmltypes
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp: RealSense_Snap/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp, .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.aotstats"
+	/Users/maoxiaoxi/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E make_directory /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml
+	/Users/maoxiaoxi/Qt/6.11.1/macos/libexec/qmlcachegen --bare --resource-path /qt/qml/RealSense_Snap/qml/Main.qml -I /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug -I /Users/maoxiaoxi/Qt/6.11.1/macos/qml -i /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/RealSense_Snap/qmldir --resource /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/qmake_RealSense_Snap.qrc --resource /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/appRealSense_Snap_raw_qml_0.qrc --resource /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.qt/rcc/appRealSense_Snap_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats "--module-id=RealSense_Snap(appRealSense_Snap)" -o /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/qml/Main.qml
 
-.rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.aotstats: .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.aotstats
+.rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.aotstats: .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.aotstats
 
-module_appRealSense_Snap_aotstats_target: .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp
-module_appRealSense_Snap_aotstats_target: .rcc/qmlcache/appRealSense_Snap_Main_qml.cpp.aotstats
+module_appRealSense_Snap_aotstats_target: .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp
+module_appRealSense_Snap_aotstats_target: .rcc/qmlcache/appRealSense_Snap_qml/Main_qml.cpp.aotstats
 module_appRealSense_Snap_aotstats_target: .rcc/qmlcache/module_appRealSense_Snap.aotstats
 module_appRealSense_Snap_aotstats_target: CMakeFiles/module_appRealSense_Snap_aotstats_target
 module_appRealSense_Snap_aotstats_target: CMakeFiles/module_appRealSense_Snap_aotstats_target.dir/build.make

@@ -1,0 +1,49 @@
+{
+    "classes": [
+        {
+            "className": "CameraWorker",
+            "lineNumber": 11,
+            "object": true,
+            "qualifiedClassName": "CameraWorker",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "image",
+                            "type": "QImage"
+                        }
+                    ],
+                    "index": 0,
+                    "lineNumber": 22,
+                    "name": "frameReady",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "index": 1,
+                    "lineNumber": 18,
+                    "name": "start",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "lineNumber": 19,
+                    "name": "stop",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "CameraWorker.h",
+    "outputRevision": 69
+}
