@@ -808,6 +808,8 @@ appRealSense_Snap_autogen/timestamp: \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/moc_predefs.h \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/CameraWorker.cpp \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/CameraWorker.h \
+	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/cameracontroller.cpp \
+	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/cameracontroller.h \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/videoitem.cpp \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/videoitem.h \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/main.cpp \

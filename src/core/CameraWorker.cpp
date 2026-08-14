@@ -1,7 +1,6 @@
 #include "CameraWorker.h"
 #include <QDebug>
 #include <QThread>
-#include <chrono>
 #include <opencv2/opencv.hpp>
 
 CameraWorker::CameraWorker(QObject *parent)
@@ -32,6 +31,7 @@ void CameraWorker::start(){
         cfg.enable_stream(RS2_STREAM_COLOR);
 
         pipe.start(cfg);
+        m_pipelineStarted = true;
 
         m_timer = new QTimer(this);
         connect(m_timer, &QTimer::timeout, this, &CameraWorker::processFrame);
@@ -42,22 +42,12 @@ void CameraWorker::start(){
         emit cameraError(QString::fromUtf8(e.what()));
         // 发生异常时，最好通知主线程发生错误（可以加一个 errorOccurred 信号）
         m_running = false;
-        try{
-            pipe.stop();
-        } catch(const rs2::error &e){
-            qCritical()<<"RealSense stop fail";
-            emit cameraError(QString::fromUtf8(e.what()));
-        }
+        m_pipelineStarted = false;
     } catch (const std::exception &e) {
         qCritical() << "Standard exception:" << e.what();
         emit cameraError(QString::fromUtf8(e.what()));
         m_running = false;
-        try{
-            pipe.stop();
-        } catch(const rs2::error &e){
-            qCritical()<<"RealSense stop fail";
-            emit cameraError(QString::fromUtf8(e.what()));
-        }
+        m_pipelineStarted = false;
     }
 }
 
@@ -65,6 +55,7 @@ void CameraWorker::stop(){
     if(!m_running.exchange(false)){
         return;
     }
+
     qDebug()<<"CameraWorker stop requested";
 
     if(m_timer){
@@ -72,11 +63,18 @@ void CameraWorker::stop(){
         m_timer->deleteLater();
         m_timer=nullptr;
     }
+
+    if (!m_pipelineStarted) {
+        return;
+    }
+
     try {
         pipe.stop();
     } catch (const std::exception &e) {
         qWarning() << "Pipeline stop failed:" << e.what();
     }
+
+    m_pipelineStarted = false;
 }
 
 /**
@@ -234,64 +232,4 @@ void CameraWorker::setAlpha(float a){
 
     emit alphaChanged();    // 通知QML属性变化
 }
-
-QVariantList CameraController::cameras() const
-{
-    return m_cameras;
-}
-
-QString CameraController::cameraStatus() const
-{
-    return m_cameraStatus;
-}
-
-QString CameraController::selectedCameraSerial() const
-{
-    return m_selectedCameraSerial;
-}
-
-void CameraController::refreshDevices()
-{
-    emit refreshDevicesRequested();
-}
-
-void CameraController::setSelectedCameraSerial(QString serial)
-{
-    if (serial == m_selectedCameraSerial)
-        return;
-
-    m_selectedCameraSerial = serial;
-    emit selectedCameraSerialChanged();
-    emit cameraSelected(serial);
-}
-
-void CameraController::setDevices(QVariantList devices)
-{
-    m_cameras = devices;
-    emit camerasChanged();
-
-    m_cameraStatus = QString("检测到 %1 个设备").arg(devices.size());
-    emit cameraStatusChanged();
-
-}
-
-void CameraController::setCameraStatus(QString message)
-{
-    if (message == m_cameraStatus)
-        return;
-
-    m_cameraStatus = message;
-    emit cameraStatusChanged();
-}
-
-void CameraController::setSelectedCameraSerialFromWorker(QString serial)
-{
-    if (serial == m_selectedCameraSerial)
-        return;
-
-    m_selectedCameraSerial = serial;
-    emit selectedCameraSerialChanged();
-}
-
-
 

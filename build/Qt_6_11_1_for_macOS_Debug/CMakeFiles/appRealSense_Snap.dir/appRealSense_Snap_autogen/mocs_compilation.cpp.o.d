@@ -1168,6 +1168,8 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtmochelpers.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtmocconstants.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/q20algorithm.h \
+  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/PRMOGMWJPH/moc_cameracontroller.cpp \
+  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/PRMOGMWJPH/../../../../src/core/cameracontroller.h \
   /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/PRMOGMWJPH/moc_videoitem.cpp \
   /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/PRMOGMWJPH/../../../../src/core/videoitem.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQuick.framework/Headers/QQuickPaintedItem \

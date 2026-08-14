@@ -24,6 +24,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.o.d"
   "CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o"
   "CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o.d"
+  "CMakeFiles/appRealSense_Snap.dir/src/core/cameracontroller.cpp.o"
+  "CMakeFiles/appRealSense_Snap.dir/src/core/cameracontroller.cpp.o.d"
   "CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o"
   "CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o.d"
   "CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o"

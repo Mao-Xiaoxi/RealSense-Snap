@@ -2,11 +2,13 @@
 #include <QQmlApplicationEngine>
 #include <QThread>
 #include <QQmlContext>
-#include "core/CameraWorker.h"
-#include "core/videoitem.h"
 
 #include <librealsense2/rs.hpp>
 #include <opencv2/opencv.hpp>
+
+#include "core/CameraWorker.h"
+#include "core/videoitem.h"
+#include "cameracontroller.h"
 
 
 int main(int argc, char *argv[])

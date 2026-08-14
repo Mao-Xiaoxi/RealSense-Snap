@@ -109,10 +109,16 @@
                         "name": "QObject"
                     }
                 ]
-            },
+            }
+        ],
+        "inputFile": "CameraWorker.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
             {
                 "className": "CameraController",
-                "lineNumber": 58,
+                "lineNumber": 15,
                 "object": true,
                 "properties": [
                     {
@@ -120,7 +126,7 @@
                         "designable": true,
                         "final": false,
                         "index": 0,
-                        "lineNumber": 60,
+                        "lineNumber": 17,
                         "name": "alpha",
                         "notify": "alphaChanged",
                         "override": false,
@@ -138,7 +144,7 @@
                         "designable": true,
                         "final": false,
                         "index": 1,
-                        "lineNumber": 61,
+                        "lineNumber": 18,
                         "name": "cameras",
                         "notify": "camerasChanged",
                         "override": false,
@@ -155,7 +161,7 @@
                         "designable": true,
                         "final": false,
                         "index": 2,
-                        "lineNumber": 62,
+                        "lineNumber": 19,
                         "name": "cameraStatus",
                         "notify": "cameraStatusChanged",
                         "override": false,
@@ -172,7 +178,7 @@
                         "designable": true,
                         "final": false,
                         "index": 3,
-                        "lineNumber": 63,
+                        "lineNumber": 20,
                         "name": "selectedCameraSerial",
                         "notify": "selectedCameraSerialChanged",
                         "override": false,
@@ -191,7 +197,7 @@
                     {
                         "access": "public",
                         "index": 0,
-                        "lineNumber": 88,
+                        "lineNumber": 45,
                         "name": "alphaChanged",
                         "returnType": "void"
                     },
@@ -204,35 +210,35 @@
                             }
                         ],
                         "index": 1,
-                        "lineNumber": 89,
+                        "lineNumber": 46,
                         "name": "alphaRequested",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 2,
-                        "lineNumber": 92,
+                        "lineNumber": 49,
                         "name": "camerasChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 3,
-                        "lineNumber": 93,
+                        "lineNumber": 50,
                         "name": "cameraStatusChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 4,
-                        "lineNumber": 94,
+                        "lineNumber": 51,
                         "name": "selectedCameraSerialChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 5,
-                        "lineNumber": 97,
+                        "lineNumber": 54,
                         "name": "refreshDevicesRequested",
                         "returnType": "void"
                     },
@@ -245,7 +251,7 @@
                             }
                         ],
                         "index": 6,
-                        "lineNumber": 98,
+                        "lineNumber": 55,
                         "name": "cameraSelected",
                         "returnType": "void"
                     }
@@ -260,14 +266,14 @@
                             }
                         ],
                         "index": 7,
-                        "lineNumber": 72,
+                        "lineNumber": 29,
                         "name": "setAlpha",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 8,
-                        "lineNumber": 81,
+                        "lineNumber": 38,
                         "name": "refreshDevices",
                         "returnType": "void"
                     },
@@ -280,7 +286,7 @@
                             }
                         ],
                         "index": 9,
-                        "lineNumber": 82,
+                        "lineNumber": 39,
                         "name": "setSelectedCameraSerial",
                         "returnType": "void"
                     },
@@ -293,7 +299,7 @@
                             }
                         ],
                         "index": 10,
-                        "lineNumber": 83,
+                        "lineNumber": 40,
                         "name": "setDevices",
                         "returnType": "void"
                     },
@@ -306,7 +312,7 @@
                             }
                         ],
                         "index": 11,
-                        "lineNumber": 84,
+                        "lineNumber": 41,
                         "name": "setCameraStatus",
                         "returnType": "void"
                     },
@@ -319,7 +325,7 @@
                             }
                         ],
                         "index": 12,
-                        "lineNumber": 85,
+                        "lineNumber": 42,
                         "name": "setSelectedCameraSerialFromWorker",
                         "returnType": "void"
                     }
@@ -332,7 +338,7 @@
                 ]
             }
         ],
-        "inputFile": "CameraWorker.h",
+        "inputFile": "cameracontroller.h",
         "outputRevision": 69
     },
     {

@@ -600,6 +600,30 @@ src/core/CameraWorker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.s
 .PHONY : src/core/CameraWorker.cpp.s
 
+src/core/cameracontroller.o: src/core/cameracontroller.cpp.o
+.PHONY : src/core/cameracontroller.o
+
+# target to build an object file
+src/core/cameracontroller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/cameracontroller.cpp.o
+.PHONY : src/core/cameracontroller.cpp.o
+
+src/core/cameracontroller.i: src/core/cameracontroller.cpp.i
+.PHONY : src/core/cameracontroller.i
+
+# target to preprocess a source file
+src/core/cameracontroller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/cameracontroller.cpp.i
+.PHONY : src/core/cameracontroller.cpp.i
+
+src/core/cameracontroller.s: src/core/cameracontroller.cpp.s
+.PHONY : src/core/cameracontroller.s
+
+# target to generate assembly for a file
+src/core/cameracontroller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/cameracontroller.cpp.s
+.PHONY : src/core/cameracontroller.cpp.s
+
 src/core/videoitem.o: src/core/videoitem.cpp.o
 .PHONY : src/core/videoitem.o
 
@@ -703,6 +727,9 @@ help:
 	@echo "... src/core/CameraWorker.o"
 	@echo "... src/core/CameraWorker.i"
 	@echo "... src/core/CameraWorker.s"
+	@echo "... src/core/cameracontroller.o"
+	@echo "... src/core/cameracontroller.i"
+	@echo "... src/core/cameracontroller.s"
 	@echo "... src/core/videoitem.o"
 	@echo "... src/core/videoitem.i"
 	@echo "... src/core/videoitem.s"

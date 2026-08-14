@@ -1188,6 +1188,12 @@
 			null
 		],
 		[
+			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/cameracontroller.h",
+			"MU",
+			"PRMOGMWJPH/moc_cameracontroller.cpp",
+			null
+		],
+		[
 			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/videoitem.h",
 			"MU",
 			"PRMOGMWJPH/moc_videoitem.cpp",
@@ -1285,6 +1291,11 @@
 	[
 		[
 			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/CameraWorker.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/cameracontroller.cpp",
 			"MU",
 			null
 		],

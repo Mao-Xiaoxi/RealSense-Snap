@@ -97,13 +97,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 73,
+				"line" : 76,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 67,
+				"line" : 70,
 				"parent" : 0
 			},
 			{
@@ -400,7 +400,7 @@
 			{
 				"command" : 23,
 				"file" : 1,
-				"line" : 53,
+				"line" : 54,
 				"parent" : 0
 			},
 			{
@@ -538,7 +538,7 @@
 			{
 				"command" : 25,
 				"file" : 1,
-				"line" : 60,
+				"line" : 61,
 				"parent" : 0
 			},
 			{
@@ -724,22 +724,16 @@
 				5,
 				7,
 				9,
-				10,
 				11,
 				12,
-				13
+				13,
+				14,
+				15
 			]
 		}
 	],
 	"dependencies" : 
 	[
-		{
-			"backtrace" : 0,
-			"id" : "appRealSense_Snap_autogen::@6890427a1f51a3e7e1df"
-		},
-		{
-			"id" : "appRealSense_Snap_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
 		{
 			"backtrace" : 42,
 			"id" : "appRealSense_Snap_copy_qml::@6890427a1f51a3e7e1df"
@@ -755,6 +749,13 @@
 		{
 			"backtrace" : 53,
 			"id" : "appRealSense_Snap_qmlimportscan::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "appRealSense_Snap_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "appRealSense_Snap_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appRealSense_Snap::@6890427a1f51a3e7e1df",
@@ -957,20 +958,20 @@
 				1,
 				2,
 				3,
-				9,
-				10,
 				11,
 				12,
+				13,
 				14,
 				16,
-				17,
+				18,
 				19,
-				30,
-				31,
+				21,
 				32,
 				33,
 				34,
-				35
+				35,
+				36,
+				37
 			]
 		},
 		{
@@ -978,7 +979,8 @@
 			"sourceIndexes" : 
 			[
 				4,
-				6
+				6,
+				8
 			]
 		},
 		{
@@ -987,24 +989,23 @@
 			[
 				5,
 				7,
-				8,
-				13
+				9,
+				10,
+				15
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				15,
-				18
+				17,
+				20
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				20,
-				21,
 				22,
 				23,
 				24,
@@ -1012,7 +1013,9 @@
 				26,
 				27,
 				28,
-				29
+				29,
+				30,
+				31
 			]
 		}
 	],
@@ -1065,6 +1068,17 @@
 			"backtrace" : 68,
 			"compileGroupIndex" : 0,
 			"path" : "src/core/CameraWorker.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 68,
+			"path" : "src/core/cameracontroller.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 68,
+			"compileGroupIndex" : 0,
+			"path" : "src/core/cameracontroller.cpp",
 			"sourceGroupIndex" : 2
 		},
 		{
