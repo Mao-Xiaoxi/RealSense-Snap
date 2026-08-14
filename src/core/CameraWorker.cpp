@@ -25,6 +25,9 @@ void CameraWorker::start(){
 
     try{
         rs2::config cfg;
+        if(!m_selectedSerial.isEmpty()){
+            cfg.enable_device(m_selectedSerial.toStdString());
+        }
         cfg.enable_stream(RS2_STREAM_DEPTH);
         cfg.enable_stream(RS2_STREAM_COLOR);
 
@@ -36,13 +39,25 @@ void CameraWorker::start(){
 
     }catch (const rs2::error &e) {
         qCritical() << "RealSense error:" << e.what();
+        emit cameraError(QString::fromUtf8(e.what()));
         // 发生异常时，最好通知主线程发生错误（可以加一个 errorOccurred 信号）
         m_running = false;
-        pipe.stop();
+        try{
+            pipe.stop();
+        } catch(const rs2::error &e){
+            qCritical()<<"RealSense stop fail";
+            emit cameraError(QString::fromUtf8(e.what()));
+        }
     } catch (const std::exception &e) {
         qCritical() << "Standard exception:" << e.what();
+        emit cameraError(QString::fromUtf8(e.what()));
         m_running = false;
-        pipe.stop();
+        try{
+            pipe.stop();
+        } catch(const rs2::error &e){
+            qCritical()<<"RealSense stop fail";
+            emit cameraError(QString::fromUtf8(e.what()));
+        }
     }
 }
 
@@ -64,6 +79,78 @@ void CameraWorker::stop(){
     }
 }
 
+/**
+ * @brief CameraWorker::refreshDevices
+ */
+void CameraWorker::refreshDevices() try{
+    rs2::context ctx;
+    auto devices = ctx.query_devices();
+    QVariantList list;
+
+    for(const auto &device : devices){  // 使用按值遍历会造成资源浪费，并且IDE会警告
+        // bool hasColor = false;
+        // bool hasDepth = false;
+
+        // for(const auto &sensor : device.query_sensors()){
+        //     for(const auto &profile : sensor.get_stream_profiles()){
+        //         if(profile.stream_type()==RS2_STREAM_COLOR)
+        //             hasColor = true;
+        //         if(profile.stream_type()==RS2_STREAM_DEPTH)
+        //             hasDepth = true;
+        //     }
+        // }
+        bool hasColor = true;
+        bool hasDepth = true;
+
+        QVariantMap item;
+        item["name"] = device.supports(RS2_CAMERA_INFO_NAME)
+                           ? QString::fromStdString(device.get_info(RS2_CAMERA_INFO_NAME))
+                           : "Unknown RealSense";
+        item["serial"] = device.supports(RS2_CAMERA_INFO_SERIAL_NUMBER)
+                             ? QString::fromStdString(device.get_info(RS2_CAMERA_INFO_SERIAL_NUMBER))
+                             : "";
+
+        // item["valid"] = hasColor && hasDepth;
+        // if (!hasColor)
+        //     item["reason"] = "Missing color stream";
+        // else if (!hasDepth)
+        //     item["reason"] = "Missing depth stream";
+        // else
+        //     item["reason"] = "";
+
+        item["valid"] = !item["serial"].toString().isEmpty();
+        item["reason"] = item["valid"].toBool() ? "" : "Missing serial number";
+
+        list.append(item);
+    }
+
+    emit deviceReady(list);
+} catch(const rs2::error &e) {
+    emit cameraError(QString::fromUtf8(e.what()));
+}
+
+void CameraWorker::selectCamera(QString serial){
+    if(serial.isEmpty()){
+        emit cameraError("Invalid camera serial");
+        return;
+    }
+
+    if(serial == m_selectedSerial && m_running.load()){
+        return;
+    }
+
+    bool wasRunning = m_running.load();
+
+    if(wasRunning)
+        stop();
+    m_selectedSerial = serial;
+    emit selectedCameraChanged(serial);
+    start();
+}
+
+/**
+ * @brief CameraWorker::processFrame
+ */
 void CameraWorker::processFrame() try
 {
     if (!m_running.load(std::memory_order_acquire)) {
@@ -71,7 +158,10 @@ void CameraWorker::processFrame() try
     }
 
     rs2::frameset frames;
-    pipe.try_wait_for_frames(&frames,5000);
+    if(!pipe.try_wait_for_frames(&frames,5000)){
+        qWarning()<<"No frame received";
+        return;
+    }
     if(false){
         frames=align_to_depth.process(frames);
     }else{
@@ -120,8 +210,13 @@ void CameraWorker::processFrame() try
     if (m_timer) {
         m_timer->stop();
     }
+    // try{
+    //     pipe.stop();
+    // } catch(const rs2::error &e){
+    //     qCritical()<<"RealSense stop fail";
+    //     emit cameraError(QString::fromUtf8(e.what()));
+    // }
 }
-
 
 float CameraWorker::alpha() const
 {
@@ -140,7 +235,63 @@ void CameraWorker::setAlpha(float a){
     emit alphaChanged();    // 通知QML属性变化
 }
 
+QVariantList CameraController::cameras() const
+{
+    return m_cameras;
+}
 
+QString CameraController::cameraStatus() const
+{
+    return m_cameraStatus;
+}
+
+QString CameraController::selectedCameraSerial() const
+{
+    return m_selectedCameraSerial;
+}
+
+void CameraController::refreshDevices()
+{
+    emit refreshDevicesRequested();
+}
+
+void CameraController::setSelectedCameraSerial(QString serial)
+{
+    if (serial == m_selectedCameraSerial)
+        return;
+
+    m_selectedCameraSerial = serial;
+    emit selectedCameraSerialChanged();
+    emit cameraSelected(serial);
+}
+
+void CameraController::setDevices(QVariantList devices)
+{
+    m_cameras = devices;
+    emit camerasChanged();
+
+    m_cameraStatus = QString("检测到 %1 个设备").arg(devices.size());
+    emit cameraStatusChanged();
+
+}
+
+void CameraController::setCameraStatus(QString message)
+{
+    if (message == m_cameraStatus)
+        return;
+
+    m_cameraStatus = message;
+    emit cameraStatusChanged();
+}
+
+void CameraController::setSelectedCameraSerialFromWorker(QString serial)
+{
+    if (serial == m_selectedCameraSerial)
+        return;
+
+    m_selectedCameraSerial = serial;
+    emit selectedCameraSerialChanged();
+}
 
 
 

@@ -1050,6 +1050,14 @@ CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/usr/lib/clang/21/include/sanitizer/tsan_interface.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QTimer \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtimer.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QVariantList \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvariantlist.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QList \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QVariant \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QVariantMap \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvariantmap.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QMap \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QString \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rs.hpp \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rs.h \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rsutil.h \
@@ -1215,7 +1223,6 @@ CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o: \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQuick.framework/Headers/qtquick-config.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQuick.framework/Headers/qtquickexports.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmlcomponent.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QList \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qproperty.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qpropertyprivate.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/source_location \

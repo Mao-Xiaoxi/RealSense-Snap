@@ -39,9 +39,31 @@ int main(int argc, char *argv[])
                      &worker, &CameraWorker::setAlpha,
                      Qt::QueuedConnection);
 
+    // controller与worker的对接
+    QObject::connect(&controller, &CameraController::refreshDevicesRequested,
+                     &worker, &CameraWorker::refreshDevices,
+                     Qt::QueuedConnection);
+    QObject::connect(&controller,&CameraController::cameraSelected,
+                     &worker, &CameraWorker::selectCamera,
+                     Qt::QueuedConnection);
+    QObject::connect(&worker,&CameraWorker::deviceReady,
+                     &controller,&CameraController::setDevices,
+                     Qt::QueuedConnection);
+    QObject::connect(&worker,&CameraWorker::cameraError,
+                     &controller,&CameraController::setCameraStatus,
+                     Qt::QueuedConnection);
+    QObject::connect(&worker,&CameraWorker::selectedCameraChanged,
+                     &controller,&CameraController::setSelectedCameraSerialFromWorker,
+                     Qt::QueuedConnection);
+
     // 启动线程并开始工作
     workerThread.start();
-    QMetaObject::invokeMethod(&worker,&CameraWorker::start,Qt::QueuedConnection);
+
+    QMetaObject::invokeMethod(
+        &worker,
+        &CameraWorker::refreshDevices,
+        Qt::QueuedConnection
+    );
 
     //退出清理
     QObject::connect(&app, &QCoreApplication::aboutToQuit, [&]() {

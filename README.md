@@ -19,26 +19,18 @@ RealSense_Snap/                           # 项目根目录
 ├── src/                          
 │   ├── main.cpp                          # 程序入口
 │   ├── core/                             # 核心功能模块（RealSense驱动、图像处理）
-│   │   └── FrameProcessor.cpp
+│   │   ├── CameraWorker.h
+│   │   ├── FrameProcessor.cpp
+│   │   ├── videoitem.h
+│   │   └── videoitem.cpp
 │   ├── models/                           # 数据模型（结构体、枚举、数据传输对象）
-│   │   ├── FrameData.h
-│   │   └── Settings.h
 │   └── utils/                            # 工具类（日志、数学、文件操作）
-│       ├── Logger.h
-│       ├── Logger.cpp
-│       └── MathUtils.cpp
 │
 ├── include/                          
 │   └── app_export.h                      # 用于 DLL/动态库导出的宏定义
 │
 ├── qml/                                  # QML 前端界面文件（全部放在此处）
-│   ├── Main.qml                          # 主界面
-│   ├── pages/                            # 各页面模块
-│   │   ├── HomePage.qml
-│   │   └── SettingsPage.qml
-│   └── components/                
-│       ├── CustomButton.qml
-│       └── SliderWithLabel.qml
+│   └── Main.qml                          # 主界面
 │
 ├── resources/                     
 │   ├── images/
@@ -52,7 +44,7 @@ RealSense_Snap/                           # 项目根目录
 │   └── CMakeLists.txt
 │
 └── build/                          
-    ├── Debug/
+    ├── Qt_6_11_1_for_macOS_Debug/
     └── Release/
 ```
 

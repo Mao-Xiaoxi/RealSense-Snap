@@ -969,6 +969,29 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qbasictimer.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qeventloop.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QVariantList \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvariantlist.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QList \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QVariant \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvariant.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdebug.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtextstream.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcontiguouscache.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qsharedpointer.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qshareddata.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/set \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/unordered_set \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmap.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qshareddata_impl.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qset.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qhash.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvarlengtharray.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qalloc.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QVariantMap \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvariantmap.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QMap \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QString \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rs.hpp \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rs.h \
   /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rsutil.h \
@@ -1086,7 +1109,6 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /usr/local/include/opencv4/opencv2/flann/saving.h \
   /usr/local/include/opencv4/opencv2/flann/nn_index.h \
   /usr/local/include/opencv4/opencv2/flann/result_set.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/set \
   /usr/local/include/opencv4/opencv2/flann/all_indices.h \
   /usr/local/include/opencv4/opencv2/flann/kdtree_index.h \
   /usr/local/include/opencv4/opencv2/flann/dynamic_bitset.h \
@@ -1164,20 +1186,6 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmlprivate.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qjsprimitivevalue.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qjsnumbercoercion.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvariant.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdebug.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtextstream.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcontiguouscache.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qsharedpointer.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qshareddata.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/unordered_set \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmap.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qshareddata_impl.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qset.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qhash.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvarlengtharray.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qalloc.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qjsvalue.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmllist.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmlparserstatus.h \
@@ -1196,7 +1204,6 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Users/maoxiaoxi/Qt/6.11.1/macos/include/QtQmlIntegration/qqmlintegration.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmlcomponent.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmlerror.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QList \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qproperty.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qpropertyprivate.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/source_location \

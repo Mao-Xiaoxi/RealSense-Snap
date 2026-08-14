@@ -2,14 +2,14 @@
     "classes": [
         {
             "className": "CameraWorker",
-            "lineNumber": 14,
+            "lineNumber": 16,
             "object": true,
             "qualifiedClassName": "CameraWorker",
             "signals": [
                 {
                     "access": "public",
                     "index": 0,
-                    "lineNumber": 24,
+                    "lineNumber": 26,
                     "name": "alphaChanged",
                     "returnType": "void"
                 },
@@ -22,24 +22,83 @@
                         }
                     ],
                     "index": 1,
-                    "lineNumber": 31,
+                    "lineNumber": 36,
                     "name": "frameReady",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "devices",
+                            "type": "QVariantList"
+                        }
+                    ],
+                    "index": 2,
+                    "lineNumber": 38,
+                    "name": "deviceReady",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 3,
+                    "lineNumber": 39,
+                    "name": "cameraError",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "serial",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 4,
+                    "lineNumber": 40,
+                    "name": "selectedCameraChanged",
                     "returnType": "void"
                 }
             ],
             "slots": [
                 {
                     "access": "public",
-                    "index": 2,
-                    "lineNumber": 27,
+                    "index": 5,
+                    "lineNumber": 29,
                     "name": "start",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 3,
-                    "lineNumber": 28,
+                    "index": 6,
+                    "lineNumber": 30,
                     "name": "stop",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 7,
+                    "lineNumber": 32,
+                    "name": "refreshDevices",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "serial",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 8,
+                    "lineNumber": 33,
+                    "name": "selectCamera",
                     "returnType": "void"
                 }
             ],
@@ -52,7 +111,7 @@
         },
         {
             "className": "CameraController",
-            "lineNumber": 47,
+            "lineNumber": 58,
             "object": true,
             "properties": [
                 {
@@ -60,7 +119,7 @@
                     "designable": true,
                     "final": false,
                     "index": 0,
-                    "lineNumber": 49,
+                    "lineNumber": 60,
                     "name": "alpha",
                     "notify": "alphaChanged",
                     "override": false,
@@ -72,6 +131,58 @@
                     "user": false,
                     "virtual": false,
                     "write": "setAlpha"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "lineNumber": 61,
+                    "name": "cameras",
+                    "notify": "camerasChanged",
+                    "override": false,
+                    "read": "cameras",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QVariantList",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "lineNumber": 62,
+                    "name": "cameraStatus",
+                    "notify": "cameraStatusChanged",
+                    "override": false,
+                    "read": "cameraStatus",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "virtual": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "lineNumber": 63,
+                    "name": "selectedCameraSerial",
+                    "notify": "selectedCameraSerialChanged",
+                    "override": false,
+                    "read": "selectedCameraSerial",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "virtual": false,
+                    "write": "setSelectedCameraSerial"
                 }
             ],
             "qualifiedClassName": "CameraController",
@@ -79,7 +190,7 @@
                 {
                     "access": "public",
                     "index": 0,
-                    "lineNumber": 63,
+                    "lineNumber": 88,
                     "name": "alphaChanged",
                     "returnType": "void"
                 },
@@ -92,8 +203,49 @@
                         }
                     ],
                     "index": 1,
-                    "lineNumber": 64,
+                    "lineNumber": 89,
                     "name": "alphaRequested",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "lineNumber": 92,
+                    "name": "camerasChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 3,
+                    "lineNumber": 93,
+                    "name": "cameraStatusChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 4,
+                    "lineNumber": 94,
+                    "name": "selectedCameraSerialChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 5,
+                    "lineNumber": 97,
+                    "name": "refreshDevicesRequested",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "serial",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 6,
+                    "lineNumber": 98,
+                    "name": "cameraSelected",
                     "returnType": "void"
                 }
             ],
@@ -106,9 +258,68 @@
                             "type": "float"
                         }
                     ],
-                    "index": 2,
-                    "lineNumber": 54,
+                    "index": 7,
+                    "lineNumber": 72,
                     "name": "setAlpha",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 8,
+                    "lineNumber": 81,
+                    "name": "refreshDevices",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "serial",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 9,
+                    "lineNumber": 82,
+                    "name": "setSelectedCameraSerial",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "devices",
+                            "type": "QVariantList"
+                        }
+                    ],
+                    "index": 10,
+                    "lineNumber": 83,
+                    "name": "setDevices",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 11,
+                    "lineNumber": 84,
+                    "name": "setCameraStatus",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "serial",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 12,
+                    "lineNumber": 85,
+                    "name": "setSelectedCameraSerialFromWorker",
                     "returnType": "void"
                 }
             ],

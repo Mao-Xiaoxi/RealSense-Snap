@@ -813,12 +813,17 @@ appRealSense_Snap_autogen/timestamp: \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/main.cpp \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/include/QtQmlIntegration/qqmlintegration.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QList \
+	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QMap \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QMutex \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QObject \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QRect \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QSize \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QSizeF \
+	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QString \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QTimer \
+	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QVariant \
+	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QVariantList \
+	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QVariantMap \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q20bit.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
@@ -966,6 +971,8 @@ appRealSense_Snap_autogen/timestamp: \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qurl.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
+	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qvariantlist.h \
+	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qvariantmap.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qversionnumber.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
