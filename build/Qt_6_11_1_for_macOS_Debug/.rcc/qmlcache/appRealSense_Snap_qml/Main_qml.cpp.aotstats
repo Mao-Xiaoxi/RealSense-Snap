@@ -8,7 +8,7 @@
                         {
                             "codegenResult": 0,
                             "column": 30,
-                            "durationMicroseconds": 0,
+                            "durationMicroseconds": 1000,
                             "functionName": "lightMode",
                             "line": 17,
                             "message": ""

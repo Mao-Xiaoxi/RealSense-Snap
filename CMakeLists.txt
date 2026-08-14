@@ -7,17 +7,32 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_AUTOMOC ON)   # Qt 标准设置，通常 qt_standard_project_setup 会默认开启
 
-set(REALSENSE_ROOT "/Users/maoxiaoxi/Documents/Packages/librealsense")
-set(REALSENSE_INCLUDE_DIR "${REALSENSE_ROOT}/include")
-set(REALSENSE_BUILD_DIR "${REALSENSE_ROOT}/build/Release")
+include(GNUInstallDirs)
+
+set(THIRD_PARTY_ROOT "$ENV{HOME}/Documents/Packages" CACHE PATH "Third-party package root")
+set(REALSENSE_ROOT "${THIRD_PARTY_ROOT}/librealsense" CACHE PATH "librealsense source/install root")
+set(REALSENSE_INCLUDE_DIR "${REALSENSE_ROOT}/include" CACHE PATH "librealsense include directory")
+set(REALSENSE_RUNTIME_DIR "${REALSENSE_ROOT}/build/Release" CACHE PATH "librealsense runtime library directory")
+
+set(_default_opencv_dir "${THIRD_PARTY_ROOT}/opencv/build")
+if(NOT OpenCV_DIR OR OpenCV_DIR MATCHES "-NOTFOUND$")
+    set(OpenCV_DIR "${_default_opencv_dir}" CACHE PATH "OpenCV CMake package directory" FORCE)
+endif()
 
 find_package(Qt6 REQUIRED COMPONENTS Quick)
 find_package(OpenCV REQUIRED)
-
 find_library(REALSENSE_LIB NAMES realsense2
-    PATHS "${REALSENSE_BUILD_DIR}"
+    PATHS "${REALSENSE_RUNTIME_DIR}"
     NO_DEFAULT_PATH
 )
+
+if(NOT REALSENSE_LIB)
+    message(FATAL_ERROR "Could not find librealsense2 library. Set REALSENSE_RUNTIME_DIR to the directory containing librealsense2.dylib.")
+endif()
+
+if(NOT EXISTS "${REALSENSE_INCLUDE_DIR}/librealsense2/rs.hpp")
+    message(FATAL_ERROR "Could not find librealsense headers. Set REALSENSE_INCLUDE_DIR to the directory containing librealsense2/rs.hpp.")
+endif()
 
 qt_standard_project_setup(REQUIRES 6.10)
 
@@ -47,7 +62,7 @@ set_target_properties(appRealSense_Snap PROPERTIES
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 
-    BUILD_RPATH "${REALSENSE_BUILD_DIR}"          # 编译目录下运行时找这里
+    BUILD_RPATH "${REALSENSE_RUNTIME_DIR}"          # 编译目录下运行时找这里
     INSTALL_RPATH "@executable_path/../lib"
 )
 

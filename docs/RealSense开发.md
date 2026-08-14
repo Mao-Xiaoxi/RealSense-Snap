@@ -92,6 +92,42 @@ target_link_libraries(myApp PRIVATE ...)
 set_target_properties(myApp PROPERTIES ...)
 ```
 
+### C++库安装的规范方式
+
+推荐安装在~/local/中，项目文件在引用的时候直接使用该目录进行链接。
+
+一般来说，推荐将C++库进行安装，这样可以避免在实际工程项目编译时，头文件的重新编译。
+
+```bash
+# 1. 进入你存放第三方库源码的目录（例如 ~/Documents/Packages）
+cd ~/Documents/Packages
+
+# 2. 克隆 dlib 源码（如果尚未克隆）
+git clone https://github.com/davisking/dlib.git
+
+# 3. 进入源码目录
+cd dlib
+
+# 4. 创建并进入编译目录
+mkdir build && cd build
+
+# 5. 配置 CMake（指定安装到用户目录，使用系统 libpng，兼容 macOS）
+cmake .. \
+    -DCMAKE_INSTALL_PREFIX=$HOME/local/dlib \
+    -DDLIB_LINK_WITH_SYSTEM_LIBPNG=ON \
+    -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15
+
+# 6. 编译（并行编译，-j 后数字为线程数，可按需调整）
+make -j3
+
+# 7. 安装到 $HOME/local/dlib
+make install
+
+# 8. （可选）清理编译临时文件，节省磁盘空间
+cd ..
+rm -rf build
+```
+
 ### RealSence数据流
 
 | 数据流类型     | `RS2_STREAM_*` 常量     | 数据格式 (`RS2_FORMAT_*`)                               | 分辨率 (宽x高)               | 帧率 (FPS)        | 主要作用与典型应用                                           |
