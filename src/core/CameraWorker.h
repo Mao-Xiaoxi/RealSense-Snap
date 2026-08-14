@@ -10,7 +10,9 @@
 
 #include <librealsense2/rs.hpp>
 #include <opencv2/opencv.hpp>
+
 #include <atomic>
+
 
 // 继承
 class CameraWorker : public QObject{
@@ -53,6 +55,17 @@ private:
     rs2::align align_to_depth{RS2_STREAM_DEPTH};    // 尽量使用C++11列表处理化，避免语法歧义
     rs2::align align_to_color{RS2_STREAM_COLOR};
     rs2::colorizer colorizer;
+    // 滤波器
+    rs2::decimation_filter m_decimationFilter;
+    rs2::spatial_filter m_spatialFilter;
+    rs2::temporal_filter m_temporalFilter;
+    rs2::hole_filling_filter m_holeFilter;
+    rs2::disparity_transform m_depthToDisparity{true};
+    rs2::disparity_transform m_disparityToDepth{false};
+
+    // 私有函数
+    rs2::depth_frame applyDepthFilters(const rs2::depth_frame &depth);
+    rs2::video_frame backgroundRemoval(rs2::video_frame &color, const rs2::depth_frame &depth);
 };
 
 

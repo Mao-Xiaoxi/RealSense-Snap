@@ -3,12 +3,38 @@
 #include <QThread>
 #include <opencv2/opencv.hpp>
 
+/**
+ * @brief CameraWorker::CameraWorker 构造函数
+ * @param parent
+ */
 CameraWorker::CameraWorker(QObject *parent)
     : QObject(parent)
     , align_to_depth(RS2_STREAM_DEPTH)   // 初始化对齐对象（昂贵操作只做一次）
     , align_to_color(RS2_STREAM_COLOR)
 {
     // 构造函数中不要做耗时操作，此时 Worker 可能还在主线程
+
+    // 按照执行顺序依次加入算子。
+    rs2::decimation_filter m_decimationFilter;
+
+    rs2::spatial_filter m_spatialFilter;
+    m_spatialFilter.set_option(RS2_OPTION_FILTER_MAGNITUDE, 3);         // 滤波强度
+    m_spatialFilter.set_option(RS2_OPTION_FILTER_SMOOTH_ALPHA, 0.3f);   // 边缘保持参数
+    m_spatialFilter.set_option(RS2_OPTION_FILTER_SMOOTH_DELTA, 20);     // 边缘阈值
+    m_spatialFilter.set_option(RS2_OPTION_HOLES_FILL, 1);               //填洞模式
+
+    rs2::temporal_filter m_temporalFilter;
+
+    m_temporalFilter.set_option(RS2_OPTION_FILTER_SMOOTH_ALPHA, 0.1f);  // 历史帧权重
+    m_temporalFilter.set_option(RS2_OPTION_FILTER_SMOOTH_DELTA, 50);    //变化阈值
+    m_temporalFilter.set_option(RS2_OPTION_HOLES_FILL, 0);              //填洞模式
+
+    rs2::hole_filling_filter m_holeFilter;
+    m_holeFilter.set_option(RS2_OPTION_HOLES_FILL, 1);                // 0：关闭 1:使用周围像素平均 2:使用梯度平均
+
+    rs2::disparity_transform m_depthToDisparity{true};  // 深度转视差
+    rs2::disparity_transform m_disparityToDepth{false};
+
 }
 
 CameraWorker::~CameraWorker(){
@@ -97,8 +123,6 @@ void CameraWorker::refreshDevices() try{
         //             hasDepth = true;
         //     }
         // }
-        bool hasColor = true;
-        bool hasDepth = true;
 
         QVariantMap item;
         item["name"] = device.supports(RS2_CAMERA_INFO_NAME)
@@ -166,13 +190,15 @@ void CameraWorker::processFrame() try
         frames=align_to_color.process(frames);
     }
 
+    // 多线程处理
     rs2::depth_frame depth=frames.get_depth_frame();
     rs2::video_frame color=frames.get_color_frame();
     if(!depth||!color){
         qWarning()<<"Incomplete frameset receive.d";
         return;
     }
-    rs2::video_frame colorized_depth = colorizer.colorize(depth);
+    rs2::depth_frame filtered = applyDepthFilters(depth);
+    rs2::video_frame colorized_depth = colorizer.colorize(filtered);
 
     cv::Mat color_rgb(cv::Size(color.get_width(),color.get_height()),CV_8UC3,(void*)color.get_data(),cv::Mat::AUTO_STEP);
     cv::Mat color_bgr;
@@ -182,6 +208,12 @@ void CameraWorker::processFrame() try
     cv::Mat depth_bgr;
     cv::cvtColor(depth_rgb, depth_bgr, cv::COLOR_RGB2BGR);
 
+    // 图片尺寸对齐
+    if (depth_bgr.size() != color_bgr.size()) {
+        cv::resize(depth_bgr, depth_bgr, color_bgr.size(), 0, 0, cv::INTER_NEAREST);
+    }
+
+    // 对彩色图像背景进行替换
 
     cv::Mat overlay;
     float currentAlpha;
@@ -208,12 +240,6 @@ void CameraWorker::processFrame() try
     if (m_timer) {
         m_timer->stop();
     }
-    // try{
-    //     pipe.stop();
-    // } catch(const rs2::error &e){
-    //     qCritical()<<"RealSense stop fail";
-    //     emit cameraError(QString::fromUtf8(e.what()));
-    // }
 }
 
 float CameraWorker::alpha() const
@@ -233,3 +259,36 @@ void CameraWorker::setAlpha(float a){
     emit alphaChanged();    // 通知QML属性变化
 }
 
+
+rs2::depth_frame CameraWorker::applyDepthFilters(const rs2::depth_frame &depth)
+{
+    try{
+        rs2::frame filtered = depth;
+
+        filtered = m_decimationFilter.process(filtered);
+        filtered = m_depthToDisparity.process(filtered);
+        filtered = m_spatialFilter.process(filtered);
+        filtered = m_temporalFilter.process(filtered);
+        //filtered = m_holeFilter.process(filtered); 重点是保证人物被分割出来，空洞填充会导致身体周围阴影与身体混在一起。
+        filtered = m_disparityToDepth.process(filtered);
+
+        return filtered.as<rs2::depth_frame>();
+    } catch(const rs2::error &e){
+        qCritical()<<"Filter failed"<< e.what();
+        emit cameraError(QString::fromUtf8(e.what()));
+        return depth;
+    }
+}
+
+/**
+ * 自动设置人体和背景的分割阈值，实现人体和背景的分离。
+ * 使用 RealSense ID库，检测人脸区域，并以人脸蛇毒像素为基准，计算阈值。
+ * @brief CameraWorker::backgroundRemoval
+ * @param color
+ * @param depth
+ * @return
+ */
+rs2::video_frame CameraWorker::backgroundRemoval(rs2::video_frame &color, const rs2::depth_frame &depth){
+
+    return color;
+}

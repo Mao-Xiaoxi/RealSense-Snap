@@ -74,7 +74,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 49,
+                            "line": 50,
                             "message": "Could not find property \"fill\"."
                         },
                         {
@@ -82,7 +82,7 @@
                             "column": 20,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 55,
+                            "line": 56,
                             "message": ""
                         },
                         {
@@ -90,7 +90,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "preferredWidth",
-                            "line": 57,
+                            "line": 58,
                             "message": ""
                         },
                         {
@@ -98,7 +98,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "maximumWidth",
-                            "line": 59,
+                            "line": 60,
                             "message": ""
                         },
                         {
@@ -106,7 +106,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 62,
+                            "line": 63,
                             "message": ""
                         },
                         {
@@ -114,7 +114,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 72,
+                            "line": 73,
                             "message": ""
                         },
                         {
@@ -122,7 +122,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 79,
+                            "line": 80,
                             "message": "Cannot access value for name cameraController"
                         },
                         {
@@ -130,7 +130,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 82,
+                            "line": 83,
                             "message": ""
                         },
                         {
@@ -138,7 +138,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "elide",
-                            "line": 84,
+                            "line": 85,
                             "message": ""
                         },
                         {
@@ -146,20 +146,12 @@
                             "column": 37,
                             "durationMicroseconds": 0,
                             "functionName": "implicitHeight",
-                            "line": 91,
+                            "line": 92,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
                             "column": 28,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 93,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "color",
                             "line": 94,
@@ -167,10 +159,18 @@
                         },
                         {
                             "codegenResult": 0,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 95,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "left",
-                            "line": 99,
+                            "line": 100,
                             "message": ""
                         },
                         {
@@ -178,7 +178,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "right",
-                            "line": 100,
+                            "line": 101,
                             "message": ""
                         },
                         {
@@ -186,7 +186,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "top",
-                            "line": 101,
+                            "line": 102,
                             "message": ""
                         },
                         {
@@ -194,7 +194,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 111,
+                            "line": 112,
                             "message": ""
                         },
                         {
@@ -202,7 +202,7 @@
                             "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 121,
+                            "line": 122,
                             "message": "Cannot access value for name cameraController"
                         },
                         {
@@ -210,7 +210,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "model",
-                            "line": 129,
+                            "line": 130,
                             "message": "Cannot access value for name cameraController"
                         },
                         {
@@ -218,7 +218,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "onActivated",
-                            "line": 138,
+                            "line": 139,
                             "message": "Cannot access value for name cameraController"
                         },
                         {
@@ -226,7 +226,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 133,
+                            "line": 134,
                             "message": "Cannot access value for name cameraCombo"
                         },
                         {
@@ -234,7 +234,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 134,
+                            "line": 135,
                             "message": "Cannot access value for name modelData"
                         },
                         {
@@ -242,7 +242,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 135,
+                            "line": 136,
                             "message": "Cannot access value for name modelData"
                         },
                         {
@@ -250,7 +250,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 147,
+                            "line": 148,
                             "message": "Cannot access value for name cameraController"
                         },
                         {
@@ -258,7 +258,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 150,
+                            "line": 151,
                             "message": "Cannot access value for name cameraController"
                         },
                         {
@@ -266,7 +266,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 152,
+                            "line": 153,
                             "message": ""
                         },
                         {
@@ -274,7 +274,7 @@
                             "column": 37,
                             "durationMicroseconds": 0,
                             "functionName": "implicitHeight",
-                            "line": 160,
+                            "line": 161,
                             "message": ""
                         },
                         {
@@ -282,7 +282,7 @@
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 162,
+                            "line": 163,
                             "message": ""
                         },
                         {
@@ -290,7 +290,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 163,
+                            "line": 164,
                             "message": ""
                         },
                         {
@@ -298,7 +298,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "left",
-                            "line": 168,
+                            "line": 169,
                             "message": ""
                         },
                         {
@@ -306,7 +306,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "right",
-                            "line": 169,
+                            "line": 170,
                             "message": ""
                         },
                         {
@@ -314,7 +314,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "top",
-                            "line": 170,
+                            "line": 171,
                             "message": ""
                         },
                         {
@@ -322,7 +322,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 179,
+                            "line": 180,
                             "message": ""
                         },
                         {
@@ -330,7 +330,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 186,
+                            "line": 187,
                             "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
@@ -338,7 +338,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 187,
+                            "line": 188,
                             "message": ""
                         },
                         {
@@ -346,7 +346,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "value",
-                            "line": 198,
+                            "line": 199,
                             "message": "Cannot access value for name cameraController"
                         },
                         {
@@ -354,7 +354,7 @@
                             "column": 45,
                             "durationMicroseconds": 0,
                             "functionName": "onValueChanged",
-                            "line": 199,
+                            "line": 200,
                             "message": "Cannot access value for name cameraController"
                         },
                         {
@@ -362,7 +362,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 207,
+                            "line": 208,
                             "message": ""
                         },
                         {
@@ -370,7 +370,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 217,
+                            "line": 218,
                             "message": ""
                         },
                         {
@@ -378,7 +378,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 230,
+                            "line": 231,
                             "message": ""
                         },
                         {
@@ -386,7 +386,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 248,
+                            "line": 249,
                             "message": ""
                         },
                         {
@@ -394,7 +394,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 236,
+                            "line": 237,
                             "message": ""
                         },
                         {
@@ -402,7 +402,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 237,
+                            "line": 238,
                             "message": ""
                         },
                         {
@@ -410,7 +410,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "font",
-                            "line": 238,
+                            "line": 239,
                             "message": ""
                         },
                         {
@@ -418,7 +418,7 @@
                             "column": 46,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 239,
+                            "line": 240,
                             "message": ""
                         },
                         {
@@ -426,7 +426,7 @@
                             "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 240,
+                            "line": 241,
                             "message": ""
                         },
                         {
@@ -434,7 +434,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 245,
+                            "line": 246,
                             "message": ""
                         }
                     ],

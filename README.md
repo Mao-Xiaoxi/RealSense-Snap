@@ -20,7 +20,9 @@ RealSense_Snap/                           # 项目根目录
 │   ├── main.cpp                          # 程序入口
 │   ├── core/                             # 核心功能模块（RealSense驱动、图像处理）
 │   │   ├── CameraWorker.h
-│   │   ├── FrameProcessor.cpp
+│   │   ├── CameraWoker.cpp
+│   │   ├── CameraController.h
+│   │   ├── CameraController.cpp
 │   │   ├── videoitem.h
 │   │   └── videoitem.cpp
 │   ├── models/                           # 数据模型（结构体、枚举、数据传输对象）

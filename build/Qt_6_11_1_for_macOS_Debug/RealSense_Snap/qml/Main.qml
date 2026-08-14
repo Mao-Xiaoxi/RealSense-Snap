@@ -40,7 +40,8 @@ ApplicationWindow {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            Layout.minimumWidth: 320
+            Layout.preferredWidth: 640   // 默认宽度
+            Layout.preferredHeight: 480  // 默认高度
             color: "black"
 
             VideoItem {
