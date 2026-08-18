@@ -81,7 +81,7 @@
                 {
                     "access": "public",
                     "index": 0,
-                    "lineNumber": 45,
+                    "lineNumber": 94,
                     "name": "alphaChanged",
                     "returnType": "void"
                 },
@@ -94,35 +94,35 @@
                         }
                     ],
                     "index": 1,
-                    "lineNumber": 46,
+                    "lineNumber": 100,
                     "name": "alphaRequested",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
                     "index": 2,
-                    "lineNumber": 49,
+                    "lineNumber": 106,
                     "name": "camerasChanged",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
                     "index": 3,
-                    "lineNumber": 50,
+                    "lineNumber": 111,
                     "name": "cameraStatusChanged",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
                     "index": 4,
-                    "lineNumber": 51,
+                    "lineNumber": 116,
                     "name": "selectedCameraSerialChanged",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
                     "index": 5,
-                    "lineNumber": 54,
+                    "lineNumber": 122,
                     "name": "refreshDevicesRequested",
                     "returnType": "void"
                 },
@@ -135,7 +135,7 @@
                         }
                     ],
                     "index": 6,
-                    "lineNumber": 55,
+                    "lineNumber": 128,
                     "name": "cameraSelected",
                     "returnType": "void"
                 }
@@ -150,14 +150,14 @@
                         }
                     ],
                     "index": 7,
-                    "lineNumber": 29,
+                    "lineNumber": 52,
                     "name": "setAlpha",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
                     "index": 8,
-                    "lineNumber": 38,
+                    "lineNumber": 64,
                     "name": "refreshDevices",
                     "returnType": "void"
                 },
@@ -170,7 +170,7 @@
                         }
                     ],
                     "index": 9,
-                    "lineNumber": 39,
+                    "lineNumber": 70,
                     "name": "setSelectedCameraSerial",
                     "returnType": "void"
                 },
@@ -183,7 +183,7 @@
                         }
                     ],
                     "index": 10,
-                    "lineNumber": 40,
+                    "lineNumber": 76,
                     "name": "setDevices",
                     "returnType": "void"
                 },
@@ -196,7 +196,7 @@
                         }
                     ],
                     "index": 11,
-                    "lineNumber": 41,
+                    "lineNumber": 82,
                     "name": "setCameraStatus",
                     "returnType": "void"
                 },
@@ -209,7 +209,7 @@
                         }
                     ],
                     "index": 12,
-                    "lineNumber": 42,
+                    "lineNumber": 88,
                     "name": "setSelectedCameraSerialFromWorker",
                     "returnType": "void"
                 }

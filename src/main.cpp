@@ -9,8 +9,15 @@
 #include "core/CameraWorker.h"
 #include "core/videoitem.h"
 #include "cameracontroller.h"
+#include "core/imagebackgroundprovider.h"
 
 
+/**
+ * @brief 应用程序入口，初始化 QML、相机线程和信号连接。
+ * @param argc 命令行参数数量。
+ * @param argv 命令行参数数组。
+ * @return 应用程序退出码。
+ */
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
@@ -19,7 +26,14 @@ int main(int argc, char *argv[])
 
     // 线程与Worker准备
     QThread workerThread;
+    ImageBackgroundProvider backgroundProvider;
+    if (!backgroundProvider.loadFromFile(
+            "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/resources/images/background001.jpeg"
+            )) {
+        return -1;
+    }
     CameraWorker worker;
+    worker.setBackgroundProvider(&backgroundProvider);
     CameraController controller;
     worker.moveToThread(&workerThread); // 线程暴露问题
 

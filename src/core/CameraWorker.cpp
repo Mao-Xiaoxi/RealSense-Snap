@@ -3,10 +3,6 @@
 #include <QThread>
 #include <opencv2/opencv.hpp>
 
-/**
- * @brief CameraWorker::CameraWorker 构造函数
- * @param parent
- */
 CameraWorker::CameraWorker(QObject *parent)
     : QObject(parent)
     , align_to_depth(RS2_STREAM_DEPTH)   // 初始化对齐对象（昂贵操作只做一次）
@@ -103,9 +99,6 @@ void CameraWorker::stop(){
     m_pipelineStarted = false;
 }
 
-/**
- * @brief CameraWorker::refreshDevices
- */
 void CameraWorker::refreshDevices() try{
     rs2::context ctx;
     auto devices = ctx.query_devices();
@@ -170,9 +163,6 @@ void CameraWorker::selectCamera(QString serial){
     start();
 }
 
-/**
- * @brief CameraWorker::processFrame
- */
 void CameraWorker::processFrame() try
 {
     if (!m_running.load(std::memory_order_acquire)) {
@@ -200,6 +190,9 @@ void CameraWorker::processFrame() try
     rs2::depth_frame filtered = applyDepthFilters(depth);
     rs2::video_frame colorized_depth = colorizer.colorize(filtered);
 
+    // 对彩色图像背景进行替换
+    color=backgroundRemoval(color,filtered);
+
     cv::Mat color_rgb(cv::Size(color.get_width(),color.get_height()),CV_8UC3,(void*)color.get_data(),cv::Mat::AUTO_STEP);
     cv::Mat color_bgr;
     cv::cvtColor(color_rgb,color_bgr,cv::COLOR_RGB2BGR);
@@ -212,8 +205,6 @@ void CameraWorker::processFrame() try
     if (depth_bgr.size() != color_bgr.size()) {
         cv::resize(depth_bgr, depth_bgr, color_bgr.size(), 0, 0, cv::INTER_NEAREST);
     }
-
-    // 对彩色图像背景进行替换
 
     cv::Mat overlay;
     float currentAlpha;
@@ -265,30 +256,66 @@ rs2::depth_frame CameraWorker::applyDepthFilters(const rs2::depth_frame &depth)
     try{
         rs2::frame filtered = depth;
 
-        filtered = m_decimationFilter.process(filtered);
+        //filtered = m_decimationFilter.process(filtered);
         filtered = m_depthToDisparity.process(filtered);
         filtered = m_spatialFilter.process(filtered);
         filtered = m_temporalFilter.process(filtered);
-        //filtered = m_holeFilter.process(filtered); 重点是保证人物被分割出来，空洞填充会导致身体周围阴影与身体混在一起。
+        //filtered = m_holeFilter.process(filtered); // 重点是保证人物被分割出来，空洞填充会导致身体周围阴影与身体混在一起。
         filtered = m_disparityToDepth.process(filtered);
 
         return filtered.as<rs2::depth_frame>();
     } catch(const rs2::error &e){
         qCritical()<<"Filter failed"<< e.what();
         emit cameraError(QString::fromUtf8(e.what()));
+
         return depth;
     }
 }
 
-/**
+/*
  * 自动设置人体和背景的分割阈值，实现人体和背景的分离。
  * 使用 RealSense ID库，检测人脸区域，并以人脸蛇毒像素为基准，计算阈值。
- * @brief CameraWorker::backgroundRemoval
- * @param color
- * @param depth
- * @return
  */
-rs2::video_frame CameraWorker::backgroundRemoval(rs2::video_frame &color, const rs2::depth_frame &depth){
+rs2::video_frame CameraWorker::backgroundRemoval(rs2::video_frame &color, const rs2::depth_frame &depth) {
 
+    if (!m_background || !m_background->isReady()) {
+        return color;
+    }
+
+    uint8_t* p_color_frame =reinterpret_cast<uint8_t*>(const_cast<void*>(color.get_data()));
+
+    int width=color.get_width();
+    int height=color.get_height();
+    int depthWidth = depth.get_width();
+    int depthHeight = depth.get_height();
+    int processWidth = qMin(width, depthWidth);
+    int processHeight = qMin(height, depthHeight);
+    int color_bpp=color.get_bytes_per_pixel();    // 自动获取帧像素字节位数
+
+    cv::Mat background=m_background->backgroundForSize(cv::Size(width, height));
+
+    const uint8_t *p_background = background.data;
+
+    #pragma omp parallel for schedule(dynamic)
+    for(int y=0;y<processHeight;y++){
+        auto color_pixel_index=y*width;
+
+        for(int x=0;x<processWidth;x++,++color_pixel_index){
+            float distance = depth.get_distance(x, y);
+
+            if (distance <= 0.0f || distance > 1.2f){
+                auto offset=color_pixel_index * color_bpp;
+                std::memcpy(
+                    &p_color_frame[offset],
+                    &p_background[offset],
+                    color_bpp
+                    );
+            }
+        }
+    }
     return color;
+}
+
+void CameraWorker::setBackgroundProvider(BackgroundProvider *provider){
+    m_background=provider;
 }

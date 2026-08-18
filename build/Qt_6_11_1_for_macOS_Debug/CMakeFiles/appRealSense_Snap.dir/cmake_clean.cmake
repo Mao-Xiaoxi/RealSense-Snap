@@ -26,6 +26,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o.d"
   "CMakeFiles/appRealSense_Snap.dir/src/core/cameracontroller.cpp.o"
   "CMakeFiles/appRealSense_Snap.dir/src/core/cameracontroller.cpp.o.d"
+  "CMakeFiles/appRealSense_Snap.dir/src/core/imagebackgroundprovider.cpp.o"
+  "CMakeFiles/appRealSense_Snap.dir/src/core/imagebackgroundprovider.cpp.o.d"
   "CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o"
   "CMakeFiles/appRealSense_Snap.dir/src/core/videoitem.cpp.o.d"
   "CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o"

@@ -1165,6 +1165,7 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/video/include/opencv2/video.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/video/include/opencv2/video/tracking.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/video/include/opencv2/video/background_segm.hpp \
+  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/PRMOGMWJPH/../../../../src/core/BackgroundProvider.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtmochelpers.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtmocconstants.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/q20algorithm.h \

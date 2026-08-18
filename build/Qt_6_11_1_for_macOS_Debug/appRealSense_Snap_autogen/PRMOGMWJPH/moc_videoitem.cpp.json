@@ -29,7 +29,7 @@
                 {
                     "access": "public",
                     "index": 0,
-                    "lineNumber": 21,
+                    "lineNumber": 42,
                     "name": "imageChanged",
                     "returnType": "void"
                 }
@@ -44,7 +44,7 @@
                         }
                     ],
                     "index": 1,
-                    "lineNumber": 18,
+                    "lineNumber": 36,
                     "name": "setImage",
                     "returnType": "void"
                 }

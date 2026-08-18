@@ -908,6 +908,7 @@
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/video/include/opencv2/video/background_segm.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/video/include/opencv2/video/tracking.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/videoio/include/opencv2/videoio.hpp \
+  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/BackgroundProvider.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QList \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QMap \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QMutex \

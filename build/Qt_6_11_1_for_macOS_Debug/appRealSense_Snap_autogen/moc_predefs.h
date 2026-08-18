@@ -1,4 +1,4 @@
-#define ARCHITECTURE_ID "arm64"
+clang++: warning: argument unused during compilation: '-c' [-Wunused-command-line-argument]
 #define QT_CORE_LIB 1
 #define QT_GUI_LIB 1
 #define QT_NETWORK_LIB 1
