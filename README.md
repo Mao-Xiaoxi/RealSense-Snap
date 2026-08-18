@@ -11,42 +11,29 @@
 ## 文件结构
 
 ```bash
-RealSense_Snap/                           # 项目根目录
-├── CMakeLists.txt                      
-├── README.md                          
-├── .gitignore                          
-│
-├── src/                          
-│   ├── main.cpp                          # 程序入口
-│   ├── core/                             # 核心功能模块（RealSense驱动、图像处理）
-│   │   ├── CameraWorker.h
-│   │   ├── CameraWoker.cpp
-│   │   ├── CameraController.h
-│   │   ├── CameraController.cpp
-│   │   ├── videoitem.h
-│   │   └── videoitem.cpp
-│   ├── models/                           # 数据模型（结构体、枚举、数据传输对象）
-│   └── utils/                            # 工具类（日志、数学、文件操作）
-│
-├── include/                          
-│   └── app_export.h                      # 用于 DLL/动态库导出的宏定义
-│
-├── qml/                                  # QML 前端界面文件（全部放在此处）
-│   └── Main.qml                          # 主界面
-│
-├── resources/                     
-│   ├── images/
-│   │   ├── logo.png
-│   │   └── icon.svg
-│   ├── fonts/
-│   │   └── NotoSans.ttf
-│   └── qml.qrc                   
-│
-├── importedcontent/             
-│   └── CMakeLists.txt
-│
-└── build/                          
-    ├── Qt_6_11_1_for_macOS_Debug/
-    └── Release/
+RealSense_Snap/                         # 项目根目录
+├── CMakeLists.txt                      # CMake 构建配置
+├── README.md                           # 项目说明
+├── docs/                               # 项目文档
+│   ├── RealSense Snap 需求文档.md
+│   └── RealSense开发.md
+├── importedcontent/                    # Qt Creator 导入内容
+│   └── README.md
+├── qml/                                # QML 前端界面
+│   └── Main.qml                        # 主界面
+├── resources/                          # 静态资源
+│   └── images/
+│       └── background001.jpeg          # 默认背景图片
+└── src/                                # C++ 源码
+    ├── main.cpp                        # 程序入口与对象连接
+    └── core/                           # 核心功能模块
+        ├── BackgroundProvider.h        # 背景提供接口
+        ├── imagebackgroundprovider.h   # 图片背景提供类声明
+        ├── imagebackgroundprovider.cpp # 图片背景提供类实现
+        ├── CameraWorker.h              # RealSense 采集与图像处理声明
+        ├── CameraWorker.cpp            # RealSense 采集与图像处理实现
+        ├── cameracontroller.h          # 相机控制器声明
+        ├── cameracontroller.cpp        # 相机控制器实现
+        ├── videoitem.h                 # QML 视频绘制项声明
+        └── videoitem.cpp               # QML 视频绘制项实现
 ```
-
