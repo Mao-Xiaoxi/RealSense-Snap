@@ -43,7 +43,8 @@ int main(int argc, char *argv[])
     engine.loadFromModule("RealSense_Snap","Main");
 
     // 查找UI中的 VideoItem
-    auto root = engine.rootObjects().first();
+    QList<QObject*> rootObjs = engine.rootObjects();
+    auto root = rootObjs.first();
     // 模版参数是指针类型
     auto videoItem = root->findChild<VideoItem*>("liveView");
 

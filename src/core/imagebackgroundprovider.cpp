@@ -32,6 +32,5 @@ bool ImageBackgroundProvider::loadFromFile(const QString &path)
         qCritical() << "Failed to load background:" << path;
         return false;
     }
-    cv::cvtColor(m_cacheMat, m_cacheMat, cv::COLOR_BGR2RGB);
     return true;
 }

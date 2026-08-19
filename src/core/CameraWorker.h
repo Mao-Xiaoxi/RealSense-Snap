@@ -100,10 +100,7 @@ signals:
 
 
 private:
-    /**
-     * @brief 读取并处理一帧相机数据。
-     */
-    void processFrame();
+
     bool m_pipelineStarted = false;
     float m_alpha=0.f;
     std::atomic<bool> m_running{false};
@@ -128,11 +125,16 @@ private:
 
     // 私有函数
     /**
+     * @brief 读取并处理一帧相机数据。
+     */
+    void processFrame();
+
+    /**
      * @brief 对深度帧应用降采样、空间和时间滤波。
      * @param depth 原始深度帧。
      * @return 滤波后的深度帧。
      */
-    rs2::depth_frame applyDepthFilters(const rs2::depth_frame &depth);
+    cv::Mat applyDepthFilters(const rs2::depth_frame &depth);
 
     /**
      * @brief 根据深度信息处理彩色帧背景。
@@ -140,7 +142,7 @@ private:
      * @param depth 深度帧。
      * @return 处理后的彩色帧。
      */
-    rs2::video_frame backgroundRemoval(rs2::video_frame &color, const rs2::depth_frame &depth);
+    cv::Mat backgroundRemoval(cv::Mat &color, const cv::Mat &depth);
 };
 
 
