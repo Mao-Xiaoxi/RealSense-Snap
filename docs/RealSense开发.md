@@ -18,7 +18,10 @@ Explore how developers can leverage the RealSense SDK 2.0 to build innovative ap
 
 任务2：眉心与体温识别
 描述：可以根据人的眼睛位置，使用摄像头，实时识别人的眉心位置，并检测出当前人的体温
-.
+
+**学习网站**
+
+https://www.qt1024.cn/
 
 ## SDK安装
 

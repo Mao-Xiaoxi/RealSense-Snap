@@ -576,6 +576,30 @@ build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.s
 .PHONY : build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.cpp.s
 
+src/background/imagebackgroundprovider.o: src/background/imagebackgroundprovider.cpp.o
+.PHONY : src/background/imagebackgroundprovider.o
+
+# target to build an object file
+src/background/imagebackgroundprovider.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/background/imagebackgroundprovider.cpp.o
+.PHONY : src/background/imagebackgroundprovider.cpp.o
+
+src/background/imagebackgroundprovider.i: src/background/imagebackgroundprovider.cpp.i
+.PHONY : src/background/imagebackgroundprovider.i
+
+# target to preprocess a source file
+src/background/imagebackgroundprovider.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/background/imagebackgroundprovider.cpp.i
+.PHONY : src/background/imagebackgroundprovider.cpp.i
+
+src/background/imagebackgroundprovider.s: src/background/imagebackgroundprovider.cpp.s
+.PHONY : src/background/imagebackgroundprovider.s
+
+# target to generate assembly for a file
+src/background/imagebackgroundprovider.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/background/imagebackgroundprovider.cpp.s
+.PHONY : src/background/imagebackgroundprovider.cpp.s
+
 src/core/CameraWorker.o: src/core/CameraWorker.cpp.o
 .PHONY : src/core/CameraWorker.o
 
@@ -624,30 +648,6 @@ src/core/cameracontroller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/cameracontroller.cpp.s
 .PHONY : src/core/cameracontroller.cpp.s
 
-src/core/imagebackgroundprovider.o: src/core/imagebackgroundprovider.cpp.o
-.PHONY : src/core/imagebackgroundprovider.o
-
-# target to build an object file
-src/core/imagebackgroundprovider.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/imagebackgroundprovider.cpp.o
-.PHONY : src/core/imagebackgroundprovider.cpp.o
-
-src/core/imagebackgroundprovider.i: src/core/imagebackgroundprovider.cpp.i
-.PHONY : src/core/imagebackgroundprovider.i
-
-# target to preprocess a source file
-src/core/imagebackgroundprovider.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/imagebackgroundprovider.cpp.i
-.PHONY : src/core/imagebackgroundprovider.cpp.i
-
-src/core/imagebackgroundprovider.s: src/core/imagebackgroundprovider.cpp.s
-.PHONY : src/core/imagebackgroundprovider.s
-
-# target to generate assembly for a file
-src/core/imagebackgroundprovider.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/core/imagebackgroundprovider.cpp.s
-.PHONY : src/core/imagebackgroundprovider.cpp.s
-
 src/core/videoitem.o: src/core/videoitem.cpp.o
 .PHONY : src/core/videoitem.o
 
@@ -695,6 +695,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/processing/filterprocessing.o: src/processing/filterprocessing.cpp.o
+.PHONY : src/processing/filterprocessing.o
+
+# target to build an object file
+src/processing/filterprocessing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/processing/filterprocessing.cpp.o
+.PHONY : src/processing/filterprocessing.cpp.o
+
+src/processing/filterprocessing.i: src/processing/filterprocessing.cpp.i
+.PHONY : src/processing/filterprocessing.i
+
+# target to preprocess a source file
+src/processing/filterprocessing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/processing/filterprocessing.cpp.i
+.PHONY : src/processing/filterprocessing.cpp.i
+
+src/processing/filterprocessing.s: src/processing/filterprocessing.cpp.s
+.PHONY : src/processing/filterprocessing.s
+
+# target to generate assembly for a file
+src/processing/filterprocessing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appRealSense_Snap.dir/build.make CMakeFiles/appRealSense_Snap.dir/src/processing/filterprocessing.cpp.s
+.PHONY : src/processing/filterprocessing.cpp.s
 
 # Help Target
 help:
@@ -748,21 +772,24 @@ help:
 	@echo "... build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.o"
 	@echo "... build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.i"
 	@echo "... build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/appRealSense_Snap_qmlcache_loader.s"
+	@echo "... src/background/imagebackgroundprovider.o"
+	@echo "... src/background/imagebackgroundprovider.i"
+	@echo "... src/background/imagebackgroundprovider.s"
 	@echo "... src/core/CameraWorker.o"
 	@echo "... src/core/CameraWorker.i"
 	@echo "... src/core/CameraWorker.s"
 	@echo "... src/core/cameracontroller.o"
 	@echo "... src/core/cameracontroller.i"
 	@echo "... src/core/cameracontroller.s"
-	@echo "... src/core/imagebackgroundprovider.o"
-	@echo "... src/core/imagebackgroundprovider.i"
-	@echo "... src/core/imagebackgroundprovider.s"
 	@echo "... src/core/videoitem.o"
 	@echo "... src/core/videoitem.i"
 	@echo "... src/core/videoitem.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/processing/filterprocessing.o"
+	@echo "... src/processing/filterprocessing.i"
+	@echo "... src/processing/filterprocessing.s"
 .PHONY : help
 
 

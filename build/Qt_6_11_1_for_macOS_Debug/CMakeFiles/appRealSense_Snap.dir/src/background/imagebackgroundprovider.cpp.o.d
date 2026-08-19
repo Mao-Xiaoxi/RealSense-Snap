@@ -1,11 +1,9 @@
-CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.o: \
-  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/mocs_compilation.cpp \
-  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/PRMOGMWJPH/moc_CameraWorker.cpp \
-  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/PRMOGMWJPH/../../../../src/core/CameraWorker.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QObject \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qobject.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qobjectdefs.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qnamespace.h \
+CMakeFiles/appRealSense_Snap.dir/src/background/imagebackgroundprovider.cpp.o: \
+  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background/imagebackgroundprovider.cpp \
+  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background/imagebackgroundprovider.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QString \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qstring.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qchar.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qglobal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__config \
@@ -858,14 +856,11 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__locale_dir/wbuffer_convert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__locale_dir/wstring_convert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/cstdarg \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtmetamacros.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qstring.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qchar.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qstringview.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qbytearray.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qrefcount.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qnamespace.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtmetamacros.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qarraydata.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qpair.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qarraydatapointer.h \
@@ -887,167 +882,6 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qstringbuilder.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qstringconverter.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qstringconverter_base.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qlist.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qhashfunctions.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/numeric \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/accumulate.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/inner_product.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/iota.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/exclusive_scan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/inclusive_scan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/pstl.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/ranges_iota.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__algorithm/out_value_result.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/reduce.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/transform_reduce.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/execution \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__type_traits/is_execution_policy.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qiterator.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qbytearraylist.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qstringlist.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qalgorithms.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/q20bit.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qstringmatcher.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qscopedpointer.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmetatype.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qiodevicebase.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qfloat16.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmath.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtformat_impl.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qiterable.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtaggedpointer.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmetacontainer.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcontainerinfo.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qscopeguard.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/list \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/map \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/map.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__tree \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/set.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qobject_impl.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qbindingstorage.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/chrono \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__chrono/file_clock.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/forward_list \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/QImage \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qimage.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qtguiglobal.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qtgui-config.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qtguiexports.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qcolor.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qrgb.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qrgba64.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qpaintdevice.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qwindowdefs.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qrect.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcheckedint_impl.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmargins.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/q23utility.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/q20utility.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qsize.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qpoint.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qpixelformat.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qtransform.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qpolygon.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qregion.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qspan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/cassert \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/q20iterator.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qline.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QMutex \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmutex.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdeadlinetimer.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtsan_impl.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/sanitizer/tsan_interface.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QTimer \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtimer.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qbasictimer.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qeventloop.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QVariantList \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvariantlist.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QList \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QVariant \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvariant.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdebug.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtextstream.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcontiguouscache.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qsharedpointer.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qshareddata.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/set \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/unordered_set \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmap.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qshareddata_impl.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qset.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qhash.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvarlengtharray.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qalloc.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QVariantMap \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvariantmap.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QMap \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QString \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rs.hpp \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rs.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/rsutil.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/float.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/float.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/float.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/__float_header_macro.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/__float_float.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/h/rs_types.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/h/rs_sensor.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/h/rs_context.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/h/rs_device.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/h/rs_frame.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/h/rs_option.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/h/rs_processing.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/h/rs_record_playback.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/h/rs_safety_sensor.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/h/rs_eth_config.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/rs_types.hpp \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/../rs.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/../h/rs_context.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/../h/rs_device.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/../h/rs_frame.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/../h/rs_processing.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/../h/rs_record_playback.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/../h/rs_sensor.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/../h/rs_pipeline.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/../h/rs_types.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/../h/rs_config.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/sstream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__ostream/put_character_sequence.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/bitset \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/istream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/ostream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/format \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/queue \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/deque.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/queue.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/deque \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/stack \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/stack.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/print \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/unistd.h \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/rs_context.hpp \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/rs_record_playback.hpp \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/rs_device.hpp \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/rs_sensor.hpp \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/rs_frame.hpp \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/rs_processing.hpp \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/rs_options.hpp \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/rs_safety_sensor.hpp \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/rs_pipeline.hpp \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/rs_eth_config.hpp \
-  /Users/maoxiaoxi/Documents/Packages/librealsense/include/librealsense2/hpp/../h/rs_eth_config.h \
   /Users/maoxiaoxi/Documents/Packages/opencv/include/opencv2/opencv.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/build/opencv2/opencv_modules.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/core/include/opencv2/core.hpp \
@@ -1071,6 +905,11 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/core/include/opencv2/core/matx.inl.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/core/include/opencv2/core/types.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/cfloat \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/float.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/float.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/float.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/__float_header_macro.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/__float_float.h \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/core/include/opencv2/core/mat.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/core/include/opencv2/core/bufferpool.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/core/include/opencv2/core/mat.inl.hpp \
@@ -1078,6 +917,22 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/core/include/opencv2/core/operations.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/core/include/opencv2/core/cvstd.inl.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/complex \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/sstream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__ostream/put_character_sequence.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/bitset \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/istream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/ostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/format \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/queue \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/deque.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/queue.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/deque \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/stack \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/stack.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/print \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/unistd.h \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/core/include/opencv2/core/utility.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/core/include/opencv2/core/optim.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/core/include/opencv2/core/ovx.hpp \
@@ -1094,8 +949,15 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/dnn/include/opencv2/dnn.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/dnn/include/opencv2/dnn/dnn.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/core/include/opencv2/core/async.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/chrono \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__chrono/file_clock.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/forward_list \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/dnn/include/opencv2/dnn/../dnn/version.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/dnn/include/opencv2/dnn/dict.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/map \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/map.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__tree \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__fwd/set.h \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/dnn/include/opencv2/dnn/layer.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/dnn/include/opencv2/dnn/dnn.inl.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/dnn/include/opencv2/dnn/utils/inference_engine.hpp \
@@ -1109,6 +971,7 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/flann/include/opencv2/flann/saving.h \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/flann/include/opencv2/flann/nn_index.h \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/flann/include/opencv2/flann/result_set.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/set \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/flann/include/opencv2/flann/all_indices.h \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/flann/include/opencv2/flann/kdtree_index.h \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/flann/include/opencv2/flann/dynamic_bitset.h \
@@ -1157,6 +1020,7 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/stitching/include/opencv2/stitching/detail/matchers.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/stitching/include/opencv2/stitching/detail/motion_estimators.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/stitching/include/opencv2/stitching/detail/util.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/list \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/stitching/include/opencv2/stitching/detail/util_inl.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/stitching/include/opencv2/stitching/detail/camera.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/stitching/include/opencv2/stitching/detail/exposure_compensate.hpp \
@@ -1165,74 +1029,58 @@ CMakeFiles/appRealSense_Snap.dir/appRealSense_Snap_autogen/mocs_compilation.cpp.
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/video/include/opencv2/video.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/video/include/opencv2/video/tracking.hpp \
   /Users/maoxiaoxi/Documents/Packages/opencv/modules/video/include/opencv2/video/background_segm.hpp \
-  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/./background/BackgroundProvider.h \
-  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/./processing/filterprocessing.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtmochelpers.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtmocconstants.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/q20algorithm.h \
-  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/PRMOGMWJPH/moc_cameracontroller.cpp \
-  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/PRMOGMWJPH/../../../../src/core/cameracontroller.h \
-  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/PRMOGMWJPH/moc_videoitem.cpp \
-  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/PRMOGMWJPH/../../../../src/core/videoitem.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQuick.framework/Headers/QQuickPaintedItem \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQuick.framework/Headers/qquickpainteditem.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQuick.framework/Headers/qquickitem.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQuick.framework/Headers/qtquickglobal.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qtqmlglobal.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qtqml-config.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qtqmlexports.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQuick.framework/Headers/qtquick-config.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQuick.framework/Headers/qtquickexports.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqml.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmlprivate.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qjsprimitivevalue.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qjsnumbercoercion.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qjsvalue.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmllist.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmlparserstatus.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmlpropertyvaluesource.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcalendar.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qlocale.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmetasequence.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qiterable_impl.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmetaobject.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qpointer.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qurl.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtyperevision.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qversionnumber.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmlregistration.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/include/QtQmlIntegration/qqmlintegration.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmlcomponent.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qqmlerror.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qproperty.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qpropertyprivate.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/source_location \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qevent.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcoreevent.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qiodevice.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qeventpoint.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qvector2d.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qvectornd.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qpointingdevice.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qinputdevice.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qscreen.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QRect \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QSize \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QSizeF \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/QTransform \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qnativeinterface.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qscreen_platform.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qguiapplication.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcoreapplication.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qinputmethod.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qguiapplication_platform.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qkeysequence.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qfont.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qendian.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qaccessible.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qaccessible_base.h
+  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background/BackgroundProvider.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QDebug \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdebug.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qfloat16.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qhashfunctions.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/numeric \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/accumulate.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/inner_product.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/iota.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/exclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/inclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/pstl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/ranges_iota.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__algorithm/out_value_result.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/reduce.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__numeric/transform_reduce.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/execution \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__type_traits/is_execution_policy.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmath.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qalgorithms.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/q20bit.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtformat_impl.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtextstream.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qiodevicebase.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcontiguouscache.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qsharedpointer.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qshareddata.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmetatype.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdatastream.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qobjectdefs.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qscopedpointer.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qiterable.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtaggedpointer.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmetacontainer.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcontainerinfo.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qscopeguard.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/unordered_set \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qlist.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qiterator.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qbytearraylist.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qstringlist.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qstringmatcher.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qmap.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qshareddata_impl.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qset.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qhash.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvarlengtharray.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qalloc.h

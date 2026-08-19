@@ -918,16 +918,18 @@ appRealSense_Snap_autogen/timestamp: \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/build/Qt_6_11_1_for_macOS_Debug/appRealSense_Snap_autogen/moc_predefs.h \
-	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/BackgroundProvider.h \
+	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background/BackgroundProvider.h \
+	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background/imagebackgroundprovider.cpp \
+	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background/imagebackgroundprovider.h \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/CameraWorker.cpp \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/CameraWorker.h \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/cameracontroller.cpp \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/cameracontroller.h \
-	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/imagebackgroundprovider.cpp \
-	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/imagebackgroundprovider.h \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/videoitem.cpp \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/videoitem.h \
 	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/main.cpp \
+	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/processing/filterprocessing.cpp \
+	/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/processing/filterprocessing.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/include/QtQmlIntegration/qqmlintegration.h \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QList \
 	/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Versions/A/Headers/QMap \

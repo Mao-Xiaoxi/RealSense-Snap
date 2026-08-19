@@ -61,3 +61,10 @@ void CameraController::setSelectedCameraSerialFromWorker(QString serial)
     emit selectedCameraSerialChanged();
 }
 
+void CameraController::setBackgroundImage(QString path){
+    if(path.isEmpty()){
+        setCameraStatus("背景图片路径为空");
+            return;
+    }
+    emit backgroundImageRequested(path);
+}

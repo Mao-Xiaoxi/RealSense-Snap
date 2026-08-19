@@ -13,7 +13,8 @@
 
 #include <atomic>
 
-#include "BackgroundProvider.h"
+#include "./background/BackgroundProvider.h"
+#include "./processing/filterprocessing.h"
 
 
 // 继承
@@ -116,12 +117,7 @@ private:
     rs2::align align_to_color{RS2_STREAM_COLOR};
     rs2::colorizer colorizer;
     // 滤波器
-    rs2::decimation_filter m_decimationFilter;
-    rs2::spatial_filter m_spatialFilter;
-    rs2::temporal_filter m_temporalFilter;
-    rs2::hole_filling_filter m_holeFilter;
-    rs2::disparity_transform m_depthToDisparity{true};
-    rs2::disparity_transform m_disparityToDepth{false};
+    FilterProcessing filter_processing;
 
     // 私有函数
     /**
@@ -129,11 +125,6 @@ private:
      */
     void processFrame();
 
-    /**
-     * @brief 对深度帧应用降采样、空间和时间滤波。
-     * @param depth 原始深度帧。
-     * @return 滤波后的深度帧。
-     */
     cv::Mat applyDepthFilters(const rs2::depth_frame &depth);
 
     /**

@@ -9,18 +9,6 @@ CameraWorker::CameraWorker(QObject *parent)
     , align_to_color(RS2_STREAM_COLOR)
 {
     // 构造函数中不要做耗时操作，此时 Worker 可能还在主线程
-
-    m_spatialFilter.set_option(RS2_OPTION_FILTER_MAGNITUDE, 3);         // 滤波强度
-    m_spatialFilter.set_option(RS2_OPTION_FILTER_SMOOTH_ALPHA, 0.3f);   // 边缘保持参数
-    m_spatialFilter.set_option(RS2_OPTION_FILTER_SMOOTH_DELTA, 20);     // 边缘阈值
-    m_spatialFilter.set_option(RS2_OPTION_HOLES_FILL, 1);               //填洞模式
-
-    m_temporalFilter.set_option(RS2_OPTION_FILTER_SMOOTH_ALPHA, 0.20f); // 当前帧权重，越低越平滑
-    m_temporalFilter.set_option(RS2_OPTION_FILTER_SMOOTH_DELTA, 80);    // 允许更大的深度变化参与平滑
-    m_temporalFilter.set_option(RS2_OPTION_HOLES_FILL, 3);              // 使用历史帧填补短暂空洞
-
-    m_holeFilter.set_option(RS2_OPTION_HOLES_FILL, 1);                // 0：关闭 1:使用周围像素平均 2:使用梯度平均
-
 }
 
 CameraWorker::~CameraWorker(){
@@ -64,7 +52,8 @@ void CameraWorker::start(){
 }
 
 void CameraWorker::stop(){
-    if(!m_running.exchange(false)){
+    const bool wasRunning = m_running.exchange(false);
+    if(!wasRunning && !m_pipelineStarted && !m_timer){
         return;
     }
 
@@ -95,17 +84,6 @@ void CameraWorker::refreshDevices() try{
     QVariantList list;
 
     for(const auto &device : devices){  // 使用按值遍历会造成资源浪费，并且IDE会警告
-        // bool hasColor = false;
-        // bool hasDepth = false;
-
-        // for(const auto &sensor : device.query_sensors()){
-        //     for(const auto &profile : sensor.get_stream_profiles()){
-        //         if(profile.stream_type()==RS2_STREAM_COLOR)
-        //             hasColor = true;
-        //         if(profile.stream_type()==RS2_STREAM_DEPTH)
-        //             hasDepth = true;
-        //     }
-        // }
 
         QVariantMap item;
         item["name"] = device.supports(RS2_CAMERA_INFO_NAME)
@@ -114,14 +92,6 @@ void CameraWorker::refreshDevices() try{
         item["serial"] = device.supports(RS2_CAMERA_INFO_SERIAL_NUMBER)
                              ? QString::fromStdString(device.get_info(RS2_CAMERA_INFO_SERIAL_NUMBER))
                              : "";
-
-        // item["valid"] = hasColor && hasDepth;
-        // if (!hasColor)
-        //     item["reason"] = "Missing color stream";
-        // else if (!hasDepth)
-        //     item["reason"] = "Missing depth stream";
-        // else
-        //     item["reason"] = "";
 
         item["valid"] = !item["serial"].toString().isEmpty();
         item["reason"] = item["valid"].toBool() ? "" : "Missing serial number";
@@ -177,19 +147,57 @@ void CameraWorker::processFrame() try
         return;
     }
 
-    cv::Mat color_rgb(cv::Size(color.get_width(),color.get_height()),CV_8UC3,(void*)color.get_data(),cv::Mat::AUTO_STEP);
     cv::Mat color_bgr;
-    cv::cvtColor(color_rgb,color_bgr,cv::COLOR_RGB2BGR);
-
-    cv::Mat filtered = applyDepthFilters(depth);
-    if (filtered.empty()) {
+    const auto colorFormat = color.get_profile().format();
+    if (colorFormat == RS2_FORMAT_RGB8) {
+        cv::Mat colorRgb(cv::Size(color.get_width(), color.get_height()),
+                         CV_8UC3,
+                         const_cast<void *>(color.get_data()),
+                         cv::Mat::AUTO_STEP);
+        cv::cvtColor(colorRgb, color_bgr, cv::COLOR_RGB2BGR);
+    } else if (colorFormat == RS2_FORMAT_BGR8) {
+        color_bgr = cv::Mat(cv::Size(color.get_width(), color.get_height()),
+                            CV_8UC3,
+                            const_cast<void *>(color.get_data()),
+                            cv::Mat::AUTO_STEP).clone();
+    } else {
+        qWarning() << "Unsupported color frame format:" << colorFormat;
         return;
     }
 
-    // 对彩色图像背景进行替换
-    color_bgr = backgroundRemoval(color_bgr,filtered);
+    cv::Mat filtered = applyDepthFilters(depth);
+    // if (filtered.empty()) return;
+    // cv::Mat flickerMask = filter_processing.flickerDetection(depth);
+    // if (flickerMask.empty()) return;
 
-    rs2::video_frame colorized_depth = colorizer.process(depth).as<rs2::video_frame>();
+    // // 确保掩码和深度图尺寸一致
+    // if (flickerMask.size() != filtered.size()) {
+    //     cv::resize(
+    //         flickerMask,
+    //         flickerMask,
+    //         filtered.size(),
+    //         0,
+    //         0,
+    //         cv::INTER_NEAREST);
+    // }
+
+    // // 将闪烁区域设置为无效深度
+    // filtered.setTo(cv::Scalar(0), flickerMask);
+
+    // 对彩色图像进行背景替换
+    color_bgr = backgroundRemoval(color_bgr, filtered);
+
+    rs2::frame colorized_frame = colorizer.process(depth);
+    if (!colorized_frame) {
+        qWarning() << "Colorized depth frame is empty";
+        return;
+    }
+    rs2::video_frame colorized_depth = colorized_frame.as<rs2::video_frame>();
+
+    if (colorized_depth.get_profile().format() != RS2_FORMAT_RGB8) {
+        qWarning() << "Unsupported colorized depth format:";
+        return;
+    }
 
     cv::Mat depth_rgb(cv::Size(colorized_depth.get_width(),colorized_depth.get_height()),CV_8UC3,(void*)colorized_depth.get_data(), cv::Mat::AUTO_STEP);
     cv::Mat depth_bgr;
@@ -221,26 +229,23 @@ void CameraWorker::processFrame() try
     if(m_running.load()){
         qCritical()<<"Frame processing error:"<<e.what();
     }
-    m_running=false;
-    if (m_timer) {
-        m_timer->stop();
-    }
+    stop();
 }catch(const cv::Exception &e){
     if(m_running.load()){
         qCritical()<<"OpenCV frame processing error:"<<e.what();
     }
-    m_running=false;
-    if (m_timer) {
-        m_timer->stop();
-    }
+    stop();
 }catch(const std::exception &e){
     if(m_running.load()){
         qCritical()<<"Frame processing exception:"<<e.what();
     }
-    m_running=false;
-    if (m_timer) {
-        m_timer->stop();
-    }
+    stop();
+}
+
+cv::Mat CameraWorker::applyDepthFilters(const rs2::depth_frame &depth)
+{
+    const rs2::depth_frame rsFiltered = filter_processing.applyRsFilters(depth);
+    return filter_processing.applyOpenCVFilters(rsFiltered);
 }
 
 float CameraWorker::alpha() const
@@ -260,69 +265,6 @@ void CameraWorker::setAlpha(float a){
     emit alphaChanged();    // 通知QML属性变化
 }
 
-cv::Mat CameraWorker::applyDepthFilters(const rs2::depth_frame &depth)
-{
-    try{
-        rs2::frame filtered = depth;
-
-        /* RealSense Filter */
-
-        //filtered = m_decimationFilter.process(filtered);
-        filtered = m_depthToDisparity.process(filtered);
-        filtered = m_spatialFilter.process(filtered);
-        filtered = m_temporalFilter.process(filtered);
-        //filtered = m_holeFilter.process(filtered);
-        filtered = m_disparityToDepth.process(filtered);
-
-        /* OpenCV Filter */
-
-        rs2::depth_frame depth_frame = filtered.as<rs2::depth_frame>();
-
-        int width = depth_frame.get_width();
-        int height = depth_frame.get_height();
-        const void* data = depth_frame.get_data();  // 只读数据
-
-        cv::Mat filtered_gray(
-            height, width, CV_16UC1,
-            const_cast<void*>(data),  // 仅当不修改时才安全
-            cv::Mat::AUTO_STEP
-            );
-
-        cv::Mat filtered_float;
-        cv::Mat bilateral_float;
-        filtered_gray.convertTo(filtered_float, CV_32F);
-        cv::bilateralFilter(filtered_float, bilateral_float, 9, 75, 75);
-
-        cv::Mat mask;
-        cv::inRange(bilateral_float, cv::Scalar(500), cv::Scalar(1200), mask);
-        cv::Mat kernel_1 = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
-        cv::Mat kernel_2 = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(7, 7));
-        cv::morphologyEx(mask, mask, cv::MORPH_OPEN, kernel_1);
-        cv::morphologyEx(mask, mask, cv::MORPH_CLOSE, kernel_2);
-
-        cv::Mat result_float;
-        result_float = cv::Mat::zeros(bilateral_float.size(), bilateral_float.type());
-        bilateral_float.copyTo(result_float, mask);
-
-        cv::Mat result_depth;
-        result_float.convertTo(result_depth, CV_16UC1);
-
-        return result_depth;
-
-    } catch(const rs2::error &e){
-        qCritical()<<"Filter failed"<< e.what();
-        emit cameraError(QString::fromUtf8(e.what()));
-        return {};
-    } catch(const cv::Exception &e){
-        qCritical()<<"OpenCV filter failed"<< e.what();
-        emit cameraError(QString::fromUtf8(e.what()));
-        return {};
-    } catch(const std::exception &e){
-        qCritical()<<"Depth filter failed"<< e.what();
-        emit cameraError(QString::fromUtf8(e.what()));
-        return {};
-    }
-}
 
 /*
  * 自动设置人体和背景的分割阈值，实现人体和背景的分离。
@@ -353,6 +295,8 @@ cv::Mat CameraWorker::backgroundRemoval(cv::Mat &color, const cv::Mat &depth) {
     // 取交集区域（防止尺寸不匹配）
     int processWidth = std::min(width, depthWidth);
     int processHeight = std::min(height, depthHeight);
+    const float minDepth = filter_processing.minDepth();
+    const float maxDepth = filter_processing.maxDepth();
 
     // 获取背景图像（应与color同尺寸同类型）
     cv::Mat background = m_background->backgroundForSize(cv::Size(width, height));
@@ -373,11 +317,9 @@ cv::Mat CameraWorker::backgroundRemoval(cv::Mat &color, const cv::Mat &depth) {
         for (int x = 0; x < processWidth; ++x) {
             // 深度值（单位：毫米）
             uint16_t depthValue = depthRow[x];
-            // 转换为米
-            float distance = depthValue / 1000.0f;
 
-            // 若距离无效（0）或超过阈值（1.2米），则用背景替换
-            if (distance <= 0.0f || distance > 1.2f) {
+            // 深度无效或不在当前滤波范围内时，使用背景替换。
+            if (depthValue < minDepth || depthValue > maxDepth) {
                 // 拷贝整个像素（elemSize个字节）
                 int offset = x * elemSize;
                 memcpy(&colorRow[offset], &bgRow[offset], elemSize);

@@ -97,13 +97,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 92,
+				"line" : 97,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 86,
+				"line" : 91,
 				"parent" : 0
 			},
 			{
@@ -400,7 +400,7 @@
 			{
 				"command" : 23,
 				"file" : 1,
-				"line" : 70,
+				"line" : 72,
 				"parent" : 0
 			},
 			{
@@ -538,7 +538,7 @@
 			{
 				"command" : 25,
 				"file" : 1,
-				"line" : 77,
+				"line" : 82,
 				"parent" : 0
 			},
 			{
@@ -649,6 +649,18 @@
 				{
 					"backtrace" : 59,
 					"path" : "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core"
+				},
+				{
+					"backtrace" : 59,
+					"path" : "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/app"
+				},
+				{
+					"backtrace" : 59,
+					"path" : "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background"
+				},
+				{
+					"backtrace" : 59,
+					"path" : "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/processing"
 				},
 				{
 					"backtrace" : 59,
@@ -805,16 +817,20 @@
 				7,
 				9,
 				11,
-				13,
 				14,
-				15,
 				16,
-				17
+				17,
+				18,
+				19,
+				20
 			]
 		}
 	],
 	"dependencies" : 
 	[
+		{
+			"id" : "appRealSense_Snap_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+		},
 		{
 			"backtrace" : 0,
 			"id" : "appRealSense_Snap_autogen::@6890427a1f51a3e7e1df"
@@ -834,9 +850,6 @@
 		{
 			"backtrace" : 53,
 			"id" : "appRealSense_Snap_qmlimportscan::@6890427a1f51a3e7e1df"
-		},
-		{
-			"id" : "appRealSense_Snap_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appRealSense_Snap::@6890427a1f51a3e7e1df",
@@ -1039,20 +1052,20 @@
 				1,
 				2,
 				3,
-				13,
-				14,
-				15,
 				16,
+				17,
 				18,
-				20,
+				19,
 				21,
 				23,
-				34,
-				35,
-				36,
+				24,
+				26,
 				37,
 				38,
-				39
+				39,
+				40,
+				41,
+				42
 			]
 		},
 		{
@@ -1062,7 +1075,9 @@
 				4,
 				6,
 				8,
-				10
+				10,
+				12,
+				13
 			]
 		},
 		{
@@ -1073,32 +1088,33 @@
 				7,
 				9,
 				11,
-				12,
-				17
+				14,
+				15,
+				20
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				19,
-				22
+				22,
+				25
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				24,
-				25,
-				26,
 				27,
 				28,
 				29,
 				30,
 				31,
 				32,
-				33
+				33,
+				34,
+				35,
+				36
 			]
 		}
 	],
@@ -1166,13 +1182,29 @@
 		},
 		{
 			"backtrace" : 68,
-			"path" : "src/core/imagebackgroundprovider.h",
+			"path" : "src/background/imagebackgroundprovider.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 68,
 			"compileGroupIndex" : 0,
-			"path" : "src/core/imagebackgroundprovider.cpp",
+			"path" : "src/background/imagebackgroundprovider.cpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 68,
+			"path" : "src/background/BackgroundProvider.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 68,
+			"path" : "src/processing/filterprocessing.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 68,
+			"compileGroupIndex" : 0,
+			"path" : "src/processing/filterprocessing.cpp",
 			"sourceGroupIndex" : 2
 		},
 		{

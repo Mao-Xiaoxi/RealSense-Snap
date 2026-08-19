@@ -6,6 +6,8 @@
 
 #include "BackgroundProvider.h"
 
+// 背景功能的启用和背景图片的选择。
+
 class ImageBackgroundProvider : public BackgroundProvider
 {
 public:
@@ -16,6 +18,8 @@ public:
     bool loadFromFile(const QString &path);
 
 private:
+    bool m_enable;
+
     cv::Mat m_cacheMat;
     cv::Mat m_resizedMat;
     cv::Size m_cachedSize;

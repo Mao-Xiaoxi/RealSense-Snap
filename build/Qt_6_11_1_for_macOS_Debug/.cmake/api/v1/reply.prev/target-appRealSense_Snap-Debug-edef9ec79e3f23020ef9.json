@@ -97,13 +97,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 93,
+				"line" : 95,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 87,
+				"line" : 89,
 				"parent" : 0
 			},
 			{
@@ -538,7 +538,7 @@
 			{
 				"command" : 25,
 				"file" : 1,
-				"line" : 78,
+				"line" : 80,
 				"parent" : 0
 			},
 			{
@@ -649,6 +649,14 @@
 				{
 					"backtrace" : 59,
 					"path" : "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core"
+				},
+				{
+					"backtrace" : 59,
+					"path" : "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/app"
+				},
+				{
+					"backtrace" : 59,
+					"path" : "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background"
 				},
 				{
 					"backtrace" : 59,
@@ -1167,18 +1175,18 @@
 		},
 		{
 			"backtrace" : 68,
-			"path" : "src/core/imagebackgroundprovider.h",
+			"path" : "src/background/imagebackgroundprovider.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 68,
 			"compileGroupIndex" : 0,
-			"path" : "src/core/imagebackgroundprovider.cpp",
+			"path" : "src/background/imagebackgroundprovider.cpp",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 68,
-			"path" : "src/core/BackgroundProvider.h",
+			"path" : "src/background/BackgroundProvider.h",
 			"sourceGroupIndex" : 1
 		},
 		{

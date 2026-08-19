@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls.Basic
+import QtQuick.Dialogs
 
 import CustomComponents 1.0
 import QtQuick.Controls 2.15
@@ -30,6 +31,16 @@ ApplicationWindow {
     //     cameraController.refreshDevices()
     // }
 
+    FileDialog {
+        id: backgroundDialog
+        title: "选择背景图片"
+        nameFilters: ["Images (*.png *.jpg *.jpeg *.bmp)"]
+
+        onAccepted: {
+            cameraController.setBackgroundImage(selectedFile.toString().replace("file://", ""))
+        }
+    }
+
     GridLayout {
         id: grid
         columns: width < 400 ? 1 : 2
@@ -40,7 +51,7 @@ ApplicationWindow {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            Layout.preferredWidth: 640   // 默认宽度
+            Layout.preferredWidth: 720   // 默认宽度
             Layout.preferredHeight: 480  // 默认高度
             color: "black"
 
@@ -220,6 +231,13 @@ ApplicationWindow {
                             }
                         }
                     }
+                }
+
+                Button {
+                    text: "切换背景"
+                    Layout.fillWidth: true
+                    implicitHeight: 38
+                    onClicked: backgroundDialog.open()
                 }
 
                 Item {

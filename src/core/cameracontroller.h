@@ -87,6 +87,8 @@ public slots:
      */
     void setSelectedCameraSerialFromWorker(QString serial);
 
+    Q_INVOKABLE void setBackgroundImage(QString path);
+
 signals:
     /**
      * @brief 透明度发生变化时发出。
@@ -126,6 +128,8 @@ signals:
      * @param serial 相机序列号。
      */
     void cameraSelected(QString serial);
+
+    void backgroundImageRequested(QString path);
 
 
 private:

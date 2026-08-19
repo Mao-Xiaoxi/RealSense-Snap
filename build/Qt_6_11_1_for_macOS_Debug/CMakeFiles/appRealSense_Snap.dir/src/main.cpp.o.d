@@ -1215,7 +1215,8 @@ CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o: \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qvariantmap.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QMap \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QString \
-  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/BackgroundProvider.h \
+  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/./background/BackgroundProvider.h \
+  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/./processing/filterprocessing.h \
   /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/videoitem.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQuick.framework/Headers/QQuickPaintedItem \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQuick.framework/Headers/qquickpainteditem.h \
@@ -1246,4 +1247,5 @@ CMakeFiles/appRealSense_Snap.dir/src/main.cpp.o: \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qaccessible.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtGui.framework/Headers/qaccessible_base.h \
   /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/cameracontroller.h \
-  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/imagebackgroundprovider.h
+  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background//imagebackgroundprovider.h \
+  /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background/BackgroundProvider.h

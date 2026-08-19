@@ -1182,9 +1182,15 @@
 	"HEADERS" : 
 	[
 		[
-			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/BackgroundProvider.h",
+			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background/BackgroundProvider.h",
 			"MU",
-			"PRMOGMWJPH/moc_BackgroundProvider.cpp",
+			"QWDIRIOR4Z/moc_BackgroundProvider.cpp",
+			null
+		],
+		[
+			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background/imagebackgroundprovider.h",
+			"MU",
+			"QWDIRIOR4Z/moc_imagebackgroundprovider.cpp",
 			null
 		],
 		[
@@ -1200,15 +1206,15 @@
 			null
 		],
 		[
-			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/imagebackgroundprovider.h",
-			"MU",
-			"PRMOGMWJPH/moc_imagebackgroundprovider.cpp",
-			null
-		],
-		[
 			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/videoitem.h",
 			"MU",
 			"PRMOGMWJPH/moc_videoitem.cpp",
+			null
+		],
+		[
+			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/processing/filterprocessing.h",
+			"MU",
+			"5QWKTM5RRA/moc_filterprocessing.cpp",
 			null
 		]
 	],
@@ -1238,6 +1244,9 @@
 		"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap",
 		"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src",
 		"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core",
+		"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/app",
+		"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background",
+		"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/processing",
 		"/Users/maoxiaoxi/Documents/Packages/librealsense/include",
 		"/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers",
 		"/Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework",
@@ -1318,6 +1327,11 @@
 	"SOURCES" : 
 	[
 		[
+			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/background/imagebackgroundprovider.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/CameraWorker.cpp",
 			"MU",
 			null
@@ -1328,17 +1342,17 @@
 			null
 		],
 		[
-			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/imagebackgroundprovider.cpp",
-			"MU",
-			null
-		],
-		[
 			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/core/videoitem.cpp",
 			"MU",
 			null
 		],
 		[
 			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/processing/filterprocessing.cpp",
 			"MU",
 			null
 		]

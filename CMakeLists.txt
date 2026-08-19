@@ -50,8 +50,9 @@ qt_add_qml_module(appRealSense_Snap
         SOURCES src/core/videoitem.h src/core/videoitem.cpp
         SOURCES src/core/CameraWorker.h src/core/CameraWorker.cpp
         SOURCES src/core/cameracontroller.h src/core/cameracontroller.cpp
-        SOURCES src/core/imagebackgroundprovider.h src/core/imagebackgroundprovider.cpp
-        SOURCES src/core/BackgroundProvider.h
+        SOURCES src/background/imagebackgroundprovider.h src/background/imagebackgroundprovider.cpp
+        SOURCES src/background/BackgroundProvider.h
+        SOURCES src/processing/filterprocessing.h src/processing/filterprocessing.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -71,6 +72,9 @@ set_target_properties(appRealSense_Snap PROPERTIES
 target_include_directories(appRealSense_Snap PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/src"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/core"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/app"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/background"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/processing"
     "${REALSENSE_INCLUDE_DIR}"
     ${OpenCV_INCLUDE_DIRS}
 )

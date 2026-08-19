@@ -6,10 +6,10 @@
 #include <librealsense2/rs.hpp>
 #include <opencv2/opencv.hpp>
 
-#include "core/CameraWorker.h"
-#include "core/videoitem.h"
+#include "CameraWorker.h"
+#include "videoitem.h"
 #include "cameracontroller.h"
-#include "core/imagebackgroundprovider.h"
+#include "background//imagebackgroundprovider.h"
 
 
 /**
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     // 模版参数是指针类型
     auto videoItem = root->findChild<VideoItem*>("liveView");
 
-    // 这里可以理解为接口之间的对接
+    // 信号与槽之间的对接，这里可以理解为接口之间的对接
     QObject::connect(&worker, &CameraWorker::frameReady,
                      videoItem, &VideoItem::setImage,
                      Qt::QueuedConnection);
@@ -72,6 +72,20 @@ int main(int argc, char *argv[])
     QObject::connect(&worker,&CameraWorker::selectedCameraChanged,
                      &controller,&CameraController::setSelectedCameraSerialFromWorker,
                      Qt::QueuedConnection);
+
+    // 背景类信号绑定
+    QObject::connect(
+        &controller,
+        &CameraController::backgroundImageRequested,
+        &controller,
+        [&](const QString &path) {
+            if (!backgroundProvider.loadFromFile(path)) {
+                controller.setCameraStatus("背景图片加载失败");
+            } else {
+                controller.setCameraStatus("背景图片已切换");
+            }
+        }
+    );
 
     // 启动线程并开始工作
     workerThread.start();

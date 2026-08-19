@@ -2,11 +2,15 @@
 #include <QDebug>
 
 ImageBackgroundProvider::ImageBackgroundProvider() {
+    m_enable = false;
 }
 
 bool ImageBackgroundProvider::isReady() const {
-    if(!m_cacheMat.empty())
-        return true;
+    if(m_enable){
+        if(!m_cacheMat.empty())
+            return true;
+        return false;
+    }
     return false;
 }
 
@@ -26,11 +30,15 @@ cv::Mat ImageBackgroundProvider::backgroundForSize(const cv::Size &size) {
 
 bool ImageBackgroundProvider::loadFromFile(const QString &path)
 {
-    std::string img_path = path.toStdString();
-    m_cacheMat = cv::imread(img_path);
-    if (m_cacheMat.empty()) {
-        qCritical() << "Failed to load background:" << path;
+    cv::Mat image = cv::imread(path.toStdString());
+    if(image.empty()){
+        qCritical()<<"Failed to load background:"<<path;
+        m_enable = false;
         return false;
     }
+    m_cacheMat = image;
+    m_resizedMat.release();
+    m_cachedSize=cv::Size();
+    m_enable = true;
     return true;
 }
