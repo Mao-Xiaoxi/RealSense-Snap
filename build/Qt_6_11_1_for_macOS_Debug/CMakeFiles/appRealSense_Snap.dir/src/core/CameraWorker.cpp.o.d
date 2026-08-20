@@ -1167,6 +1167,38 @@ CMakeFiles/appRealSense_Snap.dir/src/core/CameraWorker.cpp.o: \
   /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/./background/BackgroundProvider.h \
   /Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/src/./processing/filterprocessing.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QDebug \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QDir \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdir.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdirlisting.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qfiledevice.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qiodevice.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/filesystem \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/file_status.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/file_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/perms.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/path.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/operations.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/space_info.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/__filesystem/u8path.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdatetime.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcalendar.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qlocale.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qfile.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qfileinfo.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtimezone.h \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QDateTime \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QFile \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QStandardPaths \
+  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qstandardpaths.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/QThread \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qthread.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/future \

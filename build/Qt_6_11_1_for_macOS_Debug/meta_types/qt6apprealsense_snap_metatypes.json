@@ -23,7 +23,7 @@
                             }
                         ],
                         "index": 1,
-                        "lineNumber": 82,
+                        "lineNumber": 84,
                         "name": "frameReady",
                         "returnType": "void"
                     },
@@ -36,7 +36,7 @@
                             }
                         ],
                         "index": 2,
-                        "lineNumber": 88,
+                        "lineNumber": 90,
                         "name": "deviceReady",
                         "returnType": "void"
                     },
@@ -49,7 +49,7 @@
                             }
                         ],
                         "index": 3,
-                        "lineNumber": 94,
+                        "lineNumber": 96,
                         "name": "cameraError",
                         "returnType": "void"
                     },
@@ -62,7 +62,7 @@
                             }
                         ],
                         "index": 4,
-                        "lineNumber": 100,
+                        "lineNumber": 102,
                         "name": "selectedCameraChanged",
                         "returnType": "void"
                     }
@@ -100,6 +100,13 @@
                         "index": 8,
                         "lineNumber": 75,
                         "name": "selectCamera",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 9,
+                        "lineNumber": 77,
+                        "name": "capturePhoto",
                         "returnType": "void"
                     }
                 ],
@@ -197,7 +204,7 @@
                     {
                         "access": "public",
                         "index": 0,
-                        "lineNumber": 96,
+                        "lineNumber": 98,
                         "name": "alphaChanged",
                         "returnType": "void"
                     },
@@ -210,35 +217,35 @@
                             }
                         ],
                         "index": 1,
-                        "lineNumber": 102,
+                        "lineNumber": 104,
                         "name": "alphaRequested",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 2,
-                        "lineNumber": 108,
+                        "lineNumber": 110,
                         "name": "camerasChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 3,
-                        "lineNumber": 113,
+                        "lineNumber": 115,
                         "name": "cameraStatusChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 4,
-                        "lineNumber": 118,
+                        "lineNumber": 120,
                         "name": "selectedCameraSerialChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 5,
-                        "lineNumber": 124,
+                        "lineNumber": 126,
                         "name": "refreshDevicesRequested",
                         "returnType": "void"
                     },
@@ -251,7 +258,7 @@
                             }
                         ],
                         "index": 6,
-                        "lineNumber": 130,
+                        "lineNumber": 132,
                         "name": "cameraSelected",
                         "returnType": "void"
                     },
@@ -264,8 +271,15 @@
                             }
                         ],
                         "index": 7,
-                        "lineNumber": 132,
+                        "lineNumber": 138,
                         "name": "backgroundImageRequested",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 8,
+                        "lineNumber": 140,
+                        "name": "photoCaptureRequested",
                         "returnType": "void"
                     }
                 ],
@@ -278,14 +292,14 @@
                                 "type": "float"
                             }
                         ],
-                        "index": 8,
+                        "index": 9,
                         "lineNumber": 52,
                         "name": "setAlpha",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
-                        "index": 9,
+                        "index": 10,
                         "lineNumber": 64,
                         "name": "refreshDevices",
                         "returnType": "void"
@@ -298,7 +312,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 10,
+                        "index": 11,
                         "lineNumber": 70,
                         "name": "setSelectedCameraSerial",
                         "returnType": "void"
@@ -311,7 +325,7 @@
                                 "type": "QVariantList"
                             }
                         ],
-                        "index": 11,
+                        "index": 12,
                         "lineNumber": 76,
                         "name": "setDevices",
                         "returnType": "void"
@@ -324,7 +338,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 12,
+                        "index": 13,
                         "lineNumber": 82,
                         "name": "setCameraStatus",
                         "returnType": "void"
@@ -337,7 +351,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 13,
+                        "index": 14,
                         "lineNumber": 88,
                         "name": "setSelectedCameraSerialFromWorker",
                         "returnType": "void"
@@ -350,9 +364,16 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 14,
+                        "index": 15,
                         "lineNumber": 90,
                         "name": "setBackgroundImage",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 16,
+                        "lineNumber": 92,
+                        "name": "capturePhoto",
                         "returnType": "void"
                     }
                 ],

@@ -399,26 +399,34 @@
                         },
                         {
                             "codegenResult": 0,
-                            "column": 27,
+                            "column": 28,
                             "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 249,
+                            "functionName": "scale",
+                            "line": 252,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
+                            "column": 30,
+                            "durationMicroseconds": 0,
+                            "functionName": "opacity",
+                            "line": 253,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 267,
-                            "message": ""
+                            "line": 282,
+                            "message": "Cannot access value for name cameraController"
                         },
                         {
                             "codegenResult": 0,
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 255,
+                            "line": 264,
                             "message": ""
                         },
                         {
@@ -426,7 +434,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 256,
+                            "line": 265,
                             "message": ""
                         },
                         {
@@ -434,7 +442,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "font",
-                            "line": 257,
+                            "line": 266,
                             "message": ""
                         },
                         {
@@ -442,7 +450,7 @@
                             "column": 46,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 258,
+                            "line": 267,
                             "message": ""
                         },
                         {
@@ -450,7 +458,7 @@
                             "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 259,
+                            "line": 268,
                             "message": ""
                         },
                         {
@@ -458,7 +466,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 264,
+                            "line": 273,
                             "message": ""
                         }
                     ],

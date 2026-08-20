@@ -246,10 +246,19 @@ ApplicationWindow {
 
                 Button {
                     id: button1
-                    text: window.lightMode ? qsTr("切换深色模式")
-                                           : qsTr("切换浅色模式")
+                    text: "拍照"
                     Layout.fillWidth: true
                     implicitHeight: 38
+                    scale: pressed ? 0.97 : 1.0
+                    opacity: pressed ? 0.82 : 1.0
+
+                    Behavior on scale {
+                        NumberAnimation { duration: 80 }
+                    }
+
+                    Behavior on opacity {
+                        NumberAnimation { duration: 80 }
+                    }
 
                     contentItem: Text {
                         text: button1.text
@@ -261,10 +270,16 @@ ApplicationWindow {
 
                     background: Rectangle {
                         radius: 8
-                        color: window.lightMode ? window.dark : window.light
+                        color: button1.pressed
+                               ? (window.lightMode ? "#4b5563" : "#d1d5db")
+                               : (window.lightMode ? window.dark : window.light)
+
+                        Behavior on color {
+                            ColorAnimation { duration: 80 }
+                        }
                     }
 
-                    onClicked: window.lightMode = !window.lightMode
+                    onClicked: cameraController.capturePhoto();
                 }
             }
         }

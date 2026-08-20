@@ -63,6 +63,9 @@ int main(int argc, char *argv[])
     QObject::connect(&controller,&CameraController::cameraSelected,
                      &worker, &CameraWorker::selectCamera,
                      Qt::QueuedConnection);
+    QObject::connect(&controller,&CameraController::photoCaptureRequested,
+                     &worker, &CameraWorker::capturePhoto,
+                     Qt::QueuedConnection);
     QObject::connect(&worker,&CameraWorker::deviceReady,
                      &controller,&CameraController::setDevices,
                      Qt::QueuedConnection);

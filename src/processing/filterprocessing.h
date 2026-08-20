@@ -44,7 +44,8 @@ private:
     int m_bilateralDiameter = 5;
     double m_bilateralSigmaColor = 25.0;
     double m_bilateralSigmaSpace = 25.0;
-    int m_morphologyKernelSize = 3;
+    int m_morphologyKernelSize3 = 3;
+    int m_morphologyKernelSize5 = 5;
 };
 
 #endif // FILTERPROCESSING_H

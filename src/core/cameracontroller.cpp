@@ -68,3 +68,7 @@ void CameraController::setBackgroundImage(QString path){
     }
     emit backgroundImageRequested(path);
 }
+
+void CameraController::capturePhoto(){
+    emit photoCaptureRequested();
+}

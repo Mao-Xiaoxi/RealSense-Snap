@@ -51,6 +51,7 @@ template <> constexpr inline auto CameraController::qt_create_metaobjectdata<qt_
         "serial",
         "backgroundImageRequested",
         "path",
+        "photoCaptureRequested",
         "setAlpha",
         "refreshDevices",
         "setSelectedCameraSerial",
@@ -61,6 +62,7 @@ template <> constexpr inline auto CameraController::qt_create_metaobjectdata<qt_
         "message",
         "setSelectedCameraSerialFromWorker",
         "setBackgroundImage",
+        "capturePhoto",
         "alpha",
         "cameras",
         "cameraStatus",
@@ -90,42 +92,46 @@ template <> constexpr inline auto CameraController::qt_create_metaobjectdata<qt_
         QtMocHelpers::SignalData<void(QString)>(11, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QString, 12 },
         }}),
+        // Signal 'photoCaptureRequested'
+        QtMocHelpers::SignalData<void()>(13, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'setAlpha'
-        QtMocHelpers::SlotData<void(float)>(13, 2, QMC::AccessPublic, QMetaType::Void, {{
+        QtMocHelpers::SlotData<void(float)>(14, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::Float, 4 },
         }}),
         // Slot 'refreshDevices'
-        QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'setSelectedCameraSerial'
-        QtMocHelpers::SlotData<void(QString)>(15, 2, QMC::AccessPublic, QMetaType::Void, {{
+        QtMocHelpers::SlotData<void(QString)>(16, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QString, 10 },
         }}),
         // Slot 'setDevices'
-        QtMocHelpers::SlotData<void(QVariantList)>(16, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { 0x80000000 | 17, 18 },
+        QtMocHelpers::SlotData<void(QVariantList)>(17, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 18, 19 },
         }}),
         // Slot 'setCameraStatus'
-        QtMocHelpers::SlotData<void(QString)>(19, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 20 },
+        QtMocHelpers::SlotData<void(QString)>(20, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 21 },
         }}),
         // Slot 'setSelectedCameraSerialFromWorker'
-        QtMocHelpers::SlotData<void(QString)>(21, 2, QMC::AccessPublic, QMetaType::Void, {{
+        QtMocHelpers::SlotData<void(QString)>(22, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QString, 10 },
         }}),
         // Slot 'setBackgroundImage'
-        QtMocHelpers::SlotData<void(QString)>(22, 2, QMC::AccessPublic, QMetaType::Void, {{
+        QtMocHelpers::SlotData<void(QString)>(23, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QString, 12 },
         }}),
+        // Slot 'capturePhoto'
+        QtMocHelpers::SlotData<void()>(24, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
         // property 'alpha'
-        QtMocHelpers::PropertyData<float>(23, QMetaType::Float, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet, 0),
+        QtMocHelpers::PropertyData<float>(25, QMetaType::Float, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet, 0),
         // property 'cameras'
-        QtMocHelpers::PropertyData<QVariantList>(24, 0x80000000 | 17, QMC::DefaultPropertyFlags | QMC::EnumOrFlag, 2),
+        QtMocHelpers::PropertyData<QVariantList>(26, 0x80000000 | 18, QMC::DefaultPropertyFlags | QMC::EnumOrFlag, 2),
         // property 'cameraStatus'
-        QtMocHelpers::PropertyData<QString>(25, QMetaType::QString, QMC::DefaultPropertyFlags, 3),
+        QtMocHelpers::PropertyData<QString>(27, QMetaType::QString, QMC::DefaultPropertyFlags, 3),
         // property 'selectedCameraSerial'
-        QtMocHelpers::PropertyData<QString>(26, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet, 4),
+        QtMocHelpers::PropertyData<QString>(28, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet, 4),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -155,13 +161,15 @@ void CameraController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         case 5: _t->refreshDevicesRequested(); break;
         case 6: _t->cameraSelected((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         case 7: _t->backgroundImageRequested((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 8: _t->setAlpha((*reinterpret_cast<std::add_pointer_t<float>>(_a[1]))); break;
-        case 9: _t->refreshDevices(); break;
-        case 10: _t->setSelectedCameraSerial((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 11: _t->setDevices((*reinterpret_cast<std::add_pointer_t<QVariantList>>(_a[1]))); break;
-        case 12: _t->setCameraStatus((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 13: _t->setSelectedCameraSerialFromWorker((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 14: _t->setBackgroundImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 8: _t->photoCaptureRequested(); break;
+        case 9: _t->setAlpha((*reinterpret_cast<std::add_pointer_t<float>>(_a[1]))); break;
+        case 10: _t->refreshDevices(); break;
+        case 11: _t->setSelectedCameraSerial((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 12: _t->setDevices((*reinterpret_cast<std::add_pointer_t<QVariantList>>(_a[1]))); break;
+        case 13: _t->setCameraStatus((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 14: _t->setSelectedCameraSerialFromWorker((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 15: _t->setBackgroundImage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 16: _t->capturePhoto(); break;
         default: ;
         }
     }
@@ -181,6 +189,8 @@ void CameraController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         if (QtMocHelpers::indexOfMethod<void (CameraController::*)(QString )>(_a, &CameraController::cameraSelected, 6))
             return;
         if (QtMocHelpers::indexOfMethod<void (CameraController::*)(QString )>(_a, &CameraController::backgroundImageRequested, 7))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (CameraController::*)()>(_a, &CameraController::photoCaptureRequested, 8))
             return;
     }
     if (_c == QMetaObject::ReadProperty) {
@@ -222,14 +232,14 @@ int CameraController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 15)
+        if (_id < 17)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 15;
+        _id -= 17;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 15)
+        if (_id < 17)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 15;
+        _id -= 17;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
@@ -286,5 +296,11 @@ void CameraController::cameraSelected(QString _t1)
 void CameraController::backgroundImageRequested(QString _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 7, nullptr, _t1);
+}
+
+// SIGNAL 8
+void CameraController::photoCaptureRequested()
+{
+    QMetaObject::activate(this, &staticMetaObject, 8, nullptr);
 }
 QT_WARNING_POP

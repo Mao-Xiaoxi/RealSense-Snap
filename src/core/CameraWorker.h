@@ -74,6 +74,8 @@ public slots:
      */
     void selectCamera(QString serial);
 
+    void capturePhoto();
+
 signals:
     /**
      * @brief 新视频帧准备完成时发出。
@@ -100,6 +102,7 @@ signals:
     void selectedCameraChanged(QString serial);
 
 
+
 private:
 
     bool m_pipelineStarted = false;
@@ -118,6 +121,10 @@ private:
     rs2::colorizer colorizer;
     // 滤波器
     FilterProcessing filter_processing;
+
+    // 图片保存
+    bool m_capture;
+    std::string m_save_path;
 
     // 私有函数
     /**

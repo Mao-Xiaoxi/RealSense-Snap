@@ -22,7 +22,7 @@
                         }
                     ],
                     "index": 1,
-                    "lineNumber": 82,
+                    "lineNumber": 84,
                     "name": "frameReady",
                     "returnType": "void"
                 },
@@ -35,7 +35,7 @@
                         }
                     ],
                     "index": 2,
-                    "lineNumber": 88,
+                    "lineNumber": 90,
                     "name": "deviceReady",
                     "returnType": "void"
                 },
@@ -48,7 +48,7 @@
                         }
                     ],
                     "index": 3,
-                    "lineNumber": 94,
+                    "lineNumber": 96,
                     "name": "cameraError",
                     "returnType": "void"
                 },
@@ -61,7 +61,7 @@
                         }
                     ],
                     "index": 4,
-                    "lineNumber": 100,
+                    "lineNumber": 102,
                     "name": "selectedCameraChanged",
                     "returnType": "void"
                 }
@@ -99,6 +99,13 @@
                     "index": 8,
                     "lineNumber": 75,
                     "name": "selectCamera",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 9,
+                    "lineNumber": 77,
+                    "name": "capturePhoto",
                     "returnType": "void"
                 }
             ],

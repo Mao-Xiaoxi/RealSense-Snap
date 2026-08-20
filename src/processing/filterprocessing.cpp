@@ -45,6 +45,7 @@ cv::Mat FilterProcessing::applyOpenCVFilters(const cv::Mat &depth) const
     else
         return {};
 
+    // 双边滤波平滑
     cv::Mat smoothed;
     cv::bilateralFilter(depthFloat,
                         smoothed,
@@ -52,6 +53,7 @@ cv::Mat FilterProcessing::applyOpenCVFilters(const cv::Mat &depth) const
                         m_bilateralSigmaColor,
                         m_bilateralSigmaSpace);
 
+    // 无效值清除
     cv::Mat invalidMask;
     cv::compare(depthFloat, 0.0f, invalidMask, cv::CMP_LE);
     smoothed.setTo(0.0f, invalidMask);
@@ -59,11 +61,20 @@ cv::Mat FilterProcessing::applyOpenCVFilters(const cv::Mat &depth) const
     cv::Mat validMask;
     cv::inRange(smoothed, m_minDepth, m_maxDepth, validMask);
 
-    if (m_morphologyKernelSize > 1) {
+    // 闭运算
+    if (m_morphologyKernelSize3 > 1) {
         const cv::Mat kernel = cv::getStructuringElement(
             cv::MORPH_ELLIPSE,
-            cv::Size(m_morphologyKernelSize, m_morphologyKernelSize));
+            cv::Size(m_morphologyKernelSize3, m_morphologyKernelSize3));
         cv::morphologyEx(validMask, validMask, cv::MORPH_CLOSE, kernel);
+    }
+
+    //腐蚀
+    if (m_morphologyKernelSize5 > 1) {
+        const cv::Mat kernel = cv::getStructuringElement(
+            cv::MORPH_ELLIPSE,
+            cv::Size(m_morphologyKernelSize3, m_morphologyKernelSize5));
+        cv::erode(validMask, validMask, kernel, cv::Point(-1, -1), 1);
     }
 
     cv::Mat result = cv::Mat::zeros(depthFloat.size(), CV_32FC1);
@@ -114,8 +125,10 @@ void FilterProcessing::setBilateralFilter(int diameter,
 
 void FilterProcessing::setMorphologyKernel(int size)
 {
-    if (size > 0)
-        m_morphologyKernelSize = size;
+    if (size > 0){
+        m_morphologyKernelSize3 = size;
+        m_morphologyKernelSize5 = size + 2;
+    }
 }
 
 void FilterProcessing::resetRsFilters()

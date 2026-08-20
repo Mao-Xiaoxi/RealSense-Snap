@@ -1,5 +1,9 @@
 #include "CameraWorker.h"
 #include <QDebug>
+#include <QDir>
+#include <QDateTime>
+#include <QFile>
+#include <QStandardPaths>
 #include <QThread>
 #include <opencv2/opencv.hpp>
 
@@ -9,6 +13,8 @@ CameraWorker::CameraWorker(QObject *parent)
     , align_to_color(RS2_STREAM_COLOR)
 {
     // 构造函数中不要做耗时操作，此时 Worker 可能还在主线程
+    m_capture = false;
+    m_save_path = "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/resources/photos";
 }
 
 CameraWorker::~CameraWorker(){
@@ -123,6 +129,10 @@ void CameraWorker::selectCamera(QString serial){
     start();
 }
 
+void CameraWorker::capturePhoto(){
+    m_capture = true;
+}
+
 void CameraWorker::processFrame() try
 {
     if (!m_running.load(std::memory_order_acquire)) {
@@ -224,6 +234,39 @@ void CameraWorker::processFrame() try
                 overlay_rgb.rows,
                 static_cast<int>(overlay_rgb.step),
                 QImage::Format_RGB888);
+
+    // save overlay_rgb
+    // may optimize with mediapipe
+    if(m_capture)try{
+        const QString savePath = QString::fromStdString(m_save_path);
+        QDir saveDir(savePath);
+        if (!saveDir.exists() && !saveDir.mkpath(".")) {
+            qWarning() << "Failed to create photo directory:" << savePath;
+            m_capture = false;
+            return;
+        }
+
+        const QString baseName = QDateTime::currentDateTime()
+                                     .toString("yyyy-MM-dd_hh-mm-ss-zzz");
+        QString fullPath = saveDir.filePath(baseName + ".png");
+        int suffix = 1;
+        while (QFile::exists(fullPath)) {
+            fullPath = saveDir.filePath(
+                QString("%1_%2.png").arg(baseName).arg(suffix++));
+        }
+
+        if (!cv::imwrite(fullPath.toStdString(), overlay)) {
+            qWarning() << "Failed to save photo:" << fullPath;
+        } else {
+            qDebug() << "Photo saved:" << fullPath;
+            // 使用视觉模型进行细化分割
+        }
+        m_capture=false;
+        }catch(const cv::Exception &e){
+            qWarning()<<"Fail to save:"<<e.what();
+            m_capture = false;
+        }
+
     emit frameReady(qimg.copy());
 }catch(const rs2::error &e){
     if(m_running.load()){
@@ -306,6 +349,7 @@ cv::Mat CameraWorker::backgroundRemoval(cv::Mat &color, const cv::Mat &depth) {
 
     // 像素字节数（例如CV_8UC3为3，CV_8UC4为4）
     int elemSize = color.elemSize();
+    cv::Mat foregroundMask = cv::Mat::zeros(height, width, CV_8UC1);
 
 #pragma omp parallel for schedule(dynamic)
     for (int y = 0; y < processHeight; ++y) {
@@ -313,16 +357,55 @@ cv::Mat CameraWorker::backgroundRemoval(cv::Mat &color, const cv::Mat &depth) {
         uchar* colorRow = color.ptr<uchar>(y);
         const uchar* bgRow = background.ptr<const uchar>(y);
         const uint16_t* depthRow = depth.ptr<const uint16_t>(y);
+        uchar* maskRow = foregroundMask.ptr<uchar>(y);
 
         for (int x = 0; x < processWidth; ++x) {
             // 深度值（单位：毫米）
             uint16_t depthValue = depthRow[x];
 
             // 深度无效或不在当前滤波范围内时，使用背景替换。
-            if (depthValue < minDepth || depthValue > maxDepth) {
+            if (depthValue >= minDepth && depthValue <= maxDepth) {
+                maskRow[x] = 255;
+            } else {
                 // 拷贝整个像素（elemSize个字节）
                 int offset = x * elemSize;
                 memcpy(&colorRow[offset], &bgRow[offset], elemSize);
+            }
+        }
+    }
+
+    // 对图像边缘进行融合处理
+    cv::Mat distanceMap;
+    cv::distanceTransform(
+        foregroundMask,
+        distanceMap,
+        cv::DIST_L2,
+        cv::DIST_MASK_PRECISE);
+
+    float featherRadius = 5.0f;
+
+#pragma omp parallel for schedule(dynamic)
+    for(int y=0; y<processHeight; ++y){
+        uchar* colorRow = color.ptr<uchar>(y);
+        const uchar* bfRow = background.ptr<uchar>(y);
+        const float* distRow = distanceMap.ptr<float>(y);
+
+        for(int x=0; x<processWidth; ++x){
+            float dist = distRow[x];
+            float alpha;
+            if(dist>=featherRadius){
+                alpha = 1.0f;
+            }else{
+                float t = dist / featherRadius;
+                t = t * t * (3-2*t);
+                alpha = 0.5f + 0.5f*t;
+            }
+
+            int idx = x* elemSize;
+            for(int c = 0; c < elemSize; ++c){
+                colorRow[idx + c] = static_cast<uchar>(
+                    alpha * colorRow[idx + c] + (1.0f - alpha)*bfRow[idx + c]
+                    );
             }
         }
     }

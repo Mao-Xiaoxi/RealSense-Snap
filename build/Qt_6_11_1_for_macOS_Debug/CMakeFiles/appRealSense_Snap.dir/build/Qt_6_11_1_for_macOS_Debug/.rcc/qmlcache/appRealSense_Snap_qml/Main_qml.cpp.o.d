@@ -974,14 +974,6 @@ CMakeFiles/appRealSense_Snap.dir/build/Qt_6_11_1_for_macOS_Debug/.rcc/qmlcache/a
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qspan.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk/usr/include/c++/v1/cassert \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/q20iterator.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcoreapplication.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcoreevent.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qbasictimer.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qeventloop.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qdeadlinetimer.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qnativeinterface.h \
-  /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtCore.framework/Headers/qtimezone.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qjsengine.h \
   /Users/maoxiaoxi/Qt/6.11.1/macos/lib/QtQml.framework/Headers/qjsmanagedvalue.h \

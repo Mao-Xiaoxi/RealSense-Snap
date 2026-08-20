@@ -89,6 +89,8 @@ public slots:
 
     Q_INVOKABLE void setBackgroundImage(QString path);
 
+    Q_INVOKABLE void capturePhoto();
+
 signals:
     /**
      * @brief 透明度发生变化时发出。
@@ -129,7 +131,13 @@ signals:
      */
     void cameraSelected(QString serial);
 
+    /**
+     * @brief backgroundImageRequested
+     * @param path
+     */
     void backgroundImageRequested(QString path);
+
+    void photoCaptureRequested();
 
 
 private:
