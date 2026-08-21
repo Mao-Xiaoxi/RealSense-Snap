@@ -47,12 +47,12 @@ cv::Mat FilterProcessing::applyOpenCVFilters(const cv::Mat &depth) const
         return {};
 
     // 双边滤波平滑
-    cv::Mat smoothed;
-    cv::bilateralFilter(depthFloat,
-                        smoothed,
-                        m_bilateralDiameter,
-                        m_bilateralSigmaColor,
-                        m_bilateralSigmaSpace);
+    cv::Mat smoothed = depth;
+    // cv::bilateralFilter(depthFloat,
+    //                     smoothed,
+    //                     m_bilateralDiameter,
+    //                     m_bilateralSigmaColor,
+    //                     m_bilateralSigmaSpace);
 
     // 无效值清除
     cv::Mat invalidMask;
