@@ -27,6 +27,8 @@ private:
     cv::Mat depthFrameToMat(const rs2::depth_frame &depth) const;
     // 闪烁图像的判断
 
+    cv::Mat maskByKmeans(cv::Mat &smoothed) const;
+
     rs2::decimation_filter m_decimationFilter;
     rs2::disparity_transform m_depthToDisparity{true};
     rs2::spatial_filter m_spatialFilter;
@@ -39,8 +41,10 @@ private:
     int m_depthChangeThreshold = 50;
     int m_flickerThreshold = 10;
 
+    // 前景范围控制
     float m_minDepth = 200.0f;
     float m_maxDepth = 1200.0f;
+
     int m_bilateralDiameter = 5;
     double m_bilateralSigmaColor = 25.0;
     double m_bilateralSigmaSpace = 25.0;

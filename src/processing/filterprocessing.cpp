@@ -1,6 +1,7 @@
 #include "filterprocessing.h"
 
 #include <opencv2/imgproc.hpp>
+#include <opencv2/highgui.hpp>
 
 FilterProcessing::FilterProcessing()
 {
@@ -58,8 +59,10 @@ cv::Mat FilterProcessing::applyOpenCVFilters(const cv::Mat &depth) const
     cv::compare(depthFloat, 0.0f, invalidMask, cv::CMP_LE);
     smoothed.setTo(0.0f, invalidMask);
 
+    // K-Means 自适应阈值
     cv::Mat validMask;
-    cv::inRange(smoothed, m_minDepth, m_maxDepth, validMask);
+    validMask = maskByKmeans(smoothed);
+    //cv::inRange(smoothed, m_minDepth, m_maxDepth, validMask);   // 二值化
 
     // 闭运算
     if (m_morphologyKernelSize3 > 1) {
@@ -228,4 +231,91 @@ cv::Mat FilterProcessing::flickerDetection(const rs2::depth_frame &depth){
     m_previousDepth = currentDepth.clone();
 
     return flickerMask;
+}
+
+cv::Mat FilterProcessing::maskByKmeans(cv::Mat &smoothed) const{
+    cv::Mat validMask = cv::Mat::zeros(smoothed.size(), CV_8UC1);
+    if (smoothed.empty()) {
+        return validMask;
+    }
+
+    cv::Mat depthFloat;
+    if (smoothed.type() == CV_32FC1) {
+        depthFloat = smoothed;
+    } else {
+        smoothed.convertTo(depthFloat, CV_32FC1);
+    }
+
+    int validCount = 0;
+    for (int y = 0; y < depthFloat.rows; ++y) {
+        const float *row = depthFloat.ptr<float>(y);
+        for (int x = 0; x < depthFloat.cols; ++x) {
+            const float depth = row[x];
+            if (depth == depth && depth >= m_minDepth) {
+                ++validCount;
+            }
+        }
+    }
+
+    if (validCount < 2) {
+        return validMask;
+    }
+
+    cv::Mat samples(validCount, 1, CV_32F);
+    int sampleIndex = 0;
+    for (int y = 0; y < depthFloat.rows; ++y) {
+        const float *row = depthFloat.ptr<float>(y);
+        for (int x = 0; x < depthFloat.cols; ++x) {
+            const float depth = row[x];
+            if (depth == depth && depth >= m_minDepth) {
+                samples.at<float>(sampleIndex++, 0) = depth;
+            }
+        }
+    }
+
+    cv::Mat labels;
+    cv::Mat centers;
+    const cv::TermCriteria criteria(
+        cv::TermCriteria::EPS + cv::TermCriteria::MAX_ITER,
+        100,
+        0.01);
+
+    cv::kmeans(samples,
+               2,
+               labels,
+               criteria,
+               3,
+               cv::KMEANS_PP_CENTERS,
+               centers);
+
+    const float center0 = centers.at<float>(0, 0);
+    const float center1 = centers.at<float>(1, 0);
+    const int foregroundLabel = center0 < center1 ? 0 : 1;
+
+    for (int y = 0; y < depthFloat.rows; ++y) {
+        const float *depthRow = depthFloat.ptr<float>(y);
+        uchar *maskRow = validMask.ptr<uchar>(y);
+        for (int x = 0; x < depthFloat.cols; ++x) {
+            const float depth = depthRow[x];
+            if (depth != depth || depth < m_minDepth) {
+                continue;
+            }
+
+            float distance0 = depth - center0;
+            float distance1 = depth - center1;
+            if (distance0 < 0.0f) {
+                distance0 = -distance0;
+            }
+            if (distance1 < 0.0f) {
+                distance1 = -distance1;
+            }
+
+            const int label = distance0 <= distance1 ? 0 : 1;
+            if (label == foregroundLabel && depth <= m_maxDepth) {
+                maskRow[x] = 255;
+            }
+        }
+    }
+
+    return validMask;
 }
