@@ -49,7 +49,7 @@ private:
     double m_bilateralSigmaColor = 25.0;
     double m_bilateralSigmaSpace = 25.0;
     int m_morphologyKernelSize3 = 3;
-    int m_morphologyKernelSize5 = 5;
+    int m_morphologyKernelSize5 = 7;
 };
 
 #endif // FILTERPROCESSING_H

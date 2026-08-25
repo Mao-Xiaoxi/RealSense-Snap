@@ -12,10 +12,11 @@
 #include <opencv2/opencv.hpp>
 
 #include <atomic>
+#include <string>
 
 #include "./background/BackgroundProvider.h"
 #include "./processing/filterprocessing.h"
-
+#include "utils/yoloseg.h"
 
 // 继承
 class CameraWorker : public QObject{
@@ -125,6 +126,9 @@ private:
     // 图片保存
     bool m_capture;
     std::string m_save_path;
+
+    //图像模型
+    yoloSeg yolo26;
 
     // 私有函数
     /**

@@ -15,6 +15,11 @@ CameraWorker::CameraWorker(QObject *parent)
     // 构造函数中不要做耗时操作，此时 Worker 可能还在主线程
     m_capture = false;
     m_save_path = "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/resources/photos";
+    const std::string model_path = "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/resources/models/yolo26n-seg.onnx";
+    if (!yolo26.loadModel(model_path)) {
+        qWarning() << "Failed to load YOLO segmentation model:"
+                   << QString::fromStdString(model_path);
+    }
 }
 
 CameraWorker::~CameraWorker(){
@@ -176,6 +181,19 @@ void CameraWorker::processFrame() try
     }
 
     cv::Mat filtered = applyDepthFilters(depth);
+    if (yolo26.isLoaded()) {
+        cv::Mat personMask = yolo26.Segmatation(color_bgr);
+        if (!personMask.empty()) {
+            if (personMask.size() != filtered.size()) {
+                cv::resize(personMask, personMask, filtered.size(), 0, 0, cv::INTER_NEAREST);
+            }
+
+            cv::Mat backgroundMask;
+            cv::bitwise_not(personMask, backgroundMask);
+            filtered.setTo(cv::Scalar(0), backgroundMask);
+        }
+    }
+
     // if (filtered.empty()) return;
     // cv::Mat flickerMask = filter_processing.flickerDetection(depth);
     // if (flickerMask.empty()) return;
@@ -382,7 +400,7 @@ cv::Mat CameraWorker::backgroundRemoval(cv::Mat &color, const cv::Mat &depth) {
         cv::DIST_L2,
         cv::DIST_MASK_PRECISE);
 
-    float featherRadius = 5.0f;
+    float featherRadius = 3.0f;
 
 #pragma omp parallel for schedule(dynamic)
     for(int y=0; y<processHeight; ++y){

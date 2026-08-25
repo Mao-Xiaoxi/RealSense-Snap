@@ -73,7 +73,7 @@ cv::Mat FilterProcessing::applyOpenCVFilters(const cv::Mat &depth) const
     }
 
     //腐蚀
-    if (m_morphologyKernelSize5 > 1) {
+    if (m_morphologyKernelSize3 > 1) {
         const cv::Mat kernel = cv::getStructuringElement(
             cv::MORPH_ELLIPSE,
             cv::Size(m_morphologyKernelSize3, m_morphologyKernelSize3));
