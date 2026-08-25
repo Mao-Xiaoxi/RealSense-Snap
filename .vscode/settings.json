@@ -1,0 +1,9 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "cmake.sourceDirectory": "${workspaceFolder}/demos/vision",
+    "cmake.buildDirectory": "${workspaceFolder}/build/vscode-vision",
+    "cmake.configureSettings": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": true
+    },
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/vscode-vision/compile_commands.json"
+}

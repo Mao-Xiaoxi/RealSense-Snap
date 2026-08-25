@@ -19,11 +19,19 @@ if(NOT OpenCV_DIR OR OpenCV_DIR MATCHES "-NOTFOUND$")
     set(OpenCV_DIR "${_default_opencv_dir}" CACHE PATH "OpenCV CMake package directory" FORCE)
 endif()
 
+set(ONNXRUNTIME_ROOT "${THIRD_PARTY_ROOT}/onnxruntime-osx-arm64-1.26.0" CACHE PATH "ONNX Runtime root directory")
+
 find_package(Qt6 REQUIRED COMPONENTS Quick)
 find_package(OpenCV REQUIRED)
 find_library(REALSENSE_LIB NAMES realsense2
     PATHS "${REALSENSE_RUNTIME_DIR}"
     NO_DEFAULT_PATH
+)
+
+add_library(onnxruntime SHARED IMPORTED)
+set_target_properties(onnxruntime PROPERTIES
+    IMPORTED_LOCATION "${ONNXRUNTIME_ROOT}/lib/libonnxruntime.dylib"
+    INTERFACE_INCLUDE_DIRECTORIES "${ONNXRUNTIME_ROOT}/include"
 )
 
 if(NOT REALSENSE_LIB)
@@ -32,6 +40,14 @@ endif()
 
 if(NOT EXISTS "${REALSENSE_INCLUDE_DIR}/librealsense2/rs.hpp")
     message(FATAL_ERROR "Could not find librealsense headers. Set REALSENSE_INCLUDE_DIR to the directory containing librealsense2/rs.hpp.")
+endif()
+
+if(NOT EXISTS "${ONNXRUNTIME_ROOT}/include/onnxruntime_cxx_api.h")
+    message(FATAL_ERROR "Could not find ONNX Runtime headers. Set ONNXRUNTIME_ROOT to a valid ONNX Runtime package.")
+endif()
+
+if(NOT EXISTS "${ONNXRUNTIME_ROOT}/lib/libonnxruntime.dylib")
+    message(FATAL_ERROR "Could not find ONNX Runtime library. Set ONNXRUNTIME_ROOT to a valid ONNX Runtime package.")
 endif()
 
 qt_standard_project_setup(REQUIRES 6.10)
@@ -53,6 +69,7 @@ qt_add_qml_module(appRealSense_Snap
         SOURCES src/background/imagebackgroundprovider.h src/background/imagebackgroundprovider.cpp
         SOURCES src/background/BackgroundProvider.h
         SOURCES src/processing/filterprocessing.h src/processing/filterprocessing.cpp
+        SOURCES src/utils/yoloseg.h src/utils/yoloseg.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -65,7 +82,7 @@ set_target_properties(appRealSense_Snap PROPERTIES
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 
-    BUILD_RPATH "${REALSENSE_RUNTIME_DIR}"          # 编译目录下运行时找这里
+    BUILD_RPATH "${REALSENSE_RUNTIME_DIR};${ONNXRUNTIME_ROOT}/lib"          # 编译目录下运行时找这里
     INSTALL_RPATH "@executable_path/../lib"
 )
 
@@ -92,6 +109,7 @@ target_link_libraries(appRealSense_Snap
     PRIVATE Qt6::Quick
     "${REALSENSE_LIB}"
     ${OpenCV_LIBS}
+    onnxruntime
 )
 
 install(TARGETS appRealSense_Snap

@@ -28,7 +28,7 @@ rs2::depth_frame FilterProcessing::applyRsFilters(const rs2::depth_frame &depth)
     filtered = m_spatialFilter.process(filtered);
     filtered = m_temporalFilter.process(filtered);
     filtered = m_disparityToDepth.process(filtered);
-    filtered = m_holeFillingFilter.process(filtered);
+    //filtered = m_holeFillingFilter.process(filtered);
 
     return filtered.as<rs2::depth_frame>();
 }
@@ -48,11 +48,11 @@ cv::Mat FilterProcessing::applyOpenCVFilters(const cv::Mat &depth) const
 
     // 双边滤波平滑
     cv::Mat smoothed = depth;
-    // cv::bilateralFilter(depthFloat,
-    //                     smoothed,
-    //                     m_bilateralDiameter,
-    //                     m_bilateralSigmaColor,
-    //                     m_bilateralSigmaSpace);
+    cv::bilateralFilter(depthFloat,
+                        smoothed,
+                        m_bilateralDiameter,
+                        m_bilateralSigmaColor,
+                        m_bilateralSigmaSpace);
 
     // 无效值清除
     cv::Mat invalidMask;
@@ -61,14 +61,14 @@ cv::Mat FilterProcessing::applyOpenCVFilters(const cv::Mat &depth) const
 
     // K-Means 自适应阈值
     cv::Mat validMask;
-    validMask = maskByKmeans(smoothed);
-    //cv::inRange(smoothed, m_minDepth, m_maxDepth, validMask);   // 二值化
+    // validMask = maskByKmeans(smoothed);
+    cv::inRange(smoothed, m_minDepth, m_maxDepth, validMask);   // 二值化
 
     // 闭运算
     if (m_morphologyKernelSize3 > 1) {
         const cv::Mat kernel = cv::getStructuringElement(
             cv::MORPH_ELLIPSE,
-            cv::Size(m_morphologyKernelSize3, m_morphologyKernelSize3));
+            cv::Size(m_morphologyKernelSize5, m_morphologyKernelSize5));
         cv::morphologyEx(validMask, validMask, cv::MORPH_CLOSE, kernel);
     }
 
@@ -76,7 +76,7 @@ cv::Mat FilterProcessing::applyOpenCVFilters(const cv::Mat &depth) const
     if (m_morphologyKernelSize5 > 1) {
         const cv::Mat kernel = cv::getStructuringElement(
             cv::MORPH_ELLIPSE,
-            cv::Size(m_morphologyKernelSize3, m_morphologyKernelSize5));
+            cv::Size(m_morphologyKernelSize3, m_morphologyKernelSize3));
         cv::erode(validMask, validMask, kernel, cv::Point(-1, -1), 1);
     }
 
