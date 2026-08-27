@@ -7,19 +7,35 @@
 #include <QThread>
 #include <opencv2/opencv.hpp>
 
+static QString resourcePath(const QString &relativePath)
+{
+    return QDir(QStringLiteral(REALSENSE_SNAP_RESOURCE_DIR)).filePath(relativePath);
+}
+
+void CameraWorker::initialize()
+{
+    qDebug() << "CameraWorker initialize in thread:" << QThread::currentThread();
+
+    if (!m_backgroundProvider.loadFromFile(m_backgroundPath)) {
+        emit cameraError("默认背景加载失败");
+    }
+
+    if (!yolo26.loadModel(m_modelPath.toStdString())) {
+        emit cameraError("YOLO 模型加载失败");
+    }
+}
+
 CameraWorker::CameraWorker(QObject *parent)
     : QObject(parent)
-    , align_to_depth(RS2_STREAM_DEPTH)   // 初始化对齐对象（昂贵操作只做一次）
+    , align_to_depth(RS2_STREAM_DEPTH)
     , align_to_color(RS2_STREAM_COLOR)
 {
-    // 构造函数中不要做耗时操作，此时 Worker 可能还在主线程
     m_capture = false;
-    m_save_path = "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/resources/photos";
-    const std::string model_path = "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/resources/models/yolo26n-seg.onnx";
-    if (!yolo26.loadModel(model_path)) {
-        qWarning() << "Failed to load YOLO segmentation model:"
-                   << QString::fromStdString(model_path);
-    }
+    m_if_segmentation = true;
+
+    m_backgroundPath = resourcePath("images/background001.jpeg");
+    m_save_path = resourcePath("photos");
+    m_modelPath = resourcePath("models/yolo26n-seg.onnx");
 }
 
 CameraWorker::~CameraWorker(){
@@ -138,6 +154,16 @@ void CameraWorker::capturePhoto(){
     m_capture = true;
 }
 
+void CameraWorker::setBackgroundImage(const QString &path)
+{
+    if (!m_backgroundProvider.loadFromFile(path)) {
+        emit cameraError("背景图片加载失败");
+        return;
+    }
+
+    emit cameraError("背景图片已切换");
+}
+
 void CameraWorker::processFrame() try
 {
     if (!m_running.load(std::memory_order_acquire)) {
@@ -149,11 +175,7 @@ void CameraWorker::processFrame() try
         qWarning()<<"No frame received";
         return;
     }
-    if(false){
-        frames=align_to_depth.process(frames);
-    }else{
-        frames=align_to_color.process(frames);
-    }
+    frames=align_to_color.process(frames);
 
     rs2::depth_frame depth=frames.get_depth_frame();
     rs2::video_frame color=frames.get_color_frame();
@@ -181,18 +203,19 @@ void CameraWorker::processFrame() try
     }
 
     cv::Mat filtered = applyDepthFilters(depth);
-    if (yolo26.isLoaded()) {
+
+    // 隔帧进行推理
+    if (m_if_segmentation && yolo26.isLoaded()) {
         cv::Mat personMask = yolo26.Segmatation(color_bgr);
         if (!personMask.empty()) {
             if (personMask.size() != filtered.size()) {
                 cv::resize(personMask, personMask, filtered.size(), 0, 0, cv::INTER_NEAREST);
             }
-
-            cv::Mat backgroundMask;
-            cv::bitwise_not(personMask, backgroundMask);
-            filtered.setTo(cv::Scalar(0), backgroundMask);
+            cv::bitwise_not(personMask, m_backgroundMask);    // 对掩码取反
         }
     }
+    m_if_segmentation=!m_if_segmentation;
+    filtered.setTo(cv::Scalar(0), m_backgroundMask);
 
     // if (filtered.empty()) return;
     // cv::Mat flickerMask = filter_processing.flickerDetection(depth);
@@ -214,38 +237,8 @@ void CameraWorker::processFrame() try
 
     // 对彩色图像进行背景替换
     color_bgr = backgroundRemoval(color_bgr, filtered);
-
-    rs2::frame colorized_frame = colorizer.process(depth);
-    if (!colorized_frame) {
-        qWarning() << "Colorized depth frame is empty";
-        return;
-    }
-    rs2::video_frame colorized_depth = colorized_frame.as<rs2::video_frame>();
-
-    if (colorized_depth.get_profile().format() != RS2_FORMAT_RGB8) {
-        qWarning() << "Unsupported colorized depth format:";
-        return;
-    }
-
-    cv::Mat depth_rgb(cv::Size(colorized_depth.get_width(),colorized_depth.get_height()),CV_8UC3,(void*)colorized_depth.get_data(), cv::Mat::AUTO_STEP);
-    cv::Mat depth_bgr;
-    cv::cvtColor(depth_rgb, depth_bgr, cv::COLOR_RGB2BGR);
-
-    // 图片尺寸对齐
-    if (depth_bgr.size() != color_bgr.size()) {
-        cv::resize(depth_bgr, depth_bgr, color_bgr.size(), 0, 0, cv::INTER_NEAREST);
-    }
-
-    cv::Mat overlay;
-    float currentAlpha;
-    {
-        QMutexLocker locker(&m_alphaMutex);
-        currentAlpha = m_alpha;
-    }
-    cv::addWeighted(color_bgr, 1.0f - currentAlpha, depth_bgr, currentAlpha, 0, overlay);
-
-    cv::Mat overlay_rgb;
-    cv::cvtColor(overlay,overlay_rgb,cv::COLOR_BGR2RGB);
+    // 深度图像的叠加
+    cv::Mat overlay_rgb = overlay_depth_color(depth, color_bgr);
 
     QImage qimg(overlay_rgb.data,
                 overlay_rgb.cols,
@@ -254,36 +247,8 @@ void CameraWorker::processFrame() try
                 QImage::Format_RGB888);
 
     // save overlay_rgb
-    // may optimize with mediapipe
-    if(m_capture)try{
-        const QString savePath = QString::fromStdString(m_save_path);
-        QDir saveDir(savePath);
-        if (!saveDir.exists() && !saveDir.mkpath(".")) {
-            qWarning() << "Failed to create photo directory:" << savePath;
-            m_capture = false;
-            return;
-        }
-
-        const QString baseName = QDateTime::currentDateTime()
-                                     .toString("yyyy-MM-dd_hh-mm-ss-zzz");
-        QString fullPath = saveDir.filePath(baseName + ".png");
-        int suffix = 1;
-        while (QFile::exists(fullPath)) {
-            fullPath = saveDir.filePath(
-                QString("%1_%2.png").arg(baseName).arg(suffix++));
-        }
-
-        if (!cv::imwrite(fullPath.toStdString(), overlay)) {
-            qWarning() << "Failed to save photo:" << fullPath;
-        } else {
-            qDebug() << "Photo saved:" << fullPath;
-            // 使用视觉模型进行细化分割
-        }
-        m_capture=false;
-        }catch(const cv::Exception &e){
-            qWarning()<<"Fail to save:"<<e.what();
-            m_capture = false;
-        }
+    if(m_capture)
+        save_photo(overlay_rgb);
 
     emit frameReady(qimg.copy());
 }catch(const rs2::error &e){
@@ -333,7 +298,7 @@ void CameraWorker::setAlpha(float a){
  */
 cv::Mat CameraWorker::backgroundRemoval(cv::Mat &color, const cv::Mat &depth) {
     // 1. 输入有效性检查
-    if (!m_background || !m_background->isReady()) {
+    if (!m_backgroundProvider.isReady()) {
         return color;
     }
     if (color.empty() || depth.empty()) {
@@ -360,7 +325,7 @@ cv::Mat CameraWorker::backgroundRemoval(cv::Mat &color, const cv::Mat &depth) {
     const float maxDepth = filter_processing.maxDepth();
 
     // 获取背景图像（应与color同尺寸同类型）
-    cv::Mat background = m_background->backgroundForSize(cv::Size(width, height));
+    cv::Mat background = m_backgroundProvider.backgroundForSize(cv::Size(width, height));
     if (background.empty() || background.type() != color.type()) {
         return color;
     }
@@ -431,6 +396,70 @@ cv::Mat CameraWorker::backgroundRemoval(cv::Mat &color, const cv::Mat &depth) {
     return color;
 }
 
-void CameraWorker::setBackgroundProvider(BackgroundProvider *provider){
-    m_background=provider;
+cv::Mat CameraWorker::overlay_depth_color(rs2::depth_frame &depth, cv::Mat &color_bgr){
+    rs2::frame colorized_frame = colorizer.process(depth);
+    if (!colorized_frame) {
+        qWarning() << "Colorized depth frame is empty";
+        return color_bgr;
+    }
+    rs2::video_frame colorized_depth = colorized_frame.as<rs2::video_frame>();
+
+    if (colorized_depth.get_profile().format() != RS2_FORMAT_RGB8) {
+        qWarning() << "Unsupported colorized depth format:";
+        return color_bgr;
+    }
+
+    cv::Mat depth_rgb(cv::Size(colorized_depth.get_width(),colorized_depth.get_height()),CV_8UC3,(void*)colorized_depth.get_data(), cv::Mat::AUTO_STEP);
+    cv::Mat depth_bgr;
+    cv::cvtColor(depth_rgb, depth_bgr, cv::COLOR_RGB2BGR);
+
+    // 图片尺寸对齐
+    if (depth_bgr.size() != color_bgr.size()) {
+        cv::resize(depth_bgr, depth_bgr, color_bgr.size(), 0, 0, cv::INTER_NEAREST);
+    }
+
+    cv::Mat overlay;
+    float currentAlpha;
+    {
+        QMutexLocker locker(&m_alphaMutex);
+        currentAlpha = m_alpha;
+    }
+    cv::addWeighted(color_bgr, 1.0f - currentAlpha, depth_bgr, currentAlpha, 0, overlay);
+
+    cv::Mat overlay_rgb;
+    cv::cvtColor(overlay,overlay_rgb,cv::COLOR_BGR2RGB);
+    return overlay_rgb;
+}
+
+bool CameraWorker::save_photo(const cv::Mat &overlay)try{
+    cv::Mat overlay_bgr;
+    cv::cvtColor(overlay,overlay_bgr,cv::COLOR_BGR2RGB);
+    QDir saveDir(m_save_path);
+    if (!saveDir.exists() && !saveDir.mkpath(".")) {
+        qWarning() << "Failed to create photo directory:" << m_save_path;
+        m_capture = false;
+        return false;
+    }
+
+    const QString baseName = QDateTime::currentDateTime().toString("yyyy-MM-dd_hh-mm-ss-zzz");
+    QString fullPath = saveDir.filePath(baseName + ".png");
+    int suffix = 1;
+    while (QFile::exists(fullPath)) {
+        fullPath = saveDir.filePath(
+            QString("%1_%2.png").arg(baseName).arg(suffix++));
+    }
+
+    if (!cv::imwrite(fullPath.toStdString(), overlay_bgr)) {
+        qWarning() << "Failed to save photo:" << fullPath;
+        m_capture=false;
+        return false;
+    } else {
+        qDebug() << "Photo saved:" << fullPath;
+        m_capture=false;
+        return true;
+    }
+}catch(const cv::Exception &e){
+    qWarning()<<"Fail to save:"<<e.what();
+    m_capture = false;
+    return false;
 }

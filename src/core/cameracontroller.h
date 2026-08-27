@@ -8,13 +8,16 @@
 #include <QVariantList>
 #include <QVariantMap>
 
-#include <librealsense2/rs.hpp>
-#include <opencv2/opencv.hpp>
-
-// 摄像头选择与叠加参数调节。
+/**
+ * @brief QML 与后台 CameraWorker 之间的控制桥。
+ *
+ * Controller 运行在 UI 线程，主要保存界面需要绑定的状态，
+ * 并把用户操作转换成信号发送给 worker。该类不直接操作 RealSense、
+ * OpenCV 图像或模型资源，避免 UI 层和处理层耦合。
+ */
 class CameraController : public QObject{
     Q_OBJECT
-    Q_PROPERTY(float alpha READ alpha WRITE setAlpha NOTIFY alphaChanged)   //调用内部的函数来实现接口通信
+    Q_PROPERTY(float alpha READ alpha WRITE setAlpha NOTIFY alphaChanged)   // 调用内部的函数来实现接口通信
     Q_PROPERTY(QVariantList cameras READ cameras NOTIFY camerasChanged)
     Q_PROPERTY(QString cameraStatus READ cameraStatus NOTIFY cameraStatusChanged)
     Q_PROPERTY(QString selectedCameraSerial READ selectedCameraSerial WRITE setSelectedCameraSerial NOTIFY selectedCameraSerialChanged)
@@ -87,8 +90,19 @@ public slots:
      */
     void setSelectedCameraSerialFromWorker(QString serial);
 
+    /**
+     * @brief 请求切换背景图片。
+     * @param path QML 文件选择器返回的背景图片路径。
+     *
+     * Controller 只做路径检查和请求转发，实际图片加载由 CameraWorker 完成。
+     */
     Q_INVOKABLE void setBackgroundImage(QString path);
 
+    /**
+     * @brief 请求保存当前画面。
+     *
+     * 该函数由 QML 直接调用，随后通过 photoCaptureRequested() 通知 worker。
+     */
     Q_INVOKABLE void capturePhoto();
 
 signals:
@@ -132,19 +146,28 @@ signals:
     void cameraSelected(QString serial);
 
     /**
-     * @brief backgroundImageRequested
-     * @param path
+     * @brief 请求 worker 加载新的背景图片。
+     * @param path 背景图片路径。
      */
     void backgroundImageRequested(QString path);
 
+    /**
+     * @brief 请求 worker 在下一帧保存照片。
+     */
     void photoCaptureRequested();
 
 
 private:
+    // 当前深度伪彩叠加透明度，供 QML slider 双向绑定。
     float m_alpha=0.0f;
 
+    // QML ComboBox 使用的设备列表。
     QVariantList m_cameras;
+
+    // 当前相机状态或错误提示文本。
     QString m_cameraStatus;
+
+    // 当前选中的 RealSense 设备序列号。
     QString m_selectedCameraSerial;
 };
 

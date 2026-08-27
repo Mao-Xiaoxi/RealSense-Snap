@@ -112,6 +112,11 @@ target_link_libraries(appRealSense_Snap
     onnxruntime
 )
 
+# 资源路径
+target_compile_definitions(appRealSense_Snap PRIVATE
+    REALSENSE_SNAP_RESOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}/resources"
+)
+
 install(TARGETS appRealSense_Snap
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}

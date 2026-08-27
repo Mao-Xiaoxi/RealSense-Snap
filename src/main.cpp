@@ -9,7 +9,6 @@
 #include "CameraWorker.h"
 #include "videoitem.h"
 #include "cameracontroller.h"
-#include "background//imagebackgroundprovider.h"
 
 
 /**
@@ -26,14 +25,7 @@ int main(int argc, char *argv[])
 
     // 线程与Worker准备
     QThread workerThread;
-    ImageBackgroundProvider backgroundProvider;
-    if (!backgroundProvider.loadFromFile(
-            "/Users/maoxiaoxi/Documents/code/C++/Qt/RealSense_Snap/resources/images/background001.jpeg"
-            )) {
-        return -1;
-    }
     CameraWorker worker;
-    worker.setBackgroundProvider(&backgroundProvider);
     CameraController controller;
     worker.moveToThread(&workerThread); // 线程暴露问题
 
@@ -66,6 +58,9 @@ int main(int argc, char *argv[])
     QObject::connect(&controller,&CameraController::photoCaptureRequested,
                      &worker, &CameraWorker::capturePhoto,
                      Qt::QueuedConnection);
+    QObject::connect(&controller, &CameraController::backgroundImageRequested,
+                     &worker, &CameraWorker::setBackgroundImage,
+                     Qt::QueuedConnection);
     QObject::connect(&worker,&CameraWorker::deviceReady,
                      &controller,&CameraController::setDevices,
                      Qt::QueuedConnection);
@@ -76,28 +71,21 @@ int main(int argc, char *argv[])
                      &controller,&CameraController::setSelectedCameraSerialFromWorker,
                      Qt::QueuedConnection);
 
-    // 背景类信号绑定
-    QObject::connect(
-        &controller,
-        &CameraController::backgroundImageRequested,
-        &controller,
-        [&](const QString &path) {
-            if (!backgroundProvider.loadFromFile(path)) {
-                controller.setCameraStatus("背景图片加载失败");
-            } else {
-                controller.setCameraStatus("背景图片已切换");
-            }
-        }
-    );
-
     // 启动线程并开始工作
     workerThread.start();
+
+    // 分开加载，防止卡死
+    QMetaObject::invokeMethod(
+        &worker,
+        &CameraWorker::initialize,
+        Qt::QueuedConnection
+        );
 
     QMetaObject::invokeMethod(
         &worker,
         &CameraWorker::refreshDevices,
         Qt::QueuedConnection
-    );
+        );
 
     //退出清理
     QObject::connect(&app, &QCoreApplication::aboutToQuit, [&]() {
