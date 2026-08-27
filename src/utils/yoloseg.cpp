@@ -313,6 +313,9 @@ cv::Mat yoloSeg::postprocess(
         cv::MORPH_CLOSE,
         cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(5, 5)));
 
+    cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
+    cv::erode(personMask , personMask, kernel);
+
     return personMask;
 }
 

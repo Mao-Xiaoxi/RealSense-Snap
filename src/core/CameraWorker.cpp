@@ -400,7 +400,7 @@ cv::Mat CameraWorker::backgroundRemoval(cv::Mat &color, const cv::Mat &depth) {
         cv::DIST_L2,
         cv::DIST_MASK_PRECISE);
 
-    float featherRadius = 3.0f;
+    float featherRadius = 6.0f;
 
 #pragma omp parallel for schedule(dynamic)
     for(int y=0; y<processHeight; ++y){
