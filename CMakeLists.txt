@@ -112,6 +112,25 @@ target_link_libraries(appRealSense_Snap
     onnxruntime
 )
 
+# OpenMP
+option(REALSENSE_SNAP_ENABLE_OPENMP "Enable OpenMP acceleration" ON)
+
+if(REALSENSE_SNAP_ENABLE_OPENMP)
+    if(APPLE AND NOT OpenMP_ROOT AND EXISTS "/opt/homebrew/opt/libomp")
+        set(OpenMP_ROOT "/opt/homebrew/opt/libomp" CACHE PATH "OpenMP root directory")
+    endif()
+
+    find_package(OpenMP QUIET)
+
+    if(OpenMP_CXX_FOUND)
+        target_link_libraries(appRealSense_Snap PRIVATE OpenMP::OpenMP_CXX)
+        target_compile_definitions(appRealSense_Snap PRIVATE REALSENSE_SNAP_HAS_OPENMP=1)
+        message(STATUS "OpenMP enabled")
+    else()
+        message(WARNING "OpenMP requested but not found. Build will continue without OpenMP.")
+    endif()
+endif()
+
 # 资源路径
 target_compile_definitions(appRealSense_Snap PRIVATE
     REALSENSE_SNAP_RESOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}/resources"

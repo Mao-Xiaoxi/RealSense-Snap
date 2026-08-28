@@ -22,7 +22,6 @@ rs2::depth_frame FilterProcessing::applyRsFilters(const rs2::depth_frame &depth)
 
     rs2::frame filtered = depth;
 
-
     //filtered = m_decimationFilter.process(filtered);
     filtered = m_depthToDisparity.process(filtered);
     filtered = m_spatialFilter.process(filtered);

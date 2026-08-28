@@ -7,6 +7,18 @@
 #include <QThread>
 #include <opencv2/opencv.hpp>
 
+// 处理速度测试
+#include <QElapsedTimer>
+
+// 计时函数
+static qint64 markCost(QElapsedTimer &timer, const char *name)
+{
+    const qint64 cost = timer.elapsed();
+    qDebug() << name << cost << "ms";
+    timer.restart();
+    return cost;
+}
+
 static QString resourcePath(const QString &relativePath)
 {
     return QDir(QStringLiteral(REALSENSE_SNAP_RESOURCE_DIR)).filePath(relativePath);
@@ -166,6 +178,10 @@ void CameraWorker::setBackgroundImage(const QString &path)
 
 void CameraWorker::processFrame() try
 {
+    // 开始计时
+    QElapsedTimer frameTimer;
+    frameTimer.start();
+
     if (!m_running.load(std::memory_order_acquire)) {
         return;
     }
@@ -204,6 +220,9 @@ void CameraWorker::processFrame() try
 
     cv::Mat filtered = applyDepthFilters(depth);
 
+    // RS深度滤波耗时
+    // markCost(frameTimer, "RS filter");
+
     // 隔帧进行推理
     if (m_if_segmentation && yolo26.isLoaded()) {
         cv::Mat personMask = yolo26.Segmatation(color_bgr);
@@ -216,6 +235,9 @@ void CameraWorker::processFrame() try
     }
     m_if_segmentation=!m_if_segmentation;
     filtered.setTo(cv::Scalar(0), m_backgroundMask);
+
+    // RS深度滤波耗时
+    // markCost(frameTimer, "Yolo Segmentation");
 
     // if (filtered.empty()) return;
     // cv::Mat flickerMask = filter_processing.flickerDetection(depth);
@@ -249,6 +271,9 @@ void CameraWorker::processFrame() try
     // save overlay_rgb
     if(m_capture)
         save_photo(overlay_rgb);
+
+    // 结束计时
+    // markCost(frameTimer, "Background replaced & Overlay");
 
     emit frameReady(qimg.copy());
 }catch(const rs2::error &e){
