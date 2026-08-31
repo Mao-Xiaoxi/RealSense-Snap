@@ -1,61 +1,100 @@
 #ifndef FACIALLANDMARK_H
 #define FACIALLANDMARK_H
 
-#include <opencv2/opencv.hpp>
-#include <opencv2/face.hpp>   // 新增！
 #include <string>
+#include <vector>
+
+#include <opencv2/core.hpp>
+#include <opencv2/dnn.hpp>
 
 /**
- * @brief 基于 OpenCV face 模块的人脸关键点检测工具。
+ * @brief 基于 YOLOv8 face ONNX 模型的人脸关键点检测工具。
  *
- * 该类使用 Haar 级联检测人脸区域，再使用 FacemarkLBF 拟合人脸关键点。
- * 当前主要用于 demo 验证，尚未接入主实时处理流程。
+ * 模型输出人脸检测框和 5 个关键点：左眼、右眼、鼻尖、左嘴角、右嘴角。
  */
 class facialLandmark {
 public:
+    struct Face {
+        cv::Rect rect;
+        float confidence = 0.0f;
+        std::vector<cv::Point> landmarks;
+    };
+
     /**
-     * @brief 创建人脸关键点检测器，并尝试加载默认模型。
+     * @brief 创建检测器，并尝试加载 resources/models/yolov8n-face.onnx。
      */
     facialLandmark();
 
     /**
-     * @brief 释放人脸检测相关资源。
+     * @brief 创建检测器，并加载指定 ONNX 模型。
      */
+    explicit facialLandmark(const std::string &modelPath);
+
     ~facialLandmark();
 
     /**
-     * @brief 加载 LBF 人脸关键点模型。
-     * @param model_path LBF 模型文件路径。
+     * @brief 加载或重新加载 YOLOv8 face ONNX 模型。
+     * @param modelPath ONNX 模型文件路径。
      * @return 加载成功返回 true，失败返回 false。
      */
-    bool loadLandmarkModel(const std::string& model_path);  // 改为 bool
+    bool loadModel(const std::string &modelPath);
 
     /**
-     * @brief 加载 Haar 人脸检测模型。
-     * @param model_path Haar cascade XML 文件路径。
-     * @return 加载成功返回 true，失败返回 false。
+     * @brief 兼容旧接口：加载 YOLOv8 face ONNX 模型。
      */
-    bool loadHearModel(const std::string& model_path);      // 改为 bool
+    bool loadLandmarkModel(const std::string &modelPath);
+
+    /**
+     * @brief 兼容旧接口：YOLOv8 face 不再需要 Haar 模型。
+     */
+    bool loadHearModel(const std::string &modelPath);
+
+    /**
+     * @brief 判断模型是否已经加载成功。
+     */
+    bool isLoaded() const;
+
+    /**
+     * @brief 检测图像中的人脸框和 5 个关键点。
+     */
+    std::vector<Face> detect(const cv::Mat &color);
 
     /**
      * @brief 检测图像中的人脸关键点并绘制到图像上。
-     * @param color 输入 BGR 彩色图。
-     * @return 绘制关键点后的图像；检测失败时返回原图。
+     * @param color 输入 BGR/BGRA/灰度图。
+     * @return 绘制检测结果后的图像；失败时返回原图。
      */
     cv::Mat LandmarkDetection(cv::Mat color);
 
 private:
-    // LBF 关键点拟合器。
-    cv::Ptr<cv::face::FacemarkLBF> m_facemark;
+    struct LetterboxInfo {
+        int resizedWidth = 0;
+        int resizedHeight = 0;
+        int padX = 0;
+        int padY = 0;
+        float ratioX = 1.0f;
+        float ratioY = 1.0f;
+    };
 
-    // Haar 人脸检测器，用于先定位人脸矩形区域。
-    cv::CascadeClassifier m_faceDetector;
+    cv::Mat resizeImage(const cv::Mat &src, LetterboxInfo &info) const;
+    void generateProposal(
+        const cv::Mat &output,
+        std::vector<cv::Rect> &boxes,
+        std::vector<float> &confidences,
+        std::vector<std::vector<cv::Point>> &landmarks,
+        const cv::Size &originalSize,
+        const LetterboxInfo &info) const;
+    static void softmax(const float *src, float *dst, int length);
+    static float sigmoid(float value);
+    static std::string defaultModelPath();
 
-    // LBF 模型路径。
-    std::string m_landmark_model_path;
-
-    // Haar cascade 模型路径。
-    std::string m_hear_model_path;
+    cv::dnn::Net m_net;
+    std::string m_modelPath;
+    bool m_loaded = false;
+    int m_inputWidth = 640;
+    int m_inputHeight = 640;
+    float m_confidenceThreshold = 0.45f;
+    float m_nmsThreshold = 0.5f;
 };
 
 #endif // FACIALLANDMARK_H

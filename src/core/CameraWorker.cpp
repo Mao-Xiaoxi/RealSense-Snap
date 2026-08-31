@@ -5,6 +5,7 @@
 #include <QFile>
 #include <QStandardPaths>
 #include <QThread>
+#include <iostream>
 #include <opencv2/opencv.hpp>
 
 // 处理速度测试
@@ -33,7 +34,11 @@ void CameraWorker::initialize()
     }
 
     if (!yolo26.loadModel(m_modelPath.toStdString())) {
-        emit cameraError("YOLO 模型加载失败");
+        emit cameraError("YOLO26 模型加载失败");
+    }
+
+    if(!yolo8.loadModel(m_yolo8ModelPath.toStdString())){
+        emit cameraError("YOLO8 模型加载失败");
     }
 }
 
@@ -48,6 +53,8 @@ CameraWorker::CameraWorker(QObject *parent)
     m_backgroundPath = resourcePath("images/background001.jpeg");
     m_save_path = resourcePath("photos");
     m_modelPath = resourcePath("models/yolo26n-seg.onnx");
+    m_yolo8ModelPath = resourcePath("models/yolov8n-face.onnx");
+
 }
 
 CameraWorker::~CameraWorker(){
@@ -233,8 +240,23 @@ void CameraWorker::processFrame() try
             cv::bitwise_not(personMask, m_backgroundMask);    // 对掩码取反
         }
     }
+
+    if (yolo8.isLoaded()) {
+        m_faces = yolo8.detect(color_bgr);
+    }
+
     m_if_segmentation=!m_if_segmentation;
     filtered.setTo(cv::Scalar(0), m_backgroundMask);
+
+    // if (!m_faces.empty()) {
+    //     const auto &landmarks = m_faces[0].landmarks;
+    //     const size_t landmarkCount = std::min<size_t>(5, landmarks.size());
+    //     for (size_t i = 0; i < landmarkCount; ++i) {
+    //         std::cout << "face[0].landmark[" << i << "] = ("
+    //                   << landmarks[i].x << ", "
+    //                   << landmarks[i].y << ")" << std::endl;
+    //     }
+    // }
 
     // RS深度滤波耗时
     // markCost(frameTimer, "Yolo Segmentation");

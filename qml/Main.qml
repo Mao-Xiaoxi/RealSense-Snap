@@ -9,10 +9,10 @@ import QtQuick.Controls 2.15
 
 ApplicationWindow {
     id: window
-    width: 640
-    height: 480
-    minimumWidth: 200
-    minimumHeight: 250
+    width: 1180
+    height: 760
+    minimumWidth: 860
+    minimumHeight: 560
     visible: true
     title: qsTr("RealSense Snap")
     property bool lightMode: Application.styleHints.colorScheme === Qt.Light
@@ -26,10 +26,15 @@ ApplicationWindow {
     property color secondaryText: window.lightMode ? "#62666d" : "#b8bcc4"
     property color borderColor: window.lightMode ? "#d8dbe0" : "#444850"
     property color accentColor: "#2f7de1"
+    property color accentHover: "#256fc9"
+    property color accentPressed: "#1f5fae"
+    property int sidePanelWidth: 340
 
     // Component.onCompleted: {
     //     cameraController.refreshDevices()
     // }
+
+    color: window.lightMode ? "#e8eaee" : "#191b1f"
 
     FileDialog {
         id: backgroundDialog
@@ -43,22 +48,58 @@ ApplicationWindow {
 
     GridLayout {
         id: grid
-        columns: width < 400 ? 1 : 2
+        columns: width < 920 ? 1 : 2
         rowSpacing: 0
         columnSpacing: 0
         anchors.fill: parent
+        opacity: 0.0
+        transform: Translate {
+            id: enterOffset
+            y: 10
+        }
+
+        Component.onCompleted: {
+            enterAnimation.start()
+        }
+
+        ParallelAnimation {
+            id: enterAnimation
+            NumberAnimation {
+                target: grid
+                property: "opacity"
+                from: 0.0
+                to: 1.0
+                duration: 360
+                easing.type: Easing.OutCubic
+            }
+            NumberAnimation {
+                target: enterOffset
+                property: "y"
+                from: 10
+                to: 0
+                duration: 360
+                easing.type: Easing.OutCubic
+            }
+        }
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            Layout.preferredWidth: 720   // 默认宽度
-            Layout.preferredHeight: 480  // 默认高度
-            color: "black"
+            Layout.preferredWidth: 820
+            Layout.preferredHeight: 620
+            color: window.lightMode ? "#111318" : "#07080a"
 
             VideoItem {
                 id: liveView
                 objectName: "liveView"
                 anchors.fill: parent
+            }
+
+            Rectangle {
+                anchors.fill: parent
+                color: "transparent"
+                border.color: window.lightMode ? "#00000022" : "#ffffff18"
+                border.width: 1
             }
         }
 
@@ -66,23 +107,23 @@ ApplicationWindow {
             id: rectangle2
             color: window.panelBackground
             Layout.fillHeight: true
-            Layout.preferredWidth: grid.columns === 1 ? grid.width : 280
-            Layout.minimumWidth: 260
-            Layout.maximumWidth: grid.columns === 1 ? grid.width : 340
+            Layout.preferredWidth: grid.columns === 1 ? grid.width : window.sidePanelWidth
+            Layout.minimumWidth: 320
+            Layout.maximumWidth: grid.columns === 1 ? grid.width : 390
 
             ColumnLayout {
                 anchors.fill: parent
-                anchors.margins: 20
-                spacing: 16
+                anchors.margins: 26
+                spacing: 20
 
                 ColumnLayout {
                     Layout.fillWidth: true
-                    spacing: 4
+                    spacing: 7
 
                     Label {
                         text: "RealSense Snap"
                         color: window.primaryText
-                        font.pixelSize: 22
+                        font.pixelSize: 28
                         font.bold: true
                         Layout.fillWidth: true
                     }
@@ -92,7 +133,7 @@ ApplicationWindow {
                               ? "当前设备: " + cameraController.selectedCameraSerial
                               : "请选择可用摄像头"
                         color: window.secondaryText
-                        font.pixelSize: 12
+                        font.pixelSize: 13
                         elide: Text.ElideMiddle
                         Layout.fillWidth: true
                     }
@@ -100,7 +141,7 @@ ApplicationWindow {
 
                 Rectangle {
                     Layout.fillWidth: true
-                    implicitHeight: cameraSection.implicitHeight + 28
+                    implicitHeight: cameraSection.implicitHeight + 32
                     radius: 8
                     color: window.panelSection
                     border.color: window.borderColor
@@ -111,8 +152,8 @@ ApplicationWindow {
                         anchors.left: parent.left
                         anchors.right: parent.right
                         anchors.top: parent.top
-                        anchors.margins: 14
-                        spacing: 10
+                        anchors.margins: 16
+                        spacing: 12
 
                         RowLayout {
                             Layout.fillWidth: true
@@ -121,23 +162,55 @@ ApplicationWindow {
                             Label {
                                 text: "摄像头"
                                 color: window.primaryText
-                                font.pixelSize: 15
+                                font.pixelSize: 16
                                 font.bold: true
                                 Layout.fillWidth: true
                             }
 
                             Button {
+                                id: refreshButton
                                 text: "刷新"
-                                implicitWidth: 64
-                                implicitHeight: 32
+                                implicitWidth: 72
+                                implicitHeight: 34
+                                scale: pressed ? 0.98 : 1.0
                                 onClicked: cameraController.refreshDevices()
+
+                                Behavior on scale {
+                                    NumberAnimation {
+                                        duration: 90
+                                        easing.type: Easing.OutCubic
+                                    }
+                                }
+
+                                contentItem: Text {
+                                    text: refreshButton.text
+                                    color: window.primaryText
+                                    font.pixelSize: 13
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+
+                                background: Rectangle {
+                                    radius: 8
+                                    color: refreshButton.pressed
+                                           ? (window.lightMode ? "#dfe4ec" : "#3c4047")
+                                           : refreshButton.hovered
+                                             ? (window.lightMode ? "#eef2f7" : "#373a40")
+                                             : window.panelSection
+                                    border.color: window.borderColor
+                                    border.width: 1
+
+                                    Behavior on color {
+                                        ColorAnimation { duration: 120 }
+                                    }
+                                }
                             }
                         }
 
                         ComboBox {
                             id: cameraCombo
                             Layout.fillWidth: true
-                            implicitHeight: 36
+                            implicitHeight: 40
                             model: cameraController.cameras
                             textRole: "name"
 
@@ -147,7 +220,7 @@ ApplicationWindow {
                                 enabled: modelData.valid
                             }
 
-                            onActivated: {
+                            onActivated: function(index) {
                                 const camera = cameraController.cameras[index]
                                 if (camera.valid) {
                                     cameraController.selectedCameraSerial = camera.serial
@@ -160,16 +233,20 @@ ApplicationWindow {
                                   ? cameraController.cameraStatus
                                   : "已检测到 " + cameraController.cameras.length + " 个设备"
                             color: cameraController.cameraStatus.length > 0 ? "#d45c48" : window.secondaryText
-                            font.pixelSize: 12
+                            font.pixelSize: 13
                             wrapMode: Text.Wrap
                             Layout.fillWidth: true
+
+                            Behavior on color {
+                                ColorAnimation { duration: 160 }
+                            }
                         }
                     }
                 }
 
                 Rectangle {
                     Layout.fillWidth: true
-                    implicitHeight: alphaSection.implicitHeight + 28
+                    implicitHeight: alphaSection.implicitHeight + 32
                     radius: 8
                     color: window.panelSection
                     border.color: window.borderColor
@@ -180,8 +257,8 @@ ApplicationWindow {
                         anchors.left: parent.left
                         anchors.right: parent.right
                         anchors.top: parent.top
-                        anchors.margins: 14
-                        spacing: 10
+                        anchors.margins: 16
+                        spacing: 12
 
                         RowLayout {
                             Layout.fillWidth: true
@@ -189,7 +266,7 @@ ApplicationWindow {
                             Label {
                                 text: "深度叠加强度"
                                 color: window.primaryText
-                                font.pixelSize: 15
+                                font.pixelSize: 16
                                 font.bold: true
                                 Layout.fillWidth: true
                             }
@@ -197,7 +274,7 @@ ApplicationWindow {
                             Label {
                                 text: alphaSlider.value.toFixed(2)
                                 color: window.secondaryText
-                                font.pixelSize: 13
+                                font.pixelSize: 14
                             }
                         }
 
@@ -209,6 +286,13 @@ ApplicationWindow {
                             stepSize: 0.01
                             value: cameraController.alpha
                             onValueChanged: cameraController.alpha = value
+
+                            Behavior on value {
+                                NumberAnimation {
+                                    duration: 120
+                                    easing.type: Easing.OutCubic
+                                }
+                            }
                         }
 
                         RowLayout {
@@ -234,10 +318,42 @@ ApplicationWindow {
                 }
 
                 Button {
+                    id: backgroundButton
                     text: "切换背景"
                     Layout.fillWidth: true
-                    implicitHeight: 38
+                    implicitHeight: 42
+                    scale: pressed ? 0.985 : 1.0
                     onClicked: backgroundDialog.open()
+
+                    Behavior on scale {
+                        NumberAnimation {
+                            duration: 90
+                            easing.type: Easing.OutCubic
+                        }
+                    }
+
+                    contentItem: Text {
+                        text: backgroundButton.text
+                        color: window.primaryText
+                        font.pixelSize: 14
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                    }
+
+                    background: Rectangle {
+                        radius: 8
+                        color: backgroundButton.pressed
+                               ? (window.lightMode ? "#dfe4ec" : "#3c4047")
+                               : backgroundButton.hovered
+                                 ? (window.lightMode ? "#eef2f7" : "#373a40")
+                                 : window.panelSection
+                        border.color: window.borderColor
+                        border.width: 1
+
+                        Behavior on color {
+                            ColorAnimation { duration: 120 }
+                        }
+                    }
                 }
 
                 Item {
@@ -248,22 +364,29 @@ ApplicationWindow {
                     id: button1
                     text: "拍照"
                     Layout.fillWidth: true
-                    implicitHeight: 38
+                    implicitHeight: 46
                     scale: pressed ? 0.97 : 1.0
                     opacity: pressed ? 0.82 : 1.0
 
                     Behavior on scale {
-                        NumberAnimation { duration: 80 }
+                        NumberAnimation {
+                            duration: 90
+                            easing.type: Easing.OutCubic
+                        }
                     }
 
                     Behavior on opacity {
-                        NumberAnimation { duration: 80 }
+                        NumberAnimation {
+                            duration: 90
+                            easing.type: Easing.OutCubic
+                        }
                     }
 
                     contentItem: Text {
                         text: button1.text
                         color: window.lightMode ? window.light : window.dark
-                        font: button1.font
+                        font.pixelSize: 15
+                        font.bold: true
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
                     }
@@ -275,7 +398,7 @@ ApplicationWindow {
                                : (window.lightMode ? window.dark : window.light)
 
                         Behavior on color {
-                            ColorAnimation { duration: 80 }
+                            ColorAnimation { duration: 120 }
                         }
                     }
 

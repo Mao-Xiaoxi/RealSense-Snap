@@ -17,6 +17,7 @@
 #include "background/imagebackgroundprovider.h"
 #include "./processing/filterprocessing.h"
 #include "utils/yoloseg.h"
+#include "utils/faciallandmark.h"
 
 /**
  * @brief 相机采集与图像处理工作对象。
@@ -173,11 +174,13 @@ private:
     // 照片保存目录。
     QString m_save_path;
 
-    // YOLO segmentation 模型路径。
+    // YOLO landmark detection & segmentation 模型路径。
     QString m_modelPath;
+    QString m_yolo8ModelPath;
 
     // 图像分割模型封装。
     yoloSeg yolo26;
+    facialLandmark yolo8;
 
     // 背景图片提供器，负责加载图片和按当前画面尺寸缓存背景图。
     ImageBackgroundProvider m_backgroundProvider;
@@ -187,6 +190,9 @@ private:
 
     // 背景区域 mask，通常由人像 mask 取反得到。
     cv::Mat m_backgroundMask;
+
+    // 面部关键点识别结果
+    std::vector<facialLandmark::Face> m_faces;
 
     // 私有函数
     /**

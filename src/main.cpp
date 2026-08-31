@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QThread>
 #include <QQmlContext>
+#include <QDebug>
 
 #include <librealsense2/rs.hpp>
 #include <opencv2/opencv.hpp>
@@ -36,9 +37,18 @@ int main(int argc, char *argv[])
 
     // 查找UI中的 VideoItem
     QList<QObject*> rootObjs = engine.rootObjects();
+    if (rootObjs.isEmpty()) {
+        qCritical() << "Failed to load QML root object.";
+        return -1;
+    }
+
     auto root = rootObjs.first();
     // 模版参数是指针类型
     auto videoItem = root->findChild<VideoItem*>("liveView");
+    if (!videoItem) {
+        qCritical() << "Failed to find VideoItem object named liveView.";
+        return -1;
+    }
 
     // 信号与槽之间的对接，这里可以理解为接口之间的对接
     QObject::connect(&worker, &CameraWorker::frameReady,

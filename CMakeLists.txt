@@ -70,6 +70,7 @@ qt_add_qml_module(appRealSense_Snap
         SOURCES src/background/BackgroundProvider.h
         SOURCES src/processing/filterprocessing.h src/processing/filterprocessing.cpp
         SOURCES src/utils/yoloseg.h src/utils/yoloseg.cpp
+        SOURCES src/utils/faciallandmark.h src/utils/faciallandmark.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
