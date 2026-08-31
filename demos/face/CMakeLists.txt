@@ -1,40 +1,39 @@
 cmake_minimum_required(VERSION 3.16)
-project(face_demo CXX)
+
+project(face_demo LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-set(_default_opencv_dir "$ENV{HOME}/Documents/Packages/opencv/build")
+get_filename_component(REALSENSE_SNAP_ROOT "${CMAKE_CURRENT_LIST_DIR}/../.." ABSOLUTE)
+
+set(THIRD_PARTY_ROOT "$ENV{HOME}/Documents/Packages" CACHE PATH "Third-party package root")
+set(_default_opencv_dir "${THIRD_PARTY_ROOT}/opencv/build")
 if(NOT OpenCV_DIR OR OpenCV_DIR MATCHES "-NOTFOUND$")
     set(OpenCV_DIR "${_default_opencv_dir}" CACHE PATH "OpenCV CMake package directory" FORCE)
 endif()
-find_package(OpenCV REQUIRED) 
 
-set(ONNXRUNTIME_ROOT "/Users/maoxiaoxi/Documents/Packages/onnxruntime-osx-arm64-1.26.0" CACHE PATH "ONNX Runtime root directory")
-add_library(onnxruntime SHARED IMPORTED)
-set_target_properties(onnxruntime PROPERTIES
-    IMPORTED_LOCATION "${ONNXRUNTIME_ROOT}/lib/libonnxruntime.dylib"
-    INTERFACE_INCLUDE_DIRECTORIES "${ONNXRUNTIME_ROOT}/include"   # 自动传递头文件路径
-)
+find_package(OpenCV REQUIRED)
 
 add_executable(faceDemo
-    main.cpp  
-    ../../src/utils/faciallandmark.cpp
+    main.cpp
+    "${REALSENSE_SNAP_ROOT}/src/utils/faciallandmark.cpp"
 )
 
-# 运行时动态库搜索路径
-set_target_properties(faceDemo PROPERTIES
-    BUILD_RPATH "${ONNXRUNTIME_ROOT}/lib"
-    INSTALL_RPATH "@executable_path/../lib"  
-)
-
-# 头文件路径（OpenCV 和你的项目内部头文件）
 target_include_directories(faceDemo PRIVATE
+    "${REALSENSE_SNAP_ROOT}/src/utils"
     ${OpenCV_INCLUDE_DIRS}
-    ../../src/utils
+)
+
+target_compile_definitions(faceDemo PRIVATE
+    REALSENSE_SNAP_RESOURCE_DIR="${REALSENSE_SNAP_ROOT}/resources"
 )
 
 target_link_libraries(faceDemo PRIVATE
     ${OpenCV_LIBS}
-    onnxruntime
+)
+
+set_target_properties(faceDemo PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
 )
