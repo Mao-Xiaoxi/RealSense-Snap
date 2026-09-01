@@ -1,0 +1,28 @@
+Template audit for Business Review reference
+
+Source deck: /Users/maoxiaoxi/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-business-review/assets/reference.pptx
+Slide count: 14
+Visual system: clean white/very light gray business review style, blue accent typography, Roboto/Lora/OpenAI Sans family evidence, thin horizontal rules, page markers, restrained rounded rectangles, editable charts and tables.
+
+Reusable slide types:
+1. Cover with company/team name, large title, quarter label, descriptive subtitle, and horizontal divider.
+2. Agenda table with six numbered rows.
+3. Executive summary with status chip, left narrative block, and two right insight blocks.
+4. Intro plus 2x2 card grid.
+5. One-column explanation with three right-side callout cards.
+6. Intro with three callout cards.
+7. Two-column text layout.
+8. Center statement slide.
+9. Full-width data table with left explanatory column.
+10. Chart with three right-side cards.
+11. Chart with two metric cards and a bottom note.
+12. Timeline with three milestones.
+13. Gantt chart over time.
+14. Thank-you/closing slide.
+
+Template handling:
+The output deck duplicates source slides according to template-frame-map.json, then rewrites inherited text, chart, and table frames in place. Page markers and chrome are retained. Footer placeholders with 0x0 bounds are intentionally deleted or ignored only when invisible and non-rendering; final XML QA will verify no visible default placeholder text remains.
+
+Sources used:
+User source file docs/项目汇报PPT制作大纲.md for narrative organization and suggested page topics.
+Repository README.md, CMakeLists.txt, src/main.cpp, src/core/CameraWorker.cpp, qml/Main.qml, src/processing/filterprocessing.cpp, src/utils/yoloseg.cpp, src/utils/faciallandmark.cpp, src/background/imagebackgroundprovider.cpp, and src/core/cameracontroller.cpp for factual implementation claims.

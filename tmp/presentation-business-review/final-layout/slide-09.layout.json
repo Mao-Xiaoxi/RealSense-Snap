@@ -1,0 +1,1928 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/udsvah03",
+    "id": "udsvah03",
+    "slide": 9,
+    "layoutId": "/ppt/slideLayouts/slideLayout6.xml",
+    "layoutName": "Title Only",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Theme 2",
+    "colors": {
+      "accent1": "#3357B8",
+      "accent2": "#CFD2D9",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#FAFCFE",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "fontScheme": {
+      "name": "Lora Roboto",
+      "majorFont": {
+        "latinTypeface": "Lora"
+      },
+      "minorFont": {
+        "latinTypeface": "Roboto"
+      }
+    },
+    "typefaces": [
+      "Lora",
+      "Lora SemiBold",
+      "Roboto"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout6.xml",
+      "name": "Title Only",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout6.xml/8",
+          "id": "8",
+          "name": "Footer Placeholder 4",
+          "bbox": [
+            41.33,
+            659.24,
+            772.89,
+            25.4
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 3,
+            "vertical": 1,
+            "verticalAlignment": "bottom",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout6.xml/9",
+          "id": "9",
+          "name": "Slide Number Placeholder 5",
+          "bbox": [
+            1184.18,
+            659.24,
+            54.48,
+            25.33
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 3,
+            "vertical": 1,
+            "verticalAlignment": "bottom",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout6.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            41.33,
+            36.12,
+            1197.33,
+            109.97
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master title style",
+          "textPreview": "Click to edit Master title style",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master title style",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master title style"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "backgroundColor": "bg2",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            41.33,
+            36.12,
+            1197.33,
+            109.97
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master title style",
+          "textPreview": "Click to edit Master title style",
+          "resolvedTextStyle": {
+            "anchor": 1,
+            "vertical": 1,
+            "verticalAlignment": "top",
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master title style",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master title style"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            41.33,
+            213.33,
+            1197.33,
+            416
+          ],
+          "geometry": "rect",
+          "text": "Click to edit Master styles\nSecond level\nThird level\nFourth level\nFifth level",
+          "textPreview": "Click to edit Master styles | Second level | Third level | Fourth level | Fifth level",
+          "resolvedTextStyle": {
+            "vertical": 1,
+            "autoFit": "shrinkText",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Click to edit Master styles",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Click to edit Master styles"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "Second level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Second level"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "Third level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Third level"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "Fourth level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fourth level"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "Fifth level",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Fifth level"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/5",
+          "id": "5",
+          "name": "Footer Placeholder 4",
+          "bbox": [
+            41.33,
+            659.24,
+            790.67,
+            25.4
+          ],
+          "geometry": "rect",
+          "resolvedTextStyle": {
+            "anchor": 3,
+            "vertical": 1,
+            "verticalAlignment": "bottom",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        },
+        {
+          "order": 4,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/6",
+          "id": "6",
+          "name": "Slide Number Placeholder 5",
+          "bbox": [
+            1184.18,
+            659.24,
+            54.48,
+            25.33
+          ],
+          "geometry": "rect",
+          "text": "‹#›",
+          "textPreview": "‹#›",
+          "resolvedTextStyle": {
+            "anchor": 3,
+            "vertical": 1,
+            "verticalAlignment": "bottom",
+            "insets": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "‹#›",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "‹#›"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/94zaxgfa",
+      "id": "532",
+      "name": "Google Shape;532;p58",
+      "bbox": [
+        1184.18,
+        659.24,
+        54.48,
+        25.33
+      ],
+      "geometry": "rect",
+      "text": "9",
+      "textPreview": "9",
+      "resolvedFontSize": 14.67,
+      "resolvedTextStyle": {
+        "anchor": 3,
+        "vertical": 1,
+        "fontSize": 14.67,
+        "typeface": "Roboto",
+        "color": "tx1",
+        "alignment": "right",
+        "verticalAlignment": "bottom",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "useParagraphSpacing": true
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "9"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "9",
+          "runs": [
+            {
+              "index": 1,
+              "text": "9"
+            }
+          ],
+          "bulletCharacter": "",
+          "marginLeft": 0
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/83qtobep",
+      "id": "533",
+      "name": "Google Shape;533;p58",
+      "bbox": [
+        41.33,
+        36.12,
+        822.67,
+        109.22
+      ],
+      "geometry": "rect",
+      "text": "YOLO 分割补强复杂背景下的前景判断",
+      "textPreview": "YOLO 分割补强复杂背景下的前景判断",
+      "resolvedFontSize": 38.67,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "vertical": 1,
+        "fontSize": 38.67,
+        "typeface": "Lora SemiBold",
+        "color": "tx1",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "useParagraphSpacing": true
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "YOLO 分割补强复杂背景下的前景判断"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "YOLO 分割补强复杂背景下的前景判断",
+          "runs": [
+            {
+              "index": 1,
+              "text": "YOLO 分割补强复杂背景下的前景判断",
+              "color": "accent1"
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 90000
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/2x0ne10r",
+      "id": "534",
+      "name": "Google Shape;644;p93",
+      "bbox": [
+        498.98,
+        162.66,
+        711.6,
+        485.86
+      ],
+      "text": "环节 | 输入 | 核心处理 | 输出\n预处理 | OpenCV BGR | letterbox、归一化、CHW | ONNX tensor\n推理 | seg ONNX | Session Run | 检测与原型\n筛选 | 预测结果 | 置信度、person、NMS | 候选区域\n合成 | mask 系数 | sigmoid、resize | person mask\n约束 | person mask | 框内保留、形态学 | 稳定 mask\n融合 | mask + depth | 取反清理背景深度 | 合成深度\n策略 | 连续帧 | 隔帧推理 | 实时性更稳\n模型 | resources/models | yolo26n-seg.onnx | 人像分割能力\n框架 | C++ | ONNX Runtime / OpenCV | 工程封装",
+      "textPreview": "环节 | 输入 | 核心处理 | 输出 | 预处理 | OpenCV BGR | letterbox、归一化、CHW | ONNX tensor | 推理 | seg ONNX | Session Run | 检测与原型 | 筛选 | 预测结果 | 置信度、person、N...",
+      "rows": 10,
+      "cols": 4,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            498.98,
+            162.66,
+            177.9,
+            58.63
+          ],
+          "text": "环节",
+          "textPreview": "环节",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "环节",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "环节",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            676.88,
+            162.66,
+            177.9,
+            58.63
+          ],
+          "text": "输入",
+          "textPreview": "输入",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "输入",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "输入",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            854.78,
+            162.66,
+            177.9,
+            58.63
+          ],
+          "text": "核心处理",
+          "textPreview": "核心处理",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "核心处理",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "核心处理",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            1032.68,
+            162.66,
+            177.9,
+            58.63
+          ],
+          "text": "输出",
+          "textPreview": "输出",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "输出",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "输出",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000",
+                  "bold": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            498.98,
+            221.29,
+            177.9,
+            47.47
+          ],
+          "text": "预处理",
+          "textPreview": "预处理",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "预处理",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "预处理",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            676.88,
+            221.29,
+            177.9,
+            47.47
+          ],
+          "text": "OpenCV BGR",
+          "textPreview": "OpenCV BGR",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "OpenCV BGR",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "OpenCV BGR",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            854.78,
+            221.29,
+            177.9,
+            47.47
+          ],
+          "text": "letterbox、归一化、CHW",
+          "textPreview": "letterbox、归一化、CHW",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "letterbox、归一化、CHW",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "letterbox、归一化、CHW",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            1032.68,
+            221.29,
+            177.9,
+            47.47
+          ],
+          "text": "ONNX tensor",
+          "textPreview": "ONNX tensor",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "ONNX tensor",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "ONNX tensor",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            498.98,
+            268.76,
+            177.9,
+            47.47
+          ],
+          "text": "推理",
+          "textPreview": "推理",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "推理",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "推理",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            676.88,
+            268.76,
+            177.9,
+            47.47
+          ],
+          "text": "seg ONNX",
+          "textPreview": "seg ONNX",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "seg ONNX",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "seg ONNX",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            854.78,
+            268.76,
+            177.9,
+            47.47
+          ],
+          "text": "Session Run",
+          "textPreview": "Session Run",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "Session Run",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "Session Run",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            1032.68,
+            268.76,
+            177.9,
+            47.47
+          ],
+          "text": "检测与原型",
+          "textPreview": "检测与原型",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "检测与原型",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "检测与原型",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            498.98,
+            316.23,
+            177.9,
+            47.47
+          ],
+          "text": "筛选",
+          "textPreview": "筛选",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "筛选",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "筛选",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            676.88,
+            316.23,
+            177.9,
+            47.47
+          ],
+          "text": "预测结果",
+          "textPreview": "预测结果",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "预测结果",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "预测结果",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            854.78,
+            316.23,
+            177.9,
+            47.47
+          ],
+          "text": "置信度、person、NMS",
+          "textPreview": "置信度、person、NMS",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "置信度、person、NMS",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "置信度、person、NMS",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            1032.68,
+            316.23,
+            177.9,
+            47.47
+          ],
+          "text": "候选区域",
+          "textPreview": "候选区域",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "候选区域",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "候选区域",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            498.98,
+            363.7,
+            177.9,
+            47.47
+          ],
+          "text": "合成",
+          "textPreview": "合成",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "合成",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "合成",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            676.88,
+            363.7,
+            177.9,
+            47.47
+          ],
+          "text": "mask 系数",
+          "textPreview": "mask 系数",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "mask 系数",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "mask 系数",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            854.78,
+            363.7,
+            177.9,
+            47.47
+          ],
+          "text": "sigmoid、resize",
+          "textPreview": "sigmoid、resize",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "sigmoid、resize",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "sigmoid、resize",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 5,
+          "column": 4,
+          "bbox": [
+            1032.68,
+            363.7,
+            177.9,
+            47.47
+          ],
+          "text": "person mask",
+          "textPreview": "person mask",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "person mask",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "person mask",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            498.98,
+            411.17,
+            177.9,
+            47.47
+          ],
+          "text": "约束",
+          "textPreview": "约束",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "约束",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "约束",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            676.88,
+            411.17,
+            177.9,
+            47.47
+          ],
+          "text": "person mask",
+          "textPreview": "person mask",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "person mask",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "person mask",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "row": 6,
+          "column": 3,
+          "bbox": [
+            854.78,
+            411.17,
+            177.9,
+            47.47
+          ],
+          "text": "框内保留、形态学",
+          "textPreview": "框内保留、形态学",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "框内保留、形态学",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "框内保留、形态学",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "row": 6,
+          "column": 4,
+          "bbox": [
+            1032.68,
+            411.17,
+            177.9,
+            47.47
+          ],
+          "text": "稳定 mask",
+          "textPreview": "稳定 mask",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "稳定 mask",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "稳定 mask",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "row": 7,
+          "column": 1,
+          "bbox": [
+            498.98,
+            458.64,
+            177.9,
+            47.47
+          ],
+          "text": "融合",
+          "textPreview": "融合",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "融合",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "融合",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 26,
+          "row": 7,
+          "column": 2,
+          "bbox": [
+            676.88,
+            458.64,
+            177.9,
+            47.47
+          ],
+          "text": "mask + depth",
+          "textPreview": "mask + depth",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "mask + depth",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "mask + depth",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "row": 7,
+          "column": 3,
+          "bbox": [
+            854.78,
+            458.64,
+            177.9,
+            47.47
+          ],
+          "text": "取反清理背景深度",
+          "textPreview": "取反清理背景深度",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "取反清理背景深度",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "取反清理背景深度",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 28,
+          "row": 7,
+          "column": 4,
+          "bbox": [
+            1032.68,
+            458.64,
+            177.9,
+            47.47
+          ],
+          "text": "合成深度",
+          "textPreview": "合成深度",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "合成深度",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "合成深度",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 29,
+          "row": 8,
+          "column": 1,
+          "bbox": [
+            498.98,
+            506.11,
+            177.9,
+            47.47
+          ],
+          "text": "策略",
+          "textPreview": "策略",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "策略",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "策略",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 30,
+          "row": 8,
+          "column": 2,
+          "bbox": [
+            676.88,
+            506.11,
+            177.9,
+            47.47
+          ],
+          "text": "连续帧",
+          "textPreview": "连续帧",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "连续帧",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "连续帧",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 31,
+          "row": 8,
+          "column": 3,
+          "bbox": [
+            854.78,
+            506.11,
+            177.9,
+            47.47
+          ],
+          "text": "隔帧推理",
+          "textPreview": "隔帧推理",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "隔帧推理",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "隔帧推理",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 32,
+          "row": 8,
+          "column": 4,
+          "bbox": [
+            1032.68,
+            506.11,
+            177.9,
+            47.47
+          ],
+          "text": "实时性更稳",
+          "textPreview": "实时性更稳",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "实时性更稳",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "实时性更稳",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 33,
+          "row": 9,
+          "column": 1,
+          "bbox": [
+            498.98,
+            553.58,
+            177.9,
+            47.47
+          ],
+          "text": "模型",
+          "textPreview": "模型",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "模型",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "模型",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 34,
+          "row": 9,
+          "column": 2,
+          "bbox": [
+            676.88,
+            553.58,
+            177.9,
+            47.47
+          ],
+          "text": "resources/models",
+          "textPreview": "resources/models",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "resources/models",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "resources/models",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 35,
+          "row": 9,
+          "column": 3,
+          "bbox": [
+            854.78,
+            553.58,
+            177.9,
+            47.47
+          ],
+          "text": "yolo26n-seg.onnx",
+          "textPreview": "yolo26n-seg.onnx",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "yolo26n-seg.onnx",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "yolo26n-seg.onnx",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 36,
+          "row": 9,
+          "column": 4,
+          "bbox": [
+            1032.68,
+            553.58,
+            177.9,
+            47.47
+          ],
+          "text": "人像分割能力",
+          "textPreview": "人像分割能力",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "人像分割能力",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "人像分割能力",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 37,
+          "row": 10,
+          "column": 1,
+          "bbox": [
+            498.98,
+            601.05,
+            177.9,
+            47.47
+          ],
+          "text": "框架",
+          "textPreview": "框架",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "框架",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "框架",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 38,
+          "row": 10,
+          "column": 2,
+          "bbox": [
+            676.88,
+            601.05,
+            177.9,
+            47.47
+          ],
+          "text": "C++",
+          "textPreview": "C++",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "C++",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "C++",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 39,
+          "row": 10,
+          "column": 3,
+          "bbox": [
+            854.78,
+            601.05,
+            177.9,
+            47.47
+          ],
+          "text": "ONNX Runtime / OpenCV",
+          "textPreview": "ONNX Runtime / OpenCV",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "ONNX Runtime / OpenCV",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "ONNX Runtime / OpenCV",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 40,
+          "row": 10,
+          "column": 4,
+          "bbox": [
+            1032.68,
+            601.05,
+            177.9,
+            47.47
+          ],
+          "text": "工程封装",
+          "textPreview": "工程封装",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "工程封装",
+              "lineSpacingPercent": 110000,
+              "resolvedTextStyle": {
+                "alignment": "left"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "工程封装",
+                  "fontSize": 18.67,
+                  "typeface": "Roboto",
+                  "color": "#000000"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ofq5svm5",
+      "id": "7",
+      "name": "Google Shape;534;p58",
+      "bbox": [
+        41.33,
+        291.25,
+        378.67,
+        338.08
+      ],
+      "geometry": "rect",
+      "text": "RGB 图像推理出 person mask，再与深度图结合，清理背景深度。",
+      "textPreview": "RGB 图像推理出 person mask，再与深度图结合，清理背景深度。",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "vertical": 1,
+        "fontSize": 32,
+        "typeface": "Roboto",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "useParagraphSpacing": true
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "RGB 图像推理出 person"
+          },
+          {
+            "index": 2,
+            "text": "mask，再与深度图结合，清理背景深度。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "RGB 图像推理出 person mask，再与深度图结合，清理背景深度。",
+          "lineSpacingPercent": 114000,
+          "runs": [
+            {
+              "index": 1,
+              "text": "RGB 图像推理出 person mask，再与深度图结合，清理背景深度。",
+              "fontSize": 18.67
+            }
+          ],
+          "bulletCharacter": "•",
+          "marginLeft": 228600,
+          "indent": -228600
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bih4na5w",
+      "id": "8",
+      "name": "Google Shape;534;p58",
+      "bbox": [
+        41.33,
+        164.29,
+        378.67,
+        123.71
+      ],
+      "geometry": "rect",
+      "text": "关键学习点：模型调用要拆成预处理、推理、后处理，并处理尺寸还原、NMS 和 mask 合成。",
+      "textPreview": "关键学习点：模型调用要拆成预处理、推理、后处理，并处理尺寸还原、NMS 和 mask 合成。",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "vertical": 1,
+        "fontSize": 32,
+        "typeface": "Roboto",
+        "color": "tx1",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "useParagraphSpacing": true
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "关键学习点：模型调用要拆成"
+          },
+          {
+            "index": 2,
+            "text": "预处理、推理、后处理，并处"
+          },
+          {
+            "index": 3,
+            "text": "理尺寸还原、NMS 和 mask"
+          },
+          {
+            "index": 4,
+            "text": "合成。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "关键学习点：模型调用要拆成预处理、推理、后处理，并处理尺寸还原、NMS 和 mask 合成。",
+          "lineSpacingPercent": 114000,
+          "runs": [
+            {
+              "index": 1,
+              "text": "关键学习点：模型调用要拆成预处理、推理、后处理，并处理尺寸还原、NMS 和 mask 合成。",
+              "fontSize": 26.67,
+              "typeface": "Lora"
+            }
+          ],
+          "bulletCharacter": "•",
+          "marginLeft": 228600,
+          "indent": -228600
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}
