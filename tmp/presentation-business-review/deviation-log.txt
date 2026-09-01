@@ -1,5 +1,0 @@
-Deviation log
-
-No visual restyling departure from the Business Review template is intended. The subject changes from quarterly business review placeholder content to a Chinese intern one-month learning outcomes report for RealSense Snap.
-
-Charts and tables are repurposed to technical learning/process content because the template is business-review oriented and the user's requested content is a technical internship report. The existing chart/table regions remain as inherited business-review frames.
